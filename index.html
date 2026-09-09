@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reinas Carlata · Lencería Femenina | Lima, Perú</title>
+<meta name="description" content="Reinas Carlata Lencería — lencería femenina que celebra a la reina que llevas dentro. Conjuntos, bodys, bralettes y pijamas. Envíos en Lima y todo el Perú.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#f4f0ea;
+  --ivory-soft:#faf7f2;
+  --ink:#1b1512;
+  --ink-soft:#4a3f38;
+  --muted:#8a7d74;
+  --gold:#af915f;
+  --gold-light:#cdb488;
+  --cream-gold:#f2e3c8;
+  --blush:#e9d5cc;
+  --blush-deep:#d9b8ac;
+  --line:rgba(27,21,18,.12);
+  --serif:'Cormorant Garamond',serif;
+  --sans:'Jost',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit}
+::selection{background:var(--gold);color:#fff}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--ivory)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:5px}
+
+/* ---------- announcement bar ---------- */
+.announce{background:var(--ink);color:var(--cream-gold);font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;text-align:center;padding:.7rem 1rem;position:relative;z-index:60}
+.announce span{color:var(--gold-light)}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(244,240,234,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .4s}
+header.scrolled{box-shadow:0 10px 40px rgba(27,21,18,.08)}
+.nav{max-width:1340px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem}
+.logo{display:flex;align-items:center;gap:.6rem}
+.logo svg{width:26px;height:26px;fill:var(--gold)}
+.logo-text{font-family:var(--serif);font-size:1.55rem;font-weight:500;letter-spacing:.04em;line-height:1}
+.logo-text em{font-style:italic;color:var(--gold)}
+.logo-sub{display:block;font-family:var(--sans);font-size:.52rem;letter-spacing:.5em;text-transform:uppercase;color:var(--muted);margin-top:.2rem}
+.nav-links{display:flex;gap:2.4rem;list-style:none}
+.nav-links a{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400;position:relative;padding:.3rem 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .35s ease}
+.nav-links a:hover::after{width:100%}
+.nav-actions{display:flex;align-items:center;gap:1.4rem}
+.cart-btn{position:relative;display:flex;align-items:center}
+.cart-btn svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.4;transition:stroke .3s}
+.cart-btn:hover svg{stroke:var(--gold)}
+.cart-count{position:absolute;top:-7px;right:-9px;background:var(--gold);color:#fff;font-size:.58rem;font-weight:500;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;transform:scale(0);transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.cart-count.on{transform:scale(1)}
+.burger{display:none;flex-direction:column;gap:5px;padding:.3rem}
+.burger span{width:22px;height:1.5px;background:var(--ink);transition:.3s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.06);animation:heroZoom 14s ease-out forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,13,10,.72) 0%,rgba(20,13,10,.45) 45%,rgba(20,13,10,.12) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:1340px;margin:0 auto;padding:6rem 2rem;width:100%}
+.hero-kicker{color:var(--gold-light);font-size:.72rem;letter-spacing:.5em;text-transform:uppercase;margin-bottom:1.6rem;opacity:0;animation:fadeUp 1s .3s ease forwards}
+.hero h1{font-family:var(--serif);font-weight:400;color:#fdfaf5;font-size:clamp(3rem,7.5vw,6.4rem);line-height:1.02;letter-spacing:-.01em;max-width:13ch;opacity:0;animation:fadeUp 1s .55s ease forwards}
+.hero h1 em{font-style:italic;color:var(--cream-gold)}
+.hero p{color:rgba(253,250,245,.82);max-width:44ch;margin:1.8rem 0 2.6rem;font-size:1.02rem;opacity:0;animation:fadeUp 1s .8s ease forwards}
+.hero-ctas{display:flex;gap:1.2rem;flex-wrap:wrap;opacity:0;animation:fadeUp 1s 1.05s ease forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;gap:.7rem;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;transition:all .45s ease}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-gold:hover{background:var(--gold-light);letter-spacing:.34em}
+.btn-ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-dark{background:var(--ink);color:var(--ivory)}
+.btn-dark:hover{background:var(--gold)}
+/* rotating seal */
+.seal{position:absolute;right:4vw;bottom:6vh;z-index:3;width:132px;height:132px}
+.seal svg{width:100%;height:100%}
+.seal .ring{animation:spin 14s linear infinite;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:900px){.seal{display:none}}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--gold);color:#fff;overflow:hidden;padding:.85rem 0;white-space:nowrap}
+.marquee-track{display:inline-block;animation:scrollX 26s linear infinite}
+.marquee-track span{font-size:.7rem;letter-spacing:.4em;text-transform:uppercase;margin:0 2.6rem;font-weight:400}
+@keyframes scrollX{to{transform:translateX(-50%)}}
+
+/* ---------- section base ---------- */
+section{padding:6.5rem 2rem}
+.wrap{max-width:1340px;margin:0 auto}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:3.4rem;flex-wrap:wrap}
+.sec-kicker{font-size:.68rem;letter-spacing:.44em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.9rem}
+.sec-kicker::before{content:"";width:38px;height:1px;background:var(--gold)}
+.sec-title{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4.4vw,3.6rem);line-height:1.08;letter-spacing:-.01em}
+.sec-title em{font-style:italic;color:var(--gold)}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- categories ---------- */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.cat{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer;display:block}
+.cat img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.19,1,.22,1)}
+.cat:hover img{transform:scale(1.07)}
+.cat::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,13,10,.68) 0%,rgba(20,13,10,.05) 55%)}
+.cat-label{position:absolute;left:1.8rem;bottom:1.6rem;z-index:2;color:#fff}
+.cat-label h3{font-family:var(--serif);font-weight:500;font-size:1.7rem;letter-spacing:.02em}
+.cat-label span{font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--cream-gold);display:flex;align-items:center;gap:.5rem;margin-top:.35rem}
+.cat-label span::after{content:"→";transition:transform .35s}
+.cat:hover .cat-label span::after{transform:translateX(6px)}
+@media(max-width:820px){.cats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.cats{grid-template-columns:1fr}}
+
+/* ---------- catalog ---------- */
+.catalog-sec{background:var(--ivory-soft)}
+.filters{display:flex;gap:.6rem;flex-wrap:wrap}
+.filter-btn{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;padding:.65rem 1.4rem;border:1px solid var(--line);color:var(--ink-soft);transition:all .35s;background:transparent}
+.filter-btn:hover{border-color:var(--gold);color:var(--gold)}
+.filter-btn.active{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;margin-top:3rem}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:820px){.grid{grid-template-columns:repeat(2,1fr);gap:1rem}}
+.card{background:#fff;position:relative;transition:transform .5s ease,box-shadow .5s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(27,21,18,.12)}
+.card.hidden{display:none}
+.card-img{position:relative;overflow:hidden;aspect-ratio:2/3;background:var(--blush)}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.19,1,.22,1)}
+.card:hover .card-img img{transform:scale(1.06)}
+.badge{position:absolute;top:1rem;left:1rem;background:var(--ink);color:var(--cream-gold);font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;padding:.45rem .9rem;z-index:2}
+.badge.gold{background:var(--gold);color:#fff}
+.card-add{position:absolute;left:0;right:0;bottom:0;background:rgba(27,21,18,.92);color:#fff;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;padding:1rem;text-align:center;transform:translateY(100%);transition:transform .45s cubic-bezier(.19,1,.22,1)}
+.card:hover .card-add{transform:none}
+.card-add:hover{background:var(--gold)}
+@media(hover:none){.card-add{transform:none;background:var(--ink)}}
+.card-body{padding:1.3rem 1.2rem 1.5rem;text-align:center}
+.card-cat{font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+.card-name{font-family:var(--serif);font-size:1.32rem;font-weight:500;margin-bottom:.45rem}
+.card-price{font-size:.95rem;letter-spacing:.06em}
+.card-price s{color:var(--muted);font-size:.8rem;margin-right:.55rem}
+.card-price strong{font-weight:500;color:var(--ink)}
+
+/* ---------- offer banner ---------- */
+.offer{position:relative;overflow:hidden;min-height:62vh;display:flex;align-items:center;color:#fff}
+.offer-bg{position:absolute;inset:0}
+.offer-bg img{width:100%;height:100%;object-fit:cover}
+.offer-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,13,10,.8),rgba(20,13,10,.25))}
+.offer-inner{position:relative;z-index:2;max-width:1340px;margin:0 auto;width:100%}
+.offer h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1.05;max-width:15ch}
+.offer h2 em{font-style:italic;color:var(--cream-gold)}
+.offer p{max-width:42ch;margin:1.4rem 0 2.2rem;color:rgba(255,255,255,.85)}
+
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:900px){.about{grid-template-columns:1fr;gap:3rem}}
+.about-img{position:relative}
+.about-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.about-img::before{content:"";position:absolute;inset:-1.2rem 1.2rem 1.2rem -1.2rem;border:1px solid var(--gold);z-index:-0;pointer-events:none}
+.about-img .frame{position:absolute;inset:0;border:1px solid var(--gold);transform:translate(-1.1rem,-1.1rem);pointer-events:none}
+.about-txt p{color:var(--ink-soft);margin-bottom:1.3rem;max-width:52ch}
+.about-sign{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--gold);margin-top:1.6rem}
+.about-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.4rem;border-top:1px solid var(--line);padding-top:2rem}
+.about-feats div b{font-family:var(--serif);font-size:2rem;font-weight:500;color:var(--gold);display:block;line-height:1}
+.about-feats div span{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- testimonials ---------- */
+.testi-sec{background:var(--ink);color:var(--ivory)}
+.testi-sec .sec-title{color:#fff}
+.testi-sec .sec-kicker{color:var(--gold-light)}
+.testis{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+@media(max-width:860px){.testis{grid-template-columns:1fr}}
+.testi{border:1px solid rgba(255,255,255,.12);padding:2.6rem 2.2rem;position:relative;transition:border-color .4s,transform .4s}
+.testi:hover{border-color:var(--gold);transform:translateY(-4px)}
+.testi .quote{font-family:var(--serif);font-size:3.4rem;line-height:.6;color:var(--gold);display:block;margin-bottom:1.4rem}
+.testi p{color:rgba(244,240,234,.8);font-size:.95rem;margin-bottom:1.8rem}
+.testi .who{display:flex;align-items:center;gap:1rem}
+.testi .who .av{width:44px;height:44px;border-radius:50%;background:var(--gold);color:#fff;font-family:var(--serif);font-size:1.15rem;display:flex;align-items:center;justify-content:center}
+.testi .who b{font-weight:500;font-size:.88rem;display:block}
+.testi .who span{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light)}
+.stars{color:var(--gold-light);letter-spacing:.2em;font-size:.8rem;margin-bottom:1rem}
+
+/* ---------- footer ---------- */
+footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5rem 2rem 2rem}
+.foot-grid{max-width:1340px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:3rem}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
+.foot-brand p{color:var(--muted);font-size:.9rem;margin:1.2rem 0 1.6rem;max-width:34ch}
+.socials{display:flex;gap:.8rem}
+.socials a{width:42px;height:42px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all .35s}
+.socials a svg{width:17px;height:17px;fill:var(--ink-soft);transition:fill .35s}
+.socials a:hover{background:var(--ink);border-color:var(--ink)}
+.socials a:hover svg{fill:#fff}
+.foot-col h4{font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;margin-bottom:1.4rem;font-weight:500}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:.75rem}
+.foot-col a,.foot-col span{color:var(--ink-soft);font-size:.88rem;transition:color .3s}
+.foot-col a:hover{color:var(--gold)}
+.foot-bottom{max-width:1340px;margin:3.6rem auto 0;border-top:1px solid var(--line);padding-top:1.6rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.72rem;color:var(--muted);letter-spacing:.08em}
+
+/* ---------- whatsapp float ---------- */
+.wa-float{position:fixed;right:1.6rem;bottom:1.6rem;z-index:70;width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 32px rgba(37,211,102,.4);transition:transform .3s}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+
+/* ---------- cart drawer ---------- */
+.overlay{position:fixed;inset:0;background:rgba(20,13,10,.55);z-index:80;opacity:0;pointer-events:none;transition:opacity .4s}
+.overlay.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(430px,94vw);background:var(--ivory);z-index:90;transform:translateX(100%);transition:transform .5s cubic-bezier(.19,1,.22,1);display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:1.6rem 1.8rem;border-bottom:1px solid var(--line)}
+.drawer-head h3{font-family:var(--serif);font-size:1.5rem;font-weight:500}
+.drawer-close{font-size:1.4rem;line-height:1;color:var(--ink-soft);transition:color .3s,transform .3s}
+.drawer-close:hover{color:var(--gold);transform:rotate(90deg)}
+.drawer-body{flex:1;overflow-y:auto;padding:1.4rem 1.8rem}
+.cart-empty{text-align:center;color:var(--muted);padding:4rem 1rem;font-size:.92rem}
+.cart-empty .big{font-family:var(--serif);font-size:2.6rem;color:var(--blush-deep);display:block;margin-bottom:.6rem}
+.cart-item{display:flex;gap:1rem;padding-bottom:1.3rem;margin-bottom:1.3rem;border-bottom:1px solid var(--line)}
+.cart-item img{width:74px;height:104px;object-fit:cover}
+.ci-info{flex:1}
+.ci-info h4{font-family:var(--serif);font-size:1.08rem;font-weight:500}
+.ci-info .ci-cat{font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.ci-row{display:flex;justify-content:space-between;align-items:center;margin-top:.7rem}
+.qty{display:flex;align-items:center;border:1px solid var(--line)}
+.qty button{width:28px;height:28px;font-size:1rem;color:var(--ink-soft)}
+.qty button:hover{color:var(--gold)}
+.qty span{width:32px;text-align:center;font-size:.85rem}
+.ci-price{font-weight:500;font-size:.92rem}
+.ci-remove{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.5rem;text-decoration:underline;text-underline-offset:3px}
+.ci-remove:hover{color:#b0402f}
+.drawer-foot{border-top:1px solid var(--line);padding:1.6rem 1.8rem;background:var(--ivory-soft)}
+.total-row{display:flex;justify-content:space-between;font-size:.95rem;margin-bottom:.4rem}
+.total-row.grand{font-size:1.15rem;font-weight:500;margin:.7rem 0 1.3rem}
+.total-row.grand span:last-child{font-family:var(--serif);font-size:1.5rem;color:var(--gold)}
+.checkout-btn{width:100%;justify-content:center;background:#25d366;color:#fff;display:flex;align-items:center;gap:.7rem;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;padding:1.1rem;transition:background .35s}
+.checkout-btn:hover{background:#1eb85a}
+.checkout-btn svg{width:18px;height:18px;fill:#fff}
+.ship-note{text-align:center;font-size:.7rem;color:var(--muted);margin-top:.9rem;letter-spacing:.06em}
+
+/* ---------- toast ---------- */
+.toast{position:fixed;left:50%;bottom:2rem;transform:translate(-50%,140%);background:var(--ink);color:var(--cream-gold);font-size:.78rem;letter-spacing:.14em;padding:1rem 2rem;z-index:100;transition:transform .5s cubic-bezier(.19,1,.22,1);text-transform:uppercase}
+.toast.on{transform:translate(-50%,0)}
+
+@media(max-width:820px){
+  .nav-links{position:fixed;inset:0;top:0;background:var(--ivory);flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;z-index:49;transform:translateY(-100%);transition:transform .5s cubic-bezier(.19,1,.22,1)}
+  .nav-links.open{transform:none}
+  .nav-links a{font-size:1rem}
+  .burger{display:flex;z-index:50}
+  .burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  section{padding:4.5rem 1.3rem}
+  .nav{padding:.9rem 1.3rem}
+}
+</style>
+</head>
+<body>
+
+<div class="announce">Envíos a todo Lima y el Perú &nbsp;<span>✦</span>&nbsp; Pago contra entrega en Lima &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp</div>
+
+<header id="header">
+  <nav class="nav">
+    <a href="#inicio" class="logo">
+      <svg viewBox="0 0 24 24"><path d="M2.5 19h19l-1.7-9.2-4.6 3.4L12 5.5 8.8 13.2 4.2 9.8 2.5 19zm-.2 1.6h19.4v1.6H2.3v-1.6z"/></svg>
+      <span class="logo-text">Reinas <em>Carlata</em><span class="logo-sub">Lencería</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#categorias">Categorías</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartOpen" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24"><path d="M6 7h12l1.2 13H4.8L6 7zm3 0V6a3 3 0 016 0v1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio" style="padding:0">
+  <div class="hero-bg"><img src="assets/hero.jpg" alt="Lencería de encaje Reinas Carlata"></div>
+  <div class="hero-inner">
+    <p class="hero-kicker">Lencería femenina · Lima, Perú</p>
+    <h1>Siéntete como la <em>reina</em> que eres</h1>
+    <p>Piezas de encaje y satén diseñadas para celebrar tu feminidad. Calidad, comodidad y elegancia en cada detalle, con envíos a todo el país.</p>
+    <div class="hero-ctas">
+      <a href="#catalogo" class="btn btn-gold">Ver Catálogo</a>
+      <a href="https://wa.me/51997081492?text=Hola%20Reinas%20Carlata%2C%20quiero%20hacer%20un%20pedido%20%E2%9C%A8" target="_blank" rel="noopener" class="btn btn-ghost">Pedir por WhatsApp</a>
+    </div>
+  </div>
+  <div class="seal" aria-hidden="true">
+    <svg viewBox="0 0 132 132">
+      <g class="ring">
+        <defs><path id="circlePath" d="M66,66 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs>
+        <text fill="#f2e3c8" font-size="10.5" letter-spacing="4.5" font-family="Jost,sans-serif">
+          <textPath href="#circlePath">REINAS CARLATA · LENCERÍA · LIMA PERÚ · </textPath>
+        </text>
+      </g>
+      <circle cx="66" cy="66" r="34" fill="none" stroke="#af915f" stroke-width="1"/>
+      <path fill="#af915f" d="M51 76h30l-2.6-13.5-7 5.2L66 60l-5.4 7.7-7-5.2L51 76zm-.6 2.4h31.2v2.4H50.4v-2.4z"/>
+    </svg>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Encaje</span><span>✦</span><span>Satén</span><span>✦</span><span>Elegancia</span><span>✦</span><span>Comodidad</span><span>✦</span><span>Reinas Carlata</span><span>✦</span>
+    <span>Encaje</span><span>✦</span><span>Satén</span><span>✦</span><span>Elegancia</span><span>✦</span><span>Comodidad</span><span>✦</span><span>Reinas Carlata</span><span>✦</span>
+  </div>
+</div>
+
+<!-- CATEGORÍAS -->
+<section id="categorias">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="sec-kicker">Explora</p>
+        <h2 class="sec-title">Nuestras <em>categorías</em></h2>
+      </div>
+      <a href="#catalogo" class="btn btn-dark">Ver todo</a>
+    </div>
+    <div class="cats">
+      <a href="#catalogo" class="cat reveal" data-cat="conjuntos">
+        <img src="assets/p1.jpg" alt="Conjuntos de encaje">
+        <div class="cat-label"><h3>Conjuntos</h3><span>Explorar</span></div>
+      </a>
+      <a href="#catalogo" class="cat reveal" data-cat="bodys">
+        <img src="assets/p3.jpg" alt="Bodys de encaje">
+        <div class="cat-label"><h3>Bodys</h3><span>Explorar</span></div>
+      </a>
+      <a href="#catalogo" class="cat reveal" data-cat="pijamas">
+        <img src="assets/p5.jpg" alt="Pijamas de satén">
+        <div class="cat-label"><h3>Pijamas</h3><span>Explorar</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section class="catalog-sec" id="catalogo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="sec-kicker">La colección</p>
+        <h2 class="sec-title">Piezas que <em>enamoran</em></h2>
+      </div>
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="conjuntos">Conjuntos</button>
+        <button class="filter-btn" data-filter="bralettes">Bralettes</button>
+        <button class="filter-btn" data-filter="bodys">Bodys</button>
+        <button class="filter-btn" data-filter="pijamas">Pijamas</button>
+        <button class="filter-btn" data-filter="ofertas">Ofertas</button>
+      </div>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- OFERTA DESTACADA -->
+<section class="offer" style="padding:0">
+  <div class="offer-bg"><img src="assets/p6.jpg" alt="Colección Pasión"></div>
+  <div class="offer-inner">
+    <p class="sec-kicker" style="color:var(--cream-gold)">Edición limitada</p>
+    <h2>Colección <em>Pasión</em> — hasta 20% de descuento</h2>
+    <p>Encaje rojo intenso, tiras ajustables y detalles que roban miradas. Solo por esta temporada y hasta agotar stock.</p>
+    <a href="https://wa.me/51997081492?text=Hola%20Reinas%20Carlata%2C%20me%20interesa%20la%20Colecci%C3%B3n%20Pasi%C3%B3n%20%E2%9D%A4%EF%B8%8F" target="_blank" rel="noopener" class="btn btn-gold">La quiero</a>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+  <div class="wrap about reveal">
+    <div class="about-img">
+      <img src="assets/detail.jpg" alt="Detalle de encaje Reinas Carlata">
+      <div class="frame"></div>
+    </div>
+    <div class="about-txt">
+      <p class="sec-kicker">Nuestra historia</p>
+      <h2 class="sec-title" style="margin-bottom:1.8rem">Nacidas para <em>coronarte</em></h2>
+      <p>Reinas Carlata nació en Lima con una convicción: toda mujer merece sentirse poderosa, cómoda y bella en su propia piel. Por eso seleccionamos cada pieza cuidando los encajes, las telas y los acabados, como si fueran para nosotras.</p>
+      <p>Más que lencería, ofrecemos un ritual de amor propio. Cada pedido se prepara con dedicación y llega a tus manos con el cariño que una reina merece.</p>
+      <p class="about-sign">— Elizabeth, fundadora</p>
+      <div class="about-feats">
+        <div><b>500+</b><span>Reinas felices</span></div>
+        <div><b>24h</b><span>Envíos en Lima</span></div>
+        <div><b>100%</b><span>Atención personalizada</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testi-sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="sec-kicker">Ellas lo dicen</p>
+        <h2 class="sec-title">Reinas que ya <em>estrenaron</em></h2>
+      </div>
+    </div>
+    <div class="testis">
+      <div class="testi reveal">
+        <span class="quote">“</span>
+        <div class="stars">★★★★★</div>
+        <p>El conjunto que pedí superó mis expectativas, el encaje es suavísimo y la talla perfecta. La atención por WhatsApp fue rapidísima.</p>
+        <div class="who"><span class="av">V</span><div><b>Valeria M.</b><span>Miraflores, Lima</span></div></div>
+      </div>
+      <div class="testi reveal">
+        <span class="quote">“</span>
+        <div class="stars">★★★★★</div>
+        <p>Pedí un body para una fecha especial y llegó en 24 horas, bellamente empacado. Me sentí una verdadera reina.</p>
+        <div class="who"><span class="av">A</span><div><b>Andreina P.</b><span>San Isidro, Lima</span></div></div>
+      </div>
+      <div class="testi reveal">
+        <span class="quote">“</span>
+        <div class="stars">★★★★★</div>
+        <p>Soy clienta fija desde el primer pedido. Calidad de boutique a precios accesibles y envíos a provincia sin problemas.</p>
+        <div class="who"><span class="av">C</span><div><b>Camila R.</b><span>Arequipa</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a href="#inicio" class="logo">
+        <svg viewBox="0 0 24 24"><path d="M2.5 19h19l-1.7-9.2-4.6 3.4L12 5.5 8.8 13.2 4.2 9.8 2.5 19zm-.2 1.6h19.4v1.6H2.3v-1.6z"/></svg>
+        <span class="logo-text">Reinas <em>Carlata</em><span class="logo-sub">Lencería</span></span>
+      </a>
+      <p>Lencería femenina que celebra a la reina que llevas dentro. Calidad, elegancia y comodidad en cada pieza.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/reinascarlata.lenceria/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.7a6.1 6.1 0 100 12.2 6.1 6.1 0 000-12.2zm0 10.1a4 4 0 110-8 4 4 0 010 8zm6.4-10.4a1.4 1.4 0 11-2.8 0 1.4 1.4 0 012.8 0z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61569019517795" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M13.5 21.9v-8.4h2.8l.4-3.3h-3.2V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.5c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.8v8.5h3.4z"/></svg>
+        </a>
+        <a href="https://wa.me/51997081492" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4>Explorar</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#categorias">Categorías</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Ayuda</h4>
+      <ul>
+        <li><a href="https://wa.me/51997081492?text=Hola%2C%20quisiera%20consultar%20la%20gu%C3%ADa%20de%20tallas" target="_blank" rel="noopener">Guía de tallas</a></li>
+        <li><a href="https://wa.me/51997081492?text=Hola%2C%20quisiera%20consultar%20sobre%20env%C3%ADos" target="_blank" rel="noopener">Envíos y entregas</a></li>
+        <li><a href="https://wa.me/51997081492?text=Hola%2C%20quisiera%20consultar%20sobre%20cambios%20y%20devoluciones" target="_blank" rel="noopener">Cambios y devoluciones</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/51997081492" target="_blank" rel="noopener">WhatsApp: +51 997 081 492</a></li>
+        <li><a href="mailto:elizabeth.diart@gmail.com">elizabeth.diart@gmail.com</a></li>
+        <li><span>Lima, Perú</span></li>
+        <li><span>Lun – Sáb · 9:00 a 20:00</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Reinas Carlata Lencería. Todos los derechos reservados.</span>
+    <span>Hecho con ♥ en Lima, Perú</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a class="wa-float" href="https://wa.me/51997081492?text=Hola%20Reinas%20Carlata%2C%20quiero%20hacer%20una%20consulta%20%E2%9C%A8" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+</a>
+
+<!-- CARRITO -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Carrito de compras">
+  <div class="drawer-head">
+    <h3>Tu carrito</h3>
+    <button class="drawer-close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot" id="cartFoot" style="display:none">
+    <div class="total-row grand"><span>Total</span><span id="cartTotal">S/ 0.00</span></div>
+    <a class="checkout-btn" id="checkoutBtn" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm4.6 12.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+      Finalizar pedido por WhatsApp
+    </a>
+    <p class="ship-note">El pedido se envía por WhatsApp y coordinamos pago y envío contigo.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast">Agregado al carrito ✦</div>
+
+<script>
+const PRODUCTS = [
+  {id:1, name:"Conjunto Reina Negra", cat:"conjuntos", catLabel:"Conjuntos", price:89.90, oldPrice:120.00, img:"assets/p1.jpg", badge:"Oferta"},
+  {id:2, name:"Conjunto Rosa Carlata", cat:"conjuntos", catLabel:"Conjuntos", price:79.90, oldPrice:null, img:"assets/p2.jpg", badge:"Nuevo"},
+  {id:3, name:"Body Burdeos Real", cat:"bodys", catLabel:"Bodys", price:99.90, oldPrice:null, img:"assets/p3.jpg", badge:null},
+  {id:4, name:"Bralette Marfil Sueño", cat:"bralettes", catLabel:"Bralettes", price:59.90, oldPrice:75.00, img:"assets/p4.jpg", badge:"Oferta"},
+  {id:5, name:"Pijama Satén Champagne", cat:"pijamas", catLabel:"Pijamas", price:109.90, oldPrice:null, img:"assets/p5.jpg", badge:"Nuevo"},
+  {id:6, name:"Conjunto Pasión Roja", cat:"conjuntos", catLabel:"Conjuntos", price:94.90, oldPrice:118.00, img:"assets/p6.jpg", badge:"Oferta"},
+];
+
+const fmt = n => "S/ " + n.toFixed(2);
+let cart = [];
+
+/* ---------- render catálogo ---------- */
+const grid = document.getElementById('productGrid');
+function renderProducts(filter='todos'){
+  grid.innerHTML = '';
+  PRODUCTS.forEach(p=>{
+    const isOffer = !!p.oldPrice;
+    if(filter!=='todos'){
+      if(filter==='ofertas' ? !isOffer : p.cat!==filter) return;
+    }
+    const card = document.createElement('article');
+    card.className='card reveal in';
+    card.innerHTML = `
+      <div class="card-img">
+        ${p.badge?`<span class="badge ${p.badge==='Oferta'?'gold':''}">${p.badge}</span>`:''}
+        <img src="${p.img}" alt="${p.name}" loading="lazy">
+        <button class="card-add" data-add="${p.id}">Agregar al carrito</button>
+      </div>
+      <div class="card-body">
+        <p class="card-cat">${p.catLabel}</p>
+        <h3 class="card-name">${p.name}</h3>
+        <p class="card-price">${p.oldPrice?`<s>${fmt(p.oldPrice)}</s>`:''}<strong>${fmt(p.price)}</strong></p>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+renderProducts();
+
+/* ---------- filtros ---------- */
+document.getElementById('filters').addEventListener('click', e=>{
+  const btn = e.target.closest('.filter-btn');
+  if(!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderProducts(btn.dataset.filter);
+});
+
+/* categorías → filtro */
+document.querySelectorAll('.cat').forEach(c=>{
+  c.addEventListener('click', ()=>{
+    const target = document.querySelector(`.filter-btn[data-filter="${c.dataset.cat}"]`);
+    if(target) setTimeout(()=>target.click(), 400);
+  });
+});
+
+/* ---------- carrito ---------- */
+const drawer = document.getElementById('drawer'),
+      overlay = document.getElementById('overlay'),
+      cartBody = document.getElementById('cartBody'),
+      cartFoot = document.getElementById('cartFoot'),
+      cartCount = document.getElementById('cartCount'),
+      cartTotal = document.getElementById('cartTotal'),
+      toast = document.getElementById('toast');
+
+function openCart(){ drawer.classList.add('on'); overlay.classList.add('on'); document.body.style.overflow='hidden'; }
+function closeCart(){ drawer.classList.remove('on'); overlay.classList.remove('on'); document.body.style.overflow=''; }
+document.getElementById('cartOpen').addEventListener('click', openCart);
+document.getElementById('cartClose').addEventListener('click', closeCart);
+overlay.addEventListener('click', closeCart);
+
+function showToast(msg){
+  toast.textContent = msg;
+  toast.classList.add('on');
+  setTimeout(()=>toast.classList.remove('on'), 2200);
+}
+
+function addToCart(id){
+  const item = cart.find(i=>i.id===id);
+  if(item) item.qty++;
+  else cart.push({id, qty:1});
+  updateCart();
+  showToast('Agregado al carrito ✦');
+  openCart();
+}
+
+grid.addEventListener('click', e=>{
+  const btn = e.target.closest('[data-add]');
+  if(btn) addToCart(+btn.dataset.add);
+});
+
+function updateCart(){
+  const totalQty = cart.reduce((s,i)=>s+i.qty,0);
+  cartCount.textContent = totalQty;
+  cartCount.classList.toggle('on', totalQty>0);
+  if(cart.length===0){
+    cartBody.innerHTML = `<div class="cart-empty"><span class="big">✦</span>Tu carrito está vacío.<br>Descubre piezas hechas para ti.</div>`;
+    cartFoot.style.display='none';
+    return;
+  }
+  cartFoot.style.display='block';
+  cartBody.innerHTML='';
+  let total = 0;
+  cart.forEach(i=>{
+    const p = PRODUCTS.find(x=>x.id===i.id);
+    total += p.price*i.qty;
+    const el = document.createElement('div');
+    el.className='cart-item';
+    el.innerHTML = `
+      <img src="${p.img}" alt="${p.name}">
+      <div class="ci-info">
+        <span class="ci-cat">${p.catLabel}</span>
+        <h4>${p.name}</h4>
+        <div class="ci-row">
+          <div class="qty">
+            <button data-dec="${p.id}" aria-label="Quitar uno">−</button>
+            <span>${i.qty}</span>
+            <button data-inc="${p.id}" aria-label="Agregar uno">+</button>
+          </div>
+          <span class="ci-price">${fmt(p.price*i.qty)}</span>
+        </div>
+        <button class="ci-remove" data-del="${p.id}">Eliminar</button>
+      </div>`;
+    cartBody.appendChild(el);
+  });
+  cartTotal.textContent = fmt(total);
+
+  /* mensaje de WhatsApp */
+  let lines = ["Hola Reinas Carlata, quiero hacer este pedido:", ""];
+  cart.forEach(i=>{
+    const p = PRODUCTS.find(x=>x.id===i.id);
+    lines.push(`• ${i.qty} x ${p.name} — ${fmt(p.price*i.qty)}`);
+  });
+  lines.push("", `Total: ${fmt(total)}`, "", "Quedo atenta para coordinar pago y envío. Gracias ✨");
+  document.getElementById('checkoutBtn').href =
+    "https://wa.me/51997081492?text=" + encodeURIComponent(lines.join("\n"));
+}
+
+cartBody.addEventListener('click', e=>{
+  const inc = e.target.closest('[data-inc]'),
+        dec = e.target.closest('[data-dec]'),
+        del = e.target.closest('[data-del]');
+  if(inc){ cart.find(i=>i.id===+inc.dataset.inc).qty++; updateCart(); }
+  if(dec){
+    const it = cart.find(i=>i.id===+dec.dataset.dec);
+    it.qty--; if(it.qty<=0) cart = cart.filter(i=>i!==it);
+    updateCart();
+  }
+  if(del){ cart = cart.filter(i=>i.id!==+del.dataset.del); updateCart(); }
+});
+updateCart();
+
+/* ---------- menú móvil ---------- */
+const burger = document.getElementById('burger'), navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', ()=>{
+  burger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.addEventListener('click', e=>{
+  if(e.target.tagName==='A'){ burger.classList.remove('open'); navLinks.classList.remove('open'); }
+});
+
+/* ---------- header scroll ---------- */
+const header = document.getElementById('header');
+addEventListener('scroll', ()=>header.classList.toggle('scrolled', scrollY>10), {passive:true});
+
+/* ---------- reveal on scroll ---------- */
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
