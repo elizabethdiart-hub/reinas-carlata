@@ -387,7 +387,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 .total-row{display:flex;justify-content:space-between;font-size:.95rem;margin-bottom:.4rem}
 .total-row.grand{font-size:1.15rem;font-weight:500;margin:.7rem 0 1.3rem}
 .total-row.grand span:last-child{font-family:var(--serif);font-size:1.5rem;color:var(--gold)}
-.checkout-btn{width:100%;justify-content:center;background:#25d366;color:#fff;display:flex;align-items:center;gap:.7rem;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;padding:1.1rem;transition:background .35s}
+.checkout-btn{width:100%;margin-top:1rem;justify-content:center;background:#25d366;color:#fff;display:flex;align-items:center;gap:.7rem;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;padding:1.1rem;transition:background .35s}
 .checkout-btn:hover{background:#1eb85a}
 .checkout-btn svg{width:18px;height:18px;fill:#fff}
 .ship-note{text-align:center;font-size:.7rem;color:var(--muted);margin-top:.9rem;letter-spacing:.06em}
@@ -753,16 +753,16 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
   <div class="drawer-body" id="cartBody"></div>
   <div class="drawer-foot" id="cartFoot" style="display:none">
     <div class="total-row grand"><span>Total</span><span id="cartTotal">S/ 0.00</span></div>
-    <a class="checkout-btn" id="checkoutBtn" href="#" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm4.6 12.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
-      Finalizar pedido por WhatsApp
-    </a>
     <div class="pago">
-      <a class="qr" href="/assets/yape-qr.png" target="_blank" rel="noopener" title="Ampliar el QR"><img src="/assets/yape-qr.png" width="440" height="469" loading="lazy" decoding="async" alt="Código QR de Yape de Reina Scarlata"></a>
+      <a class="qr" href="/assets/yape-qr.png" target="_blank" rel="noopener" title="Ampliar el QR"><img src="/assets/yape-qr.png" width="440" height="420" loading="lazy" decoding="async" alt="Código QR de Yape de Reina Scarlata"></a>
       <span class="pago-t">Yape</span>
       <span class="pago-n">997 081 492</span>
       <span class="pago-d">Escanea el QR o yapea al número. A nombre de Elizabeth Cinthya Jimenez Matos. Mándanos la captura por WhatsApp y despachamos.</span>
     </div>
+    <a class="checkout-btn" id="checkoutBtn" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm4.6 12.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+      Finalizar pedido por WhatsApp
+    </a>
     <p class="ship-note">En Lima también puedes pagar contra entrega.</p>
   </div>
 </aside>
