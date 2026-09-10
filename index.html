@@ -367,7 +367,8 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 .drawer-head h3{font-family:var(--serif);font-size:1.3rem;font-weight:500}
 .drawer-close{font-size:1.4rem;line-height:1;color:var(--ink-soft);transition:color .3s,transform .3s}
 .drawer-close:hover{color:var(--gold);transform:rotate(90deg)}
-.drawer-body{flex:1;overflow-y:auto;padding:.9rem 1.8rem 1.2rem}
+.drawer-scroll{flex:1;overflow-y:auto;display:flex;flex-direction:column}
+.drawer-body{padding:.9rem 1.8rem .6rem}
 .cart-empty{text-align:center;color:var(--muted);padding:4rem 1rem;font-size:.92rem}
 .cart-empty .big{font-family:var(--serif);font-size:2.6rem;color:var(--blush-deep);display:block;margin-bottom:.6rem}
 .cart-item{display:flex;gap:1rem;padding-bottom:1.3rem;margin-bottom:1.3rem;border-bottom:1px solid var(--line)}
@@ -427,14 +428,14 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 @media (prefers-reduced-motion:reduce){.faq-item summary,.faq-item summary::after{transition:none}}
 
 /* ---------- formas de pago ---------- */
-.pago{background:var(--ivory-soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:.65rem .8rem;margin-top:.8rem;display:grid;grid-template-columns:auto 1fr;gap:.1rem .75rem;align-items:center}
-.pago a.qr{grid-row:1 / span 3;display:block;line-height:0;border-radius:4px;overflow:hidden;transition:transform .3s}
+.pago{background:var(--ivory-soft);border:1px solid var(--line);border-left:3px solid var(--gold);margin:.4rem 1.8rem 1.3rem;padding:.9rem 1rem;display:flex;flex-direction:column;align-items:center;gap:.5rem;text-align:center}
+.pago a.qr{display:block;width:100%;max-width:155px;margin-top:.35rem;line-height:0;border-radius:4px;overflow:hidden;transition:transform .3s}
 .pago a.qr:hover{transform:scale(1.04)}
-.pago img{width:84px;height:auto;display:block}
-@media(max-width:400px){.pago{grid-template-columns:1fr}.pago a.qr{grid-row:auto;justify-self:center;margin-bottom:.5rem}.pago img{width:130px}}
+.pago img{width:100%;height:auto;display:block}
+@media(max-width:400px){.pago{margin:.4rem 1.1rem 1.3rem}}
 .pago .pago-t{font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-.pago .pago-n{font-family:var(--serif);font-size:1.12rem;font-weight:500;letter-spacing:.02em;color:var(--ink)}
-.pago .pago-d{font-size:.68rem;color:var(--ink-soft);line-height:1.5}
+.pago .pago-n{font-family:var(--serif);font-size:1.3rem;font-weight:500;letter-spacing:.02em;color:var(--ink)}
+.pago .pago-d{font-size:.75rem;color:var(--ink-soft);line-height:1.5}
 .foot-pago{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--line)}
 .foot-pago b{display:block;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:.5rem}
 .foot-pago span{font-size:.88rem;color:var(--ink-soft);display:block;line-height:1.6}
@@ -750,20 +751,22 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
     <h3>Tu carrito</h3>
     <button class="drawer-close" id="cartClose" aria-label="Cerrar carrito">✕</button>
   </div>
-  <div class="drawer-body" id="cartBody"></div>
-  <div class="drawer-foot" id="cartFoot" style="display:none">
-    <div class="total-row grand"><span>Total</span><span id="cartTotal">S/ 0.00</span></div>
-    <div class="pago">
-      <a class="qr" href="/assets/yape-qr.png" target="_blank" rel="noopener" title="Ampliar el QR"><img src="/assets/yape-qr.png" width="440" height="420" loading="lazy" decoding="async" alt="Código QR de Yape de Reina Scarlata"></a>
-      <span class="pago-t">Yape</span>
+  <div class="drawer-scroll">
+    <div class="drawer-body" id="cartBody"></div>
+    <div class="pago" id="pagoBox" style="display:none">
+      <span class="pago-t">Paga con Yape</span>
       <span class="pago-n">997 081 492</span>
       <span class="pago-d">A nombre de Elizabeth Cinthya Jimenez Matos. Envíanos la captura por WhatsApp.</span>
+      <a class="qr" href="/assets/yape-qr.png" target="_blank" rel="noopener" title="Ampliar el QR"><img src="/assets/yape-qr.png" width="440" height="420" loading="lazy" decoding="async" alt="Código QR de Yape de Reina Scarlata"></a>
     </div>
+  </div>
+  <div class="drawer-foot" id="cartFoot" style="display:none">
+    <div class="total-row grand"><span>Total</span><span id="cartTotal">S/ 0.00</span></div>
     <a class="checkout-btn" id="checkoutBtn" href="#" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm4.6 12.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
       Finalizar pedido por WhatsApp
     </a>
-    <p class="ship-note">En Lima también puedes pagar contra entrega.</p>
+    <p class="ship-note">En Lima también puedes pagar contra entrega.<br>* El costo de envío se coordina por WhatsApp.</p>
   </div>
 </aside>
 
@@ -831,6 +834,7 @@ const drawer = document.getElementById('drawer'),
       overlay = document.getElementById('overlay'),
       cartBody = document.getElementById('cartBody'),
       cartFoot = document.getElementById('cartFoot'),
+      pagoBox = document.getElementById('pagoBox'),
       cartCount = document.getElementById('cartCount'),
       cartTotal = document.getElementById('cartTotal'),
       toast = document.getElementById('toast');
@@ -867,10 +871,10 @@ function updateCart(){
   cartCount.classList.toggle('on', totalQty>0);
   if(cart.length===0){
     cartBody.innerHTML = `<div class="cart-empty"><span class="big">✦</span>Tu carrito está vacío.<br>Descubre piezas hechas para ti.</div>`;
-    cartFoot.style.display='none';
+    cartFoot.style.display='none'; pagoBox.style.display='none';
     return;
   }
-  cartFoot.style.display='block';
+  cartFoot.style.display='block'; pagoBox.style.display='flex';
   cartBody.innerHTML='';
   let total = 0;
   cart.forEach(i=>{
