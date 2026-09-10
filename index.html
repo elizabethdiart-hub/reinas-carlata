@@ -49,7 +49,7 @@
   "telephone": "+51997081492",
   "priceRange": "S/ 59 - S/ 110",
   "currenciesAccepted": "PEN",
-  "paymentAccepted": "Efectivo, pago contra entrega",
+  "paymentAccepted": "Yape, efectivo, pago contra entrega",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Lima",
@@ -130,7 +130,7 @@
       "name": "¿Cómo puedo pagar mi pedido?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "En Lima puedes pagar contra entrega, al recibir tu pedido. Para el resto del Perú coordinamos la forma de pago por WhatsApp antes del envío."
+        "text": "Puedes pagar con Yape o, si estás en Lima, contra entrega al recibir tu pedido. Nuestro Yape es 997 081 492, a nombre de Elizabeth Cinthya Jimenez Matos. Envíanos la captura por WhatsApp y despachamos tu pedido."
       }
     },
     {
@@ -425,11 +425,26 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 .faq-a{padding:0 3rem 1.7rem 0;color:var(--ink-soft);max-width:62ch}
 .faq-a a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 @media (prefers-reduced-motion:reduce){.faq-item summary,.faq-item summary::after{transition:none}}
+
+/* ---------- formas de pago ---------- */
+.pago{background:var(--ivory-soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:.9rem 1rem;margin-top:1rem;display:flex;flex-direction:column;gap:.3rem}
+.pago .pago-t{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.pago .pago-n{font-family:var(--serif);font-size:1.35rem;font-weight:500;letter-spacing:.02em;color:var(--ink)}
+.pago .pago-d{font-size:.78rem;color:var(--ink-soft);line-height:1.5}
+.foot-pago{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+.foot-pago b{display:block;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:.5rem}
+.foot-pago span{font-size:.88rem;color:var(--ink-soft);display:block;line-height:1.6}
+
+/* ---------- aviso de ayuda en el catálogo ---------- */
+.ayuda-tallas{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin:1.6rem 0 0;padding:.85rem 1.1rem;background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);font-size:.9rem;color:var(--ink-soft)}
+.ayuda-tallas a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-weight:400}
+.ayuda-tallas a:hover{color:var(--ink)}
+.ayuda-tallas .sep{color:var(--line);padding:0 .2rem}
 </style>
 </head>
 <body>
 
-<div class="announce">Envíos a todo Lima y el Perú &nbsp;<span>✦</span>&nbsp; Pago contra entrega en Lima &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp</div>
+<div class="announce">Envíos a todo Lima y el Perú &nbsp;<span>✦</span>&nbsp; Yape o pago contra entrega &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp</div>
 
 <header id="header">
   <nav class="nav">
@@ -531,6 +546,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
         <button class="filter-btn" data-filter="ofertas">Ofertas</button>
       </div>
     </div>
+    <p class="ayuda-tallas">¿No sabes qué talla pedir? <a href="/guia-de-tallas/">Mira la guía de tallas</a> <span class="sep">·</span> <a href="/cuidados-del-encaje/">Cómo cuidar tu encaje</a></p>
     <div class="grid" id="productGrid"></div>
   </div>
 </section>
@@ -623,7 +639,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 
       <details class="faq-item">
         <summary>¿Cómo puedo pagar mi pedido?</summary>
-        <div class="faq-a">En Lima puedes pagar contra entrega, al recibir tu pedido. Para el resto del Perú coordinamos la forma de pago por WhatsApp antes del envío.</div>
+        <div class="faq-a">Puedes pagar con <b>Yape</b> o, si estás en Lima, contra entrega al recibir tu pedido. Nuestro Yape es <b>997 081 492</b>, a nombre de Elizabeth Cinthya Jimenez Matos. Envíanos la captura por WhatsApp y despachamos tu pedido.</div>
       </details>
 
       <details class="faq-item">
@@ -704,6 +720,12 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
         <li><span>Lima, Perú</span></li>
         <li><span>Lun – Sáb · 9:00 a 20:00</span></li>
       </ul>
+      <div class="foot-pago">
+        <b>Formas de pago</b>
+        <span>Yape: 997 081 492</span>
+        <span>Elizabeth Cinthya Jimenez Matos</span>
+        <span>Contra entrega en Lima</span>
+      </div>
     </div>
   </div>
   <div class="foot-bottom">
@@ -731,7 +753,12 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
       <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm4.6 12.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
       Finalizar pedido por WhatsApp
     </a>
-    <p class="ship-note">El pedido se envía por WhatsApp y coordinamos pago y envío contigo.</p>
+    <div class="pago">
+      <span class="pago-t">Yape</span>
+      <span class="pago-n">997 081 492</span>
+      <span class="pago-d">A nombre de Elizabeth Cinthya Jimenez Matos. Envíanos la captura por WhatsApp y despachamos tu pedido.</span>
+    </div>
+    <p class="ship-note">En Lima también puedes pagar contra entrega.</p>
   </div>
 </aside>
 
