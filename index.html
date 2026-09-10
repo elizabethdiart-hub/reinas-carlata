@@ -905,6 +905,41 @@ const io = new IntersectionObserver(entries=>{
   entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---------- eventos de conversión (GA4) ---------- */
+function origenWhatsApp(a){
+  if(a.id === 'checkoutBtn')            return 'carrito';
+  if(a.classList.contains('wa-float'))  return 'boton_flotante';
+  if(a.closest('.hero'))                return 'portada';
+  if(a.closest('.offer'))               return 'oferta';
+  if(a.closest('.faq-sec'))             return 'preguntas';
+  if(a.closest('footer'))               return 'pie';
+  return 'otro';
+}
+
+document.addEventListener('click', e=>{
+  const a = e.target.closest('a[href*="wa.me"]');
+  if(!a || typeof gtag !== 'function') return;
+
+  const origen = origenWhatsApp(a);
+
+  /* el carrito además dispara el evento de e-commerce estándar,
+     que GA4 ya sabe reportar sin configuración extra */
+  if(origen === 'carrito' && cart.length){
+    const total = cart.reduce((s,i)=> s + PRODUCTS.find(x=>x.id===i.id).price * i.qty, 0);
+    gtag('event','begin_checkout',{
+      currency:'PEN',
+      value: +total.toFixed(2),
+      items: cart.map((i,idx)=>{
+        const p = PRODUCTS.find(x=>x.id===i.id);
+        return { item_id:'RS-00'+p.id, item_name:p.name, item_category:p.catLabel,
+                 price:p.price, quantity:i.qty, index:idx };
+      })
+    });
+  }
+
+  gtag('event','click_whatsapp',{ origen: origen, pagina: location.pathname });
+}, true);
 </script>
 </body>
 </html>

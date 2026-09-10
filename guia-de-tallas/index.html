@@ -440,6 +440,17 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
   addEventListener('scroll', () => {
     document.getElementById('header').classList.toggle('scrolled', scrollY > 10);
   }, {passive:true});
+
+  /* ---------- eventos de conversión (GA4) ---------- */
+  document.addEventListener('click', e=>{
+    const a = e.target.closest('a[href*="wa.me"]');
+    if(!a || typeof gtag !== 'function') return;
+    const origen = a.classList.contains('wa-float') ? 'boton_flotante'
+                 : a.closest('.cierre')            ? 'cierre_guia'
+                 : a.closest('footer')             ? 'pie'
+                 : 'guia_tallas';
+    gtag('event','click_whatsapp',{ origen: origen, pagina: location.pathname });
+  }, true);
 </script>
 
 </body>
