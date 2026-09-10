@@ -427,7 +427,11 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 @media (prefers-reduced-motion:reduce){.faq-item summary,.faq-item summary::after{transition:none}}
 
 /* ---------- formas de pago ---------- */
-.pago{background:var(--ivory-soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:.9rem 1rem;margin-top:1rem;display:flex;flex-direction:column;gap:.3rem}
+.pago{background:var(--ivory-soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:.9rem 1rem;margin-top:1rem;display:grid;grid-template-columns:auto 1fr;gap:.2rem .9rem;align-items:center}
+.pago a.qr{grid-row:1 / span 3;display:block;line-height:0;border-radius:4px;overflow:hidden;transition:transform .3s}
+.pago a.qr:hover{transform:scale(1.04)}
+.pago img{width:132px;height:auto;display:block}
+@media(max-width:400px){.pago{grid-template-columns:1fr}.pago a.qr{grid-row:auto;justify-self:center;margin-bottom:.6rem}.pago img{width:190px}}
 .pago .pago-t{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
 .pago .pago-n{font-family:var(--serif);font-size:1.35rem;font-weight:500;letter-spacing:.02em;color:var(--ink)}
 .pago .pago-d{font-size:.78rem;color:var(--ink-soft);line-height:1.5}
@@ -754,9 +758,10 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
       Finalizar pedido por WhatsApp
     </a>
     <div class="pago">
+      <a class="qr" href="/assets/yape-qr.png" target="_blank" rel="noopener" title="Ampliar el QR"><img src="/assets/yape-qr.png" width="440" height="469" loading="lazy" decoding="async" alt="Código QR de Yape de Reina Scarlata"></a>
       <span class="pago-t">Yape</span>
       <span class="pago-n">997 081 492</span>
-      <span class="pago-d">A nombre de Elizabeth Cinthya Jimenez Matos. Envíanos la captura por WhatsApp y despachamos tu pedido.</span>
+      <span class="pago-d">Escanea el QR o yapea al número. A nombre de Elizabeth Cinthya Jimenez Matos. Mándanos la captura por WhatsApp y despachamos.</span>
     </div>
     <p class="ship-note">En Lima también puedes pagar contra entrega.</p>
   </div>
