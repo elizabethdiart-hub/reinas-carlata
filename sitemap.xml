@@ -1,10 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://reinascarlata.com/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://reinascarlata.com/assets/hero.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://reinascarlata.com/conjunto-hortencia/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-hortencia-1.jpg</image:loc></image:image>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-hortencia-2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-hortencia-3.jpg</image:loc></image:image>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-hortencia-4.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://reinascarlata.com/conjunto-reina-de-corazones/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-reina-de-corazones-3.jpg</image:loc></image:image>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-reina-de-corazones-1.jpg</image:loc></image:image>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-reina-de-corazones-4.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://reinascarlata.com/conjunto-reina-de-rosas/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-reina-de-rosas-1.jpg</image:loc></image:image>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-reina-de-rosas-2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-reina-de-rosas-3.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://reinascarlata.com/conjunto-buganvilla/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-buganvilla-1.jpg</image:loc></image:image>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-buganvilla-3.jpg</image:loc></image:image>
+    <image:image><image:loc>https://reinascarlata.com/assets/conjunto-buganvilla-4.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://reinascarlata.com/conjunto-reina-negra/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://reinascarlata.com/assets/p1.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://reinascarlata.com/conjunto-rosa-carlata/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://reinascarlata.com/assets/p2.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://reinascarlata.com/body-burdeos-real/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://reinascarlata.com/assets/p3.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://reinascarlata.com/bralette-marfil-sueno/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://reinascarlata.com/assets/p4.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://reinascarlata.com/pijama-saten-champagne/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://reinascarlata.com/assets/p5.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://reinascarlata.com/guia-de-tallas/</loc>
