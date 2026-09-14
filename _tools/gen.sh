@@ -5,7 +5,7 @@ SP="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$SP/.." && pwd)"
 SITE="https://reinascarlata.com"
 
-SLUGS=(conjunto-petunia conjunto-jazmin-rosa conjunto-azucena conjunto-hortencia conjunto-reina-de-corazones conjunto-reina-de-rosas conjunto-buganvilla conjunto-reina-negra conjunto-rosa-carlata body-burdeos-real bralette-marfil-sueno pijama-saten-champagne)
+SLUGS=(conjunto-petunia conjunto-jazmin-rosa conjunto-azucena conjunto-hortencia conjunto-reina-de-corazones conjunto-reina-de-rosas conjunto-buganvilla body-burdeos-real bralette-marfil-sueno pijama-saten-champagne)
 
 declare -A SKU NAME CAT CATLABEL PRICE OLDPRICE IMG BADGE TITLE METADESC ALT DESCLONG SPECS SEOH SEOP1 SEOP2 WANAME GALLERY SIZES NOTA MEDIDAS
 
@@ -169,44 +169,6 @@ GALLERY[conjunto-reina-de-rosas]="conjunto-reina-de-rosas-1.jpg::1000::1500::Con
 SIZES[conjunto-reina-de-rosas]="S,M,L"
 NOTA[conjunto-reina-de-rosas]="Stock actual: <b>1 unidad en talla S, 2 en M y 1 en L</b>."
 MEDIDAS[conjunto-reina-de-rosas]="Talla::Equivalencia US::Contorno bajo busto::Cintura de la tanga|S::32C · 32D · 34A · 34B::74–77 cm::66 cm|M::34C · 36A · 36B::78–81 cm::70 cm|L::34D · 36C · 38A · 38B::82–85 cm::76 cm"
-
-# ---------------- RS-001 ----------------
-SKU[conjunto-reina-negra]="RS-001"
-NAME[conjunto-reina-negra]="Conjunto Reina Negra"
-CAT[conjunto-reina-negra]="conjuntos"
-CATLABEL[conjunto-reina-negra]="Conjuntos"
-PRICE[conjunto-reina-negra]="89.90"
-OLDPRICE[conjunto-reina-negra]="120.00"
-IMG[conjunto-reina-negra]="p1.jpg"
-BADGE[conjunto-reina-negra]="Oferta"
-WANAME[conjunto-reina-negra]="Conjunto%20Reina%20Negra"
-TITLE[conjunto-reina-negra]="Conjunto de encaje negro Reina Negra | Reina Scarlata"
-METADESC[conjunto-reina-negra]="Conjunto de encaje floral negro: brasier con aro y calzón festoneado. S/ 89.90 antes S/ 120. Envíos a todo el Perú, Yape o pago contra entrega en Lima."
-ALT[conjunto-reina-negra]="Conjunto de lencería de encaje floral negro Reina Scarlata, brasier con aro y calzón festoneado"
-DESCLONG[conjunto-reina-negra]="Conjunto de dos piezas en encaje floral negro. Brasier con aro y copa forrada, tirantes regulables y lazo satinado al centro. Calzón a juego con encaje festoneado y transparencias."
-SPECS[conjunto-reina-negra]="Encaje floral negro en las dos piezas|Brasier con aro y copa forrada|Tirantes regulables|Lazo satinado al centro|Calzón a juego con encaje festoneado y transparencias"
-SEOH[conjunto-reina-negra]="El negro que <em>nunca</em> falla"
-SEOP1[conjunto-reina-negra]="El conjunto de encaje negro es la pieza con la que casi todas empiezan, y por una buena razón: combina con todo, se siente elegante sin esfuerzo y funciona igual para un día cualquiera que para una ocasión especial. El encaje floral de este conjunto tiene cuerpo y caída, no se arruga dentro del cajón y mantiene su forma lavado tras lavado si lo cuidas a mano."
-SEOP2[conjunto-reina-negra]="El brasier tiene aro y copa forrada, así que sostiene de verdad en lugar de solo cubrir, y los tirantes regulables te dejan ajustarlo a tu espalda. El calzón repite el encaje festoneado con transparencias en los costados. Si dudas entre dos tallas, escríbenos por WhatsApp con tus medidas antes de pedir."
-
-# ---------------- RS-002 ----------------
-SKU[conjunto-rosa-carlata]="RS-002"
-NAME[conjunto-rosa-carlata]="Conjunto Rosa Carlata"
-CAT[conjunto-rosa-carlata]="conjuntos"
-CATLABEL[conjunto-rosa-carlata]="Conjuntos"
-PRICE[conjunto-rosa-carlata]="79.90"
-OLDPRICE[conjunto-rosa-carlata]=""
-IMG[conjunto-rosa-carlata]="p2.jpg"
-BADGE[conjunto-rosa-carlata]="Nuevo"
-WANAME[conjunto-rosa-carlata]="Conjunto%20Rosa%20Carlata"
-TITLE[conjunto-rosa-carlata]="Conjunto de satén rosa palo con encaje | Reina Scarlata"
-METADESC[conjunto-rosa-carlata]="Conjunto de satén rosa palo con encaje festoneado, copa acolchada y lazos. S/ 79.90. Envíos a todo el Perú, Yape o pago contra entrega en Lima."
-ALT[conjunto-rosa-carlata]="Conjunto de lencería de satén rosa palo Reina Scarlata con encaje festoneado y lazos"
-DESCLONG[conjunto-rosa-carlata]="Conjunto en satén rosa palo con encaje festoneado. Brasier de copa acolchada con lazos en los tirantes y al centro, y calzón satinado con paneles de encaje a los costados."
-SPECS[conjunto-rosa-carlata]="Satén rosa palo con encaje festoneado|Brasier de copa acolchada|Lazos en los tirantes y al centro|Calzón satinado con paneles de encaje a los costados"
-SEOH[conjunto-rosa-carlata]="Satén rosa, el lado más <em>suave</em>"
-SEOP1[conjunto-rosa-carlata]="El rosa palo es el tono al que vuelven las clientas que quieren algo romántico sin caer en lo obvio. El satén le da un brillo discreto que el encaje solo no consigue, y la combinación de las dos telas hace que el conjunto se vea mucho más caro de lo que cuesta. Es también de los tonos que mejor quedan bajo ropa clara."
-SEOP2[conjunto-rosa-carlata]="La copa acolchada da forma sin necesidad de relleno extra y los lazos, tanto en los tirantes como al centro, son el detalle que hace que esta pieza funcione muy bien como regalo. El calzón repite el satén con paneles de encaje a los costados. El satén pide lavado a mano con agua fría: en nuestra guía de cuidados te explicamos cómo hacerlo sin que pierda el brillo."
 
 # ---------------- RS-003 ----------------
 SKU[body-burdeos-real]="RS-003"
