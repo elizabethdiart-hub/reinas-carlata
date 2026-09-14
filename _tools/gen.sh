@@ -7,7 +7,7 @@ SITE="https://reinascarlata.com"
 
 SLUGS=(conjunto-petunia conjunto-jazmin-rosa conjunto-azucena conjunto-hortencia conjunto-reina-de-corazones conjunto-reina-de-rosas conjunto-buganvilla body-burdeos-real bralette-marfil-sueno pijama-saten-champagne)
 
-declare -A SKU NAME CAT CATLABEL PRICE OLDPRICE IMG BADGE TITLE METADESC ALT DESCLONG SPECS SEOH SEOP1 SEOP2 WANAME GALLERY SIZES NOTA MEDIDAS
+declare -A SKU NAME CAT CATLABEL PRICE OLDPRICE IMG BADGE ADDED TITLE METADESC ALT DESCLONG SPECS SEOH SEOP1 SEOP2 WANAME GALLERY SIZES NOTA MEDIDAS
 
 # ---------------- RS-013 ----------------
 SKU[conjunto-petunia]="RS-013"
@@ -18,6 +18,7 @@ PRICE[conjunto-petunia]="89.90"
 OLDPRICE[conjunto-petunia]=""
 IMG[conjunto-petunia]="conjunto-petunia-1.jpg"
 BADGE[conjunto-petunia]="Nuevo"
+ADDED[conjunto-petunia]="2026-09-13"
 WANAME[conjunto-petunia]="Conjunto%20Petunia"
 TITLE[conjunto-petunia]="Conjunto de encaje rosa Petunia | Reina Scarlata"
 METADESC[conjunto-petunia]="Conjunto Petunia: tul rosa con petunias bordadas en relieve en degradado de rosa a fucsia y encaje festoneado. S/ 89.90, tallas S a XL. Envíos a todo el Perú y pago con Yape."
@@ -41,6 +42,7 @@ PRICE[conjunto-jazmin-rosa]="69.90"
 OLDPRICE[conjunto-jazmin-rosa]=""
 IMG[conjunto-jazmin-rosa]="conjunto-jazmin-rosa-1.jpg"
 BADGE[conjunto-jazmin-rosa]="Nuevo"
+ADDED[conjunto-jazmin-rosa]="2026-09-13"
 WANAME[conjunto-jazmin-rosa]="Conjunto%20Jazm%C3%ADn%20Rosa"
 TITLE[conjunto-jazmin-rosa]="Conjunto de encaje rosa Jazmín Rosa | Reina Scarlata"
 METADESC[conjunto-jazmin-rosa]="Conjunto Jazmín Rosa: tul rosa con florecitas bordadas en rosa y fucsia y hojas verdes. S/ 69.90, tallas S a XL. Envíos a todo el Perú y pago con Yape."
@@ -64,6 +66,7 @@ PRICE[conjunto-azucena]="79.90"
 OLDPRICE[conjunto-azucena]=""
 IMG[conjunto-azucena]="conjunto-azucena-1.jpg"
 BADGE[conjunto-azucena]="Nuevo"
+ADDED[conjunto-azucena]="2026-09-13"
 WANAME[conjunto-azucena]="Conjunto%20Azucena"
 TITLE[conjunto-azucena]="Conjunto de encaje blanco Azucena | Reina Scarlata"
 METADESC[conjunto-azucena]="Conjunto Azucena: tul nude con azucenas bordadas en relieve en blanco marfil y escote profundo en V. S/ 79.90, tallas S, M y L. Envíos a todo el Perú y pago con Yape."
@@ -87,6 +90,7 @@ PRICE[conjunto-hortencia]="89.00"
 OLDPRICE[conjunto-hortencia]=""
 IMG[conjunto-hortencia]="conjunto-hortencia-1.jpg"
 BADGE[conjunto-hortencia]="Nuevo"
+ADDED[conjunto-hortencia]="2026-09-12"
 WANAME[conjunto-hortencia]="Conjunto%20Hortencia"
 TITLE[conjunto-hortencia]="Conjunto de encaje lila Hortencia | Reina Scarlata"
 METADESC[conjunto-hortencia]="Conjunto Hortencia: tul menta con hortensias bordadas en relieve en lila, marfil y celeste. S/ 89.00, tallas S a XL. Envíos a todo el Perú y pago con Yape."
@@ -110,6 +114,7 @@ PRICE[conjunto-reina-de-corazones]="69.00"
 OLDPRICE[conjunto-reina-de-corazones]=""
 IMG[conjunto-reina-de-corazones]="conjunto-reina-de-corazones-3.jpg"
 BADGE[conjunto-reina-de-corazones]="Nuevo"
+ADDED[conjunto-reina-de-corazones]="2026-09-12"
 WANAME[conjunto-reina-de-corazones]="Conjunto%20Reina%20de%20Corazones"
 TITLE[conjunto-reina-de-corazones]="Conjunto de encaje negro con corazones | Reina Scarlata"
 METADESC[conjunto-reina-de-corazones]="Conjunto Reina de Corazones: brasier de tul con corazones bordados y tanga de amarrar con cintas de satén. S/ 69.00, tallas S, M y L. Envíos a todo el Perú."
@@ -156,6 +161,7 @@ PRICE[conjunto-reina-de-rosas]="89.00"
 OLDPRICE[conjunto-reina-de-rosas]=""
 IMG[conjunto-reina-de-rosas]="conjunto-reina-de-rosas-1.jpg"
 BADGE[conjunto-reina-de-rosas]="Nuevo"
+ADDED[conjunto-reina-de-rosas]="2026-09-12"
 WANAME[conjunto-reina-de-rosas]="Conjunto%20Reina%20de%20Rosas"
 TITLE[conjunto-reina-de-rosas]="Conjunto de encaje rojo Reina de Rosas | Reina Scarlata"
 METADESC[conjunto-reina-de-rosas]="Conjunto Reina de Rosas: corset de tul con rosas bordadas en relieve y tanga a juego. S/ 89.00, tallas S, M y L. Envíos a todo el Perú y pago con Yape."
@@ -217,6 +223,7 @@ PRICE[pijama-saten-champagne]="109.90"
 OLDPRICE[pijama-saten-champagne]=""
 IMG[pijama-saten-champagne]="p5.jpg"
 BADGE[pijama-saten-champagne]="Nuevo"
+ADDED[pijama-saten-champagne]="2026-09-09"
 WANAME[pijama-saten-champagne]="Pijama%20Sat%C3%A9n%20Champagne"
 TITLE[pijama-saten-champagne]="Pijama de satén champagne de dos piezas | Reina Scarlata"
 METADESC[pijama-saten-champagne]="Pijama de satén champagne: top con escote en V y encaje, y short con pretina elástica. S/ 109.90. Envíos a todo el Perú y pago con Yape."
@@ -233,6 +240,7 @@ for s in "${SLUGS[@]}"; do
   SIZES[$s]="${SIZES[$s]:-}"
   NOTA[$s]="${NOTA[$s]:-}"
   MEDIDAS[$s]="${MEDIDAS[$s]:-}"
+  ADDED[$s]="${ADDED[$s]:-}"
 done
 
 # ---------------- helpers ----------------
@@ -367,7 +375,10 @@ for i in "${!SLUGS[@]}"; do
   # badge
   if [ -n "$badge" ]; then
     cls="badge"; [ "$badge" = "Oferta" ] && cls="badge gold"
-    badge_html="<span class=\"${cls}\">${badge}</span>"
+    # con fecha de alta, "Nuevo" lleva data-nuevo y el script de la ficha lo quita a los 7 días
+    nuevo_attr=""
+    if [ "$badge" = "Nuevo" ] && [ -n "${ADDED[$slug]}" ]; then nuevo_attr=" data-nuevo=\"${ADDED[$slug]}\""; fi
+    badge_html="<span class=\"${cls}\"${nuevo_attr}>${badge}</span>"
   else
     badge_html=""
   fi
@@ -557,6 +568,10 @@ BODY2
   cat <<'TAIL'
 
 <script>
+  /* la etiqueta "Nuevo" desaparece sola a los 7 días del alta de la ficha */
+  document.querySelectorAll('.badge[data-nuevo]').forEach(b=>{
+    if((Date.now() - Date.parse(b.dataset.nuevo + 'T00:00:00-05:00')) / 864e5 >= 7) b.remove();
+  });
   const burger = document.getElementById('burger');
   const navLinks = document.getElementById('navLinks');
   burger.addEventListener('click', () => {

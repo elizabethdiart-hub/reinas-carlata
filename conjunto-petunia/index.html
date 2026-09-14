@@ -340,7 +340,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 <section class="prod">
   <div class="wrap prod-grid">
     <div class="prod-media-col">
-      <span class="badge">Nuevo</span>
+      <span class="badge" data-nuevo="2026-09-13">Nuevo</span>
       <div class="gal-main">
         <img id="galMain" src="/assets/conjunto-petunia-1.jpg" width="1000" height="1500" fetchpriority="high" decoding="async" alt="Conjunto Petunia de Reina Scarlata sobre maniquí, brasier de tul rosa con petunias bordadas y encaje festoneado">
       </div>
@@ -526,6 +526,10 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 
 
 <script>
+  /* la etiqueta "Nuevo" desaparece sola a los 7 días del alta de la ficha */
+  document.querySelectorAll('.badge[data-nuevo]').forEach(b=>{
+    if((Date.now() - Date.parse(b.dataset.nuevo + 'T00:00:00-05:00')) / 864e5 >= 7) b.remove();
+  });
   const burger = document.getElementById('burger');
   const navLinks = document.getElementById('navLinks');
   burger.addEventListener('click', () => {

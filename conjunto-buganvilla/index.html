@@ -518,6 +518,10 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 
 
 <script>
+  /* la etiqueta "Nuevo" desaparece sola a los 7 días del alta de la ficha */
+  document.querySelectorAll('.badge[data-nuevo]').forEach(b=>{
+    if((Date.now() - Date.parse(b.dataset.nuevo + 'T00:00:00-05:00')) / 864e5 >= 7) b.remove();
+  });
   const burger = document.getElementById('burger');
   const navLinks = document.getElementById('navLinks');
   burger.addEventListener('click', () => {

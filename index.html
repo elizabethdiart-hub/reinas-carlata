@@ -311,6 +311,7 @@ section{padding:6.5rem 2rem}
 .card-cat{font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
 .card-name{font-family:var(--serif);font-size:1.32rem;font-weight:500;margin-bottom:.45rem}
 .card-price{font-size:.95rem;letter-spacing:.06em}
+.ver-mas{text-align:center;margin-top:3rem}
 .card-price s{color:var(--muted);font-size:.8rem;margin-right:.55rem}
 .card-price strong{font-weight:500;color:var(--ink)}
 
@@ -570,6 +571,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
     </div>
     <p class="ayuda-tallas">¿No sabes qué talla pedir? <a href="/guia-de-tallas/">Mira la guía de tallas</a> <span class="sep">·</span> <a href="/cuidados-del-encaje/">Cómo cuidar tu encaje</a></p>
     <div class="grid" id="productGrid"></div>
+    <div class="ver-mas" id="verMasWrap" hidden><button type="button" class="btn btn-dark" id="verMas">Ver más piezas</button></div>
   </div>
 </section>
 
@@ -790,16 +792,16 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 
 <script>
 const PRODUCTS = [
-  {id:13, name:"Conjunto Petunia", slug:"conjunto-petunia", alt:"Conjunto Petunia de Reina Scarlata, brasier de tul rosa con petunias bordadas en degradado rosa y encaje festoneado", cat:"conjuntos", catLabel:"Conjuntos", price:89.90, oldPrice:null, img:"assets/conjunto-petunia-1.jpg", badge:"Nuevo"},
-  {id:12, name:"Conjunto Jazmín Rosa", slug:"conjunto-jazmin-rosa", alt:"Conjunto Jazmín Rosa de Reina Scarlata, brasier de tul rosa con florecitas bordadas en rosa, fucsia y verde", cat:"conjuntos", catLabel:"Conjuntos", price:69.90, oldPrice:null, img:"assets/conjunto-jazmin-rosa-1.jpg", badge:"Nuevo"},
-  {id:11, name:"Conjunto Azucena", slug:"conjunto-azucena", alt:"Conjunto Azucena de Reina Scarlata, brasier de tul nude con azucenas bordadas en blanco y escote profundo en V", cat:"conjuntos", catLabel:"Conjuntos", price:79.90, oldPrice:null, img:"assets/conjunto-azucena-1.jpg", badge:"Nuevo"},
-  {id:10, name:"Conjunto Hortencia", slug:"conjunto-hortencia", alt:"Conjunto Hortencia de Reina Scarlata, brasier de tul menta con hortensias bordadas en lila y marfil", cat:"conjuntos", catLabel:"Conjuntos", price:89.00, oldPrice:null, img:"assets/conjunto-hortencia-1.jpg", badge:"Nuevo"},
-  {id:9, name:"Conjunto Reina de Corazones", slug:"conjunto-reina-de-corazones", alt:"Conjunto Reina de Corazones de Reina Scarlata, brasier de encaje negro con corazones bordados y tanga de amarrar", cat:"conjuntos", catLabel:"Conjuntos", price:69.00, oldPrice:null, img:"assets/conjunto-reina-de-corazones-3.jpg", badge:"Nuevo"},
-  {id:7, name:"Conjunto Reina de Rosas", slug:"conjunto-reina-de-rosas", alt:"Conjunto Reina de Rosas de Reina Scarlata, corset de encaje rojo con rosas bordadas y tanga a juego", cat:"conjuntos", catLabel:"Conjuntos", price:89.00, oldPrice:null, img:"assets/conjunto-reina-de-rosas-1.jpg", badge:"Nuevo"},
+  {id:13, name:"Conjunto Petunia", slug:"conjunto-petunia", alt:"Conjunto Petunia de Reina Scarlata, brasier de tul rosa con petunias bordadas en degradado rosa y encaje festoneado", cat:"conjuntos", catLabel:"Conjuntos", price:89.90, oldPrice:null, img:"assets/conjunto-petunia-1.jpg", added:"2026-09-13", badge:"Nuevo"},
+  {id:12, name:"Conjunto Jazmín Rosa", slug:"conjunto-jazmin-rosa", alt:"Conjunto Jazmín Rosa de Reina Scarlata, brasier de tul rosa con florecitas bordadas en rosa, fucsia y verde", cat:"conjuntos", catLabel:"Conjuntos", price:69.90, oldPrice:null, img:"assets/conjunto-jazmin-rosa-1.jpg", added:"2026-09-13", badge:"Nuevo"},
+  {id:11, name:"Conjunto Azucena", slug:"conjunto-azucena", alt:"Conjunto Azucena de Reina Scarlata, brasier de tul nude con azucenas bordadas en blanco y escote profundo en V", cat:"conjuntos", catLabel:"Conjuntos", price:79.90, oldPrice:null, img:"assets/conjunto-azucena-1.jpg", added:"2026-09-13", badge:"Nuevo"},
+  {id:10, name:"Conjunto Hortencia", slug:"conjunto-hortencia", alt:"Conjunto Hortencia de Reina Scarlata, brasier de tul menta con hortensias bordadas en lila y marfil", cat:"conjuntos", catLabel:"Conjuntos", price:89.00, oldPrice:null, img:"assets/conjunto-hortencia-1.jpg", added:"2026-09-12", badge:"Nuevo"},
+  {id:9, name:"Conjunto Reina de Corazones", slug:"conjunto-reina-de-corazones", alt:"Conjunto Reina de Corazones de Reina Scarlata, brasier de encaje negro con corazones bordados y tanga de amarrar", cat:"conjuntos", catLabel:"Conjuntos", price:69.00, oldPrice:null, img:"assets/conjunto-reina-de-corazones-3.jpg", added:"2026-09-12", badge:"Nuevo"},
+  {id:7, name:"Conjunto Reina de Rosas", slug:"conjunto-reina-de-rosas", alt:"Conjunto Reina de Rosas de Reina Scarlata, corset de encaje rojo con rosas bordadas y tanga a juego", cat:"conjuntos", catLabel:"Conjuntos", price:89.00, oldPrice:null, img:"assets/conjunto-reina-de-rosas-1.jpg", added:"2026-09-12", badge:"Nuevo"},
   {id:8, name:"Conjunto Buganvilla", slug:"conjunto-buganvilla", alt:"Conjunto Buganvilla de Reina Scarlata, brasier de encaje fucsia con bordado floral y tanga a juego", cat:"conjuntos", catLabel:"Conjuntos", price:79.00, oldPrice:null, img:"assets/conjunto-buganvilla-portada.jpg", badge:"Última unidad"},
   {id:3, name:"Body Burdeos Real", slug:"body-burdeos-real", alt:"Body de encaje floral burdeos Reina Scarlata con escote profundo en V y herrajes dorados", cat:"bodys", catLabel:"Bodys", price:99.90, oldPrice:null, img:"assets/p3.jpg", badge:null},
   {id:4, name:"Bralette Marfil Sueño", slug:"bralette-marfil-sueno", alt:"Bralette triangular de encaje marfil Reina Scarlata, sin aro, con borde de pestaña festoneada", cat:"bralettes", catLabel:"Bralettes", price:59.90, oldPrice:75.00, img:"assets/p4.jpg", badge:"Oferta"},
-  {id:5, name:"Pijama Satén Champagne", slug:"pijama-saten-champagne", alt:"Pijama de satén champagne Reina Scarlata de dos piezas, top con escote en V y short con encaje", cat:"pijamas", catLabel:"Pijamas", price:109.90, oldPrice:null, img:"assets/p5.jpg", badge:"Nuevo"},
+  {id:5, name:"Pijama Satén Champagne", slug:"pijama-saten-champagne", alt:"Pijama de satén champagne Reina Scarlata de dos piezas, top con escote en V y short con encaje", cat:"pijamas", catLabel:"Pijamas", price:109.90, oldPrice:null, img:"assets/p5.jpg", added:"2026-09-09", badge:"Nuevo"},
 ];
 
 const fmt = n => "S/ " + n.toFixed(2);
@@ -807,18 +809,29 @@ let cart = [];
 
 /* ---------- render catálogo ---------- */
 const grid = document.getElementById('productGrid');
-function renderProducts(filter='todos'){
+const verMasWrap = document.getElementById('verMasWrap');
+const verMasBtn = document.getElementById('verMas');
+const POR_PAGINA = 8;   // piezas visibles antes del botón "Ver más"
+const DIAS_NUEVO = 7;   // la etiqueta "Nuevo" desaparece sola pasados estos días desde "added"
+let filtroActual = 'todos', visibles = POR_PAGINA;
+
+function esNuevo(p){
+  if(!p.added) return false;
+  return (Date.now() - Date.parse(p.added + 'T00:00:00-05:00')) / 864e5 < DIAS_NUEVO;
+}
+const etiqueta = p => p.badge === 'Nuevo' && !esNuevo(p) ? null : p.badge;
+
+function renderProducts(filter = filtroActual){
+  if(filter !== filtroActual){ filtroActual = filter; visibles = POR_PAGINA; }
+  const lista = PRODUCTS.filter(p => filter === 'todos' ? true : filter === 'ofertas' ? !!p.oldPrice : p.cat === filter);
   grid.innerHTML = '';
-  PRODUCTS.forEach(p=>{
-    const isOffer = !!p.oldPrice;
-    if(filter!=='todos'){
-      if(filter==='ofertas' ? !isOffer : p.cat!==filter) return;
-    }
+  lista.slice(0, visibles).forEach(p=>{
+    const badge = etiqueta(p);
     const card = document.createElement('article');
     card.className='card reveal in';
     card.innerHTML = `
       <div class="card-img">
-        ${p.badge?`<span class="badge ${p.badge==='Oferta'?'gold':''}">${p.badge}</span>`:''}
+        ${badge?`<span class="badge ${badge==='Oferta'?'gold':''}">${badge}</span>`:''}
         <a href="/${p.slug}/" aria-label="Ver ${p.name}"><img src="${p.img}" alt="${p.alt}" loading="lazy" width="800" height="1200" decoding="async"></a>
         <button class="card-add" data-add="${p.id}">Agregar al carrito</button>
       </div>
@@ -829,8 +842,12 @@ function renderProducts(filter='todos'){
       </div>`;
     grid.appendChild(card);
   });
+  const quedan = lista.length - visibles;
+  verMasWrap.hidden = quedan <= 0;
+  if(quedan > 0) verMasBtn.textContent = `Ver más piezas (${quedan})`;
 }
 renderProducts();
+verMasBtn.addEventListener('click', ()=>{ visibles += POR_PAGINA; renderProducts(); });
 
 /* ---------- filtros ---------- */
 document.getElementById('filters').addEventListener('click', e=>{
