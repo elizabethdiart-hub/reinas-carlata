@@ -21,6 +21,9 @@
 .prod-specs li::before{content:"✦";position:absolute;left:0;top:.3em;color:var(--gold);font-size:.78rem}
 .prod-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2rem}
 .prod-ctas .btn{flex:1 1 auto;justify-content:center}
+.compartir{display:inline-flex;align-items:center;gap:.55rem;margin:-.9rem 0 2rem;font-size:.84rem;color:var(--ink-soft);text-decoration:underline;text-underline-offset:3px}
+.compartir svg{width:1.1rem;height:1.1rem;fill:#25d366;flex:none}
+.compartir:hover{color:var(--gold)}
 .prod-notes{border-top:1px solid var(--line);padding-top:1.6rem;display:flex;flex-direction:column;gap:.85rem}
 .prod-notes p{font-size:.88rem;color:var(--ink-soft);margin:0;padding-left:1.4rem;position:relative}
 .prod-notes p::before{content:"·";position:absolute;left:.35rem;top:-.15rem;color:var(--gold);font-size:1.4rem;line-height:1}

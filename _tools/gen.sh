@@ -399,6 +399,10 @@ for i in "${!SLUGS[@]}"; do
 
   wa="https://wa.me/51997081492?text=Hola%20Reina%20Scarlata%2C%20me%20interesa%20el%20${WANAME[$slug]}%20(${SKU[$slug]}).%20%C2%BFSigue%20disponible%3F"
 
+  # compartir con una amiga: WhatsApp sin destinatario, con nombre, precio y enlace a la ficha
+  url_enc="${SITE}/${slug}/"; url_enc="${url_enc//:/%3A}"; url_enc="${url_enc//\//%2F}"
+  compartir="https://wa.me/?text=Mira%20este%20${WANAME[$slug]}%20de%20Reina%20Scarlata%20%E2%9C%A8%20S%2F%20${price}%20${url_enc}"
+
   {
   cat <<HEAD
 <!DOCTYPE html>
@@ -530,6 +534,10 @@ $(medidas_html "$slug")
         <a href="${wa}" target="_blank" rel="noopener" class="btn btn-gold">Pedir por WhatsApp</a>
         <a href="/#catalogo" class="btn btn-dark">Ver todo el catálogo</a>
       </div>
+      <a href="${compartir}" target="_blank" rel="noopener" class="compartir">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+        Compártelo con una amiga por WhatsApp
+      </a>
       <div class="prod-notes">
 $(nota_html "$slug")
         <p>Envíos a Lima y a todo el Perú. El costo y el tiempo de entrega los coordinamos por WhatsApp según tu distrito o ciudad.</p>
@@ -630,6 +638,10 @@ BODY2
   document.addEventListener('click', e=>{
     const a = e.target.closest('a[href*="wa.me"]');
     if(!a || typeof gtag !== 'function') return;
+    if(a.classList.contains('compartir')){
+      gtag('event','share',{ method: 'whatsapp', content_type: 'producto', item_id: location.pathname });
+      return;
+    }
     const origen = a.classList.contains('wa-float') ? 'boton_flotante'
                  : a.closest('.prod-ctas')          ? 'ficha_producto'
                  : a.closest('.cierre')             ? 'cierre_ficha'
@@ -655,6 +667,56 @@ for s in "${SLUGS[@]}"; do
 done
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$(cygpath -w "$SP/og.ps1")" -Datos "$(cygpath -w "$ogdatos")" -Raiz "$(cygpath -w "$ROOT")"
 rm -f "$ogdatos"
+
+# ---------------- catálogo de productos ----------------
+# Feed RSS con campos g: que leen tanto Meta Commerce Manager (tienda de Instagram
+# y Facebook) como Google Merchant Center. Una variante por talla, agrupadas por SKU.
+xml_esc(){ local s="${1//&/&amp;}"; s="${s//</&lt;}"; s="${s//>/&gt;}"; printf '%s' "$s"; }
+{
+  echo '<?xml version="1.0" encoding="UTF-8"?>'
+  echo '<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">'
+  echo '<channel>'
+  echo '  <title>Reina Scarlata Lencería</title>'
+  echo "  <link>${SITE}/</link>"
+  echo '  <description>Catálogo de Reina Scarlata Lencería, Lima, Perú</description>'
+  for s in "${SLUGS[@]}"; do
+    IFS='|' read -ra fotos <<< "${GALLERY[$s]}"
+    tallas=("")
+    if [ -n "${SIZES[$s]}" ]; then IFS=',' read -ra tallas <<< "${SIZES[$s]}"; fi
+    for t in "${tallas[@]}"; do
+      echo '  <item>'
+      if [ -n "$t" ]; then
+        echo "    <g:id>${SKU[$s]}-${t}</g:id>"
+        echo "    <g:item_group_id>${SKU[$s]}</g:item_group_id>"
+      else
+        echo "    <g:id>${SKU[$s]}</g:id>"
+      fi
+      echo "    <g:title>$(xml_esc "${NAME[$s]}")</g:title>"
+      echo "    <g:description>$(xml_esc "${DESCLONG[$s]}")</g:description>"
+      echo "    <g:link>${SITE}/${s}/</g:link>"
+      echo "    <g:image_link>${SITE}/assets/${fotos[0]%%::*}</g:image_link>"
+      for f in "${fotos[@]:1}"; do echo "    <g:additional_image_link>${SITE}/assets/${f%%::*}</g:additional_image_link>"; done
+      echo '    <g:availability>in stock</g:availability>'
+      echo '    <g:condition>new</g:condition>'
+      if [ -n "${OLDPRICE[$s]}" ]; then
+        echo "    <g:price>${OLDPRICE[$s]} PEN</g:price>"
+        echo "    <g:sale_price>${PRICE[$s]} PEN</g:sale_price>"
+      else
+        echo "    <g:price>${PRICE[$s]} PEN</g:price>"
+      fi
+      echo '    <g:brand>Reina Scarlata</g:brand>'
+      echo '    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>'
+      echo "    <g:product_type>$(xml_esc "${CATLABEL[$s]}")</g:product_type>"
+      echo '    <g:gender>female</g:gender>'
+      echo '    <g:age_group>adult</g:age_group>'
+      if [ -n "$t" ]; then echo "    <g:size>${t}</g:size>"; fi
+      echo '  </item>'
+    done
+  done
+  echo '</channel>'
+  echo '</rss>'
+} > "$ROOT/catalogo.xml"
+echo "catálogo: $(grep -c '<item>' "$ROOT/catalogo.xml") artículos"
 
 # ---------------- sitemap ----------------
 HOY="$(date +%F)"
