@@ -7,7 +7,7 @@ SITE="https://reinascarlata.com"
 
 SLUGS=(conjunto-petunia conjunto-jazmin-rosa conjunto-azucena conjunto-hortencia conjunto-reina-de-corazones conjunto-reina-de-rosas conjunto-buganvilla body-burdeos-real bralette-marfil-sueno pijama-saten-champagne)
 
-declare -A SKU NAME CAT CATLABEL PRICE OLDPRICE IMG BADGE ADDED TITLE METADESC ALT DESCLONG SPECS SEOH SEOP1 SEOP2 WANAME GALLERY SIZES NOTA MEDIDAS
+declare -A SKU NAME CAT CATLABEL PRICE OLDPRICE IMG BADGE ADDED TITLE METADESC ALT DESCLONG SPECS SEOH SEOP1 SEOP2 WANAME GALLERY SIZES NOTA MEDIDAS OGCROP
 
 # ---------------- RS-013 ----------------
 SKU[conjunto-petunia]="RS-013"
@@ -234,8 +234,17 @@ SEOH[pijama-saten-champagne]="Dormir bien también es <em>arreglarse</em>"
 SEOP1[pijama-saten-champagne]="El satén no es solo cuestión de verse bien: es una tela fresca, que no se pega al cuerpo en las noches de calor de Lima y que resbala en lugar de engancharse con las sábanas. Por eso un pijama de satén se siente distinto a uno de algodón desde la primera noche, sobre todo en verano."
 SEOP2[pijama-saten-champagne]="El champagne es un neutro cálido que no se ve amarillento ni apagado, y el encaje del escote y del ruedo del short lo saca del terreno del pijama corriente. Es de los regalos que mejor funcionan porque es bonito y se usa todos los días, no solo en ocasiones especiales. La pretina elástica del short da margen de talla."
 
+# vista previa para redes: franja vertical de la foto principal (inicio::fin, en fracción del alto)
+# que se muestra a la derecha de la imagen de 1200x630. Por defecto encuadra el maniquí.
+OGCROP[conjunto-reina-de-corazones]="0.17::0.88"
+OGCROP[conjunto-buganvilla]="0.18::0.86"
+OGCROP[body-burdeos-real]="0.04::0.99"
+OGCROP[bralette-marfil-sueno]="0.10::0.86"
+OGCROP[pijama-saten-champagne]="0.02::0.97"
+
 # los productos sin fotos propias todavia usan su imagen unica como galeria
 for s in "${SLUGS[@]}"; do
+  OGCROP[$s]="${OGCROP[$s]:-0.18::0.90}"
   [ -n "${GALLERY[$s]:-}" ] || GALLERY[$s]="${IMG[$s]}::800::1200::${ALT[$s]}"
   SIZES[$s]="${SIZES[$s]:-}"
   NOTA[$s]="${NOTA[$s]:-}"
@@ -407,7 +416,10 @@ for i in "${!SLUGS[@]}"; do
 <meta property="og:url" content="${SITE}/${slug}/">
 <meta property="og:title" content="${NAME[$slug]} · Reina Scarlata">
 <meta property="og:description" content="${METADESC[$slug]}">
-<meta property="og:image" content="${SITE}/assets/${img}">
+<meta property="og:image" content="${SITE}/assets/og/${slug}.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="${ALT[$slug]}">
 <meta property="product:price:amount" content="${price}">
 <meta property="product:price:currency" content="PEN">
@@ -415,7 +427,8 @@ for i in "${!SLUGS[@]}"; do
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${NAME[$slug]} · Reina Scarlata">
 <meta name="twitter:description" content="${METADESC[$slug]}">
-<meta name="twitter:image" content="${SITE}/assets/${img}">
+<meta name="twitter:image" content="${SITE}/assets/og/${slug}.jpg">
+<meta name="twitter:image:alt" content="${ALT[$slug]}">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
@@ -633,6 +646,15 @@ TAIL
 
   echo "generado: $slug/index.html"
 done
+
+# ---------------- vistas previas para redes (1200x630) ----------------
+# llevan nombre y precio impresos, así que se regeneran en cada corrida
+ogdatos="$(mktemp)"
+for s in "${SLUGS[@]}"; do
+  printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$s" "${NAME[$s]}" "${PRICE[$s]}" "${OLDPRICE[$s]}" "${IMG[$s]}" "${OGCROP[$s]%%::*}" "${OGCROP[$s]#*::}" >> "$ogdatos"
+done
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$(cygpath -w "$SP/og.ps1")" -Datos "$(cygpath -w "$ogdatos")" -Raiz "$(cygpath -w "$ROOT")"
+rm -f "$ogdatos"
 
 # ---------------- sitemap ----------------
 HOY="$(date +%F)"
