@@ -7,7 +7,14 @@ SITE="https://reinascarlata.com"
 
 SLUGS=(conjunto-petunia conjunto-jazmin-rosa conjunto-azucena conjunto-hortencia conjunto-reina-de-corazones conjunto-reina-de-rosas conjunto-buganvilla body-burdeos-real bralette-marfil-sueno pijama-saten-champagne)
 
-declare -A SKU NAME CAT CATLABEL PRICE OLDPRICE IMG BADGE ADDED TITLE METADESC ALT DESCLONG SPECS SEOH SEOP1 SEOP2 WANAME GALLERY SIZES NOTA MEDIDAS OGCROP
+declare -A SKU NAME CAT CATLABEL PRICE OLDPRICE IMG BADGE ADDED TITLE METADESC ALT DESCLONG SPECS SEOH SEOP1 SEOP2 WANAME GALLERY SIZES NOTA MEDIDAS OGCROP AGOTADO
+
+# Prendas sin stock: su ficha se queda viva y posicionada, pero marcada como agotada
+# (sale del catalogo de la portada, del feed de Meta y de las tarjetas relacionadas).
+# Cuando vuelva la mercaderia, basta con borrar la linea de aqui y de PRODUCTS en index.html.
+AGOTADO[body-burdeos-real]=1
+AGOTADO[bralette-marfil-sueno]=1
+AGOTADO[pijama-saten-champagne]=1
 
 # ---------------- RS-013 ----------------
 SKU[conjunto-petunia]="RS-013"
@@ -183,7 +190,7 @@ CAT[body-burdeos-real]="bodys"
 CATLABEL[body-burdeos-real]="Bodys"
 PRICE[body-burdeos-real]="99.90"
 OLDPRICE[body-burdeos-real]=""
-IMG[body-burdeos-real]="p3.jpg"
+IMG[body-burdeos-real]="body-encaje-burdeos-real.jpg"
 BADGE[body-burdeos-real]=""
 WANAME[body-burdeos-real]="Body%20Burdeos%20Real"
 TITLE[body-burdeos-real]="Body de encaje burdeos con escote en V | Reina Scarlata"
@@ -202,7 +209,7 @@ CAT[bralette-marfil-sueno]="bralettes"
 CATLABEL[bralette-marfil-sueno]="Bralettes"
 PRICE[bralette-marfil-sueno]="59.90"
 OLDPRICE[bralette-marfil-sueno]="75.00"
-IMG[bralette-marfil-sueno]="p4.jpg"
+IMG[bralette-marfil-sueno]="bralette-encaje-marfil-sueno.jpg"
 BADGE[bralette-marfil-sueno]="Oferta"
 WANAME[bralette-marfil-sueno]="Bralette%20Marfil%20Sue%C3%B1o"
 TITLE[bralette-marfil-sueno]="Bralette de encaje marfil sin aro | Reina Scarlata"
@@ -221,7 +228,7 @@ CAT[pijama-saten-champagne]="pijamas"
 CATLABEL[pijama-saten-champagne]="Pijamas"
 PRICE[pijama-saten-champagne]="109.90"
 OLDPRICE[pijama-saten-champagne]=""
-IMG[pijama-saten-champagne]="p5.jpg"
+IMG[pijama-saten-champagne]="pijama-saten-champagne.jpg"
 BADGE[pijama-saten-champagne]="Nuevo"
 ADDED[pijama-saten-champagne]="2026-09-09"
 WANAME[pijama-saten-champagne]="Pijama%20Sat%C3%A9n%20Champagne"
@@ -381,9 +388,17 @@ for i in "${!SLUGS[@]}"; do
     price_html="<strong>S/ ${price}</strong>"
   fi
 
+  # disponibilidad
+  if [ -n "${AGOTADO[$slug]:-}" ]; then
+    badge="Agotado"
+    avail_meta="out of stock"; avail_ld="OutOfStock"
+  else
+    avail_meta="in stock"; avail_ld="InStock"
+  fi
+
   # badge
   if [ -n "$badge" ]; then
-    cls="badge"; [ "$badge" = "Oferta" ] && cls="badge gold"
+    cls="badge"; [ "$badge" = "Oferta" ] && cls="badge gold"; [ "$badge" = "Agotado" ] && cls="badge agotado"
     # con fecha de alta, "Nuevo" lleva data-nuevo y el script de la ficha lo quita a los 7 días
     nuevo_attr=""
     if [ "$badge" = "Nuevo" ] && [ -n "${ADDED[$slug]}" ]; then nuevo_attr=" data-nuevo=\"${ADDED[$slug]}\""; fi
@@ -392,12 +407,23 @@ for i in "${!SLUGS[@]}"; do
     badge_html=""
   fi
 
-  # relacionados: los tres siguientes en orden cíclico
-  r1="${SLUGS[$(( (i+1) % n ))]}"
-  r2="${SLUGS[$(( (i+2) % n ))]}"
-  r3="${SLUGS[$(( (i+3) % n ))]}"
+  # relacionados: los tres siguientes con stock, en orden cíclico
+  rels=()
+  for (( k=1; k<n && ${#rels[@]}<3; k++ )); do
+    cand="${SLUGS[$(( (i+k) % n ))]}"
+    [ -n "${AGOTADO[$cand]:-}" ] || rels+=("$cand")
+  done
+  r1="${rels[0]}"; r2="${rels[1]}"; r3="${rels[2]}"
 
-  wa="https://wa.me/51997081492?text=Hola%20Reina%20Scarlata%2C%20me%20interesa%20el%20${WANAME[$slug]}%20(${SKU[$slug]}).%20%C2%BFSigue%20disponible%3F"
+  if [ -n "${AGOTADO[$slug]:-}" ]; then
+    wa="https://wa.me/51997081492?text=Hola%20Reina%20Scarlata%2C%20me%20interesa%20el%20${WANAME[$slug]}%20(${SKU[$slug]}).%20%C2%BFMe%20avisas%20cuando%20vuelva%20a%20haber%20stock%3F"
+    cta_wa="Avísame cuando llegue"
+    aviso_html='      <p class="prod-agotado"><b>Agotada por ahora</b><br>Esta prenda se acabó, pero volverá. Escríbenos por WhatsApp y te avisamos apenas llegue la próxima.</p>'
+  else
+    wa="https://wa.me/51997081492?text=Hola%20Reina%20Scarlata%2C%20me%20interesa%20el%20${WANAME[$slug]}%20(${SKU[$slug]}).%20%C2%BFSigue%20disponible%3F"
+    cta_wa="Pedir por WhatsApp"
+    aviso_html=""
+  fi
 
   # compartir con una amiga: WhatsApp sin destinatario, con nombre, precio y enlace a la ficha
   url_enc="${SITE}/${slug}/"; url_enc="${url_enc//:/%3A}"; url_enc="${url_enc//\//%2F}"
@@ -427,7 +453,7 @@ for i in "${!SLUGS[@]}"; do
 <meta property="og:image:alt" content="${ALT[$slug]}">
 <meta property="product:price:amount" content="${price}">
 <meta property="product:price:currency" content="PEN">
-<meta property="product:availability" content="in stock">
+<meta property="product:availability" content="${avail_meta}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${NAME[$slug]} · Reina Scarlata">
 <meta name="twitter:description" content="${METADESC[$slug]}">
@@ -474,7 +500,7 @@ $(sizes_json "$slug")
     "price": "${price}",
     "priceCurrency": "PEN",
     "priceValidUntil": "2026-12-31",
-    "availability": "https://schema.org/InStock",
+    "availability": "https://schema.org/${avail_ld}",
     "itemCondition": "https://schema.org/NewCondition",
     "seller": { "@id": "${SITE}/#tienda" }
   }
@@ -530,8 +556,9 @@ $(specs_html "$slug")
       </ul>
 $(tallas_html "$slug")
 $(medidas_html "$slug")
+${aviso_html}
       <div class="prod-ctas">
-        <a href="${wa}" target="_blank" rel="noopener" class="btn btn-gold">Pedir por WhatsApp</a>
+        <a href="${wa}" target="_blank" rel="noopener" class="btn btn-gold">${cta_wa}</a>
         <a href="/#catalogo" class="btn btn-dark">Ver todo el catálogo</a>
       </div>
       <a href="${compartir}" target="_blank" rel="noopener" class="compartir">
@@ -660,10 +687,10 @@ TAIL
 done
 
 # ---------------- vistas previas para redes (1200x630) ----------------
-# llevan nombre y precio impresos, así que se regeneran en cada corrida
+# llevan el nombre impreso, así que se regeneran en cada corrida
 ogdatos="$(mktemp)"
 for s in "${SLUGS[@]}"; do
-  printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$s" "${NAME[$s]}" "${PRICE[$s]}" "${OLDPRICE[$s]}" "${IMG[$s]}" "${OGCROP[$s]%%::*}" "${OGCROP[$s]#*::}" >> "$ogdatos"
+  printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$s" "${NAME[$s]}" "${IMG[$s]}" "${OGCROP[$s]%%::*}" "${OGCROP[$s]#*::}" "${AGOTADO[$s]:-}" >> "$ogdatos"
 done
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$(cygpath -w "$SP/og.ps1")" -Datos "$(cygpath -w "$ogdatos")" -Raiz "$(cygpath -w "$ROOT")"
 rm -f "$ogdatos"
@@ -696,7 +723,11 @@ xml_esc(){ local s="${1//&/&amp;}"; s="${s//</&lt;}"; s="${s//>/&gt;}"; printf '
       echo "    <g:link>${SITE}/${s}/</g:link>"
       echo "    <g:image_link>${SITE}/assets/${fotos[0]%%::*}</g:image_link>"
       for f in "${fotos[@]:1}"; do echo "    <g:additional_image_link>${SITE}/assets/${f%%::*}</g:additional_image_link>"; done
-      echo '    <g:availability>in stock</g:availability>'
+      if [ -n "${AGOTADO[$s]:-}" ]; then
+        echo '    <g:availability>out of stock</g:availability>'
+      else
+        echo '    <g:availability>in stock</g:availability>'
+      fi
       echo '    <g:condition>new</g:condition>'
       if [ -n "${OLDPRICE[$s]}" ]; then
         echo "    <g:price>${OLDPRICE[$s]} PEN</g:price>"
