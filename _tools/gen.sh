@@ -427,7 +427,8 @@ for i in "${!SLUGS[@]}"; do
 
   # compartir con una amiga: WhatsApp sin destinatario, con nombre, precio y enlace a la ficha
   url_enc="${SITE}/${slug}/"; url_enc="${url_enc//:/%3A}"; url_enc="${url_enc//\//%2F}"
-  compartir="https://wa.me/?text=Mira%20este%20${WANAME[$slug]}%20de%20Reina%20Scarlata%20%E2%9C%A8%20S%2F%20${price}%20${url_enc}"
+  # sin precio: el mensaje se queda para siempre en el chat de quien lo recibe
+  compartir="https://wa.me/?text=Mira%20este%20${WANAME[$slug]}%20de%20Reina%20Scarlata%20%E2%9C%A8%20${url_enc}"
 
   {
   cat <<HEAD
