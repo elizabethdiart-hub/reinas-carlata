@@ -761,7 +761,7 @@ HOY="$(date +%F)"
   echo "    <lastmod>${HOY}</lastmod>"
   echo '    <changefreq>weekly</changefreq>'
   echo '    <priority>1.0</priority>'
-  echo "    <image:image><image:loc>${SITE}/assets/hero.jpg</image:loc></image:image>"
+  echo "    <image:image><image:loc>${SITE}/assets/hero-video.jpg</image:loc></image:image>"
   echo '  </url>'
   for s in "${SLUGS[@]}"; do
     echo '  <url>'
