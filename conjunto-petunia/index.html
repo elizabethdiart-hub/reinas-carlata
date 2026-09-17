@@ -116,6 +116,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
 /* ---------- announcement bar ---------- */
 .announce{background:var(--ink);color:var(--cream-gold);font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;text-align:center;padding:.7rem 1rem;position:relative;z-index:60}
 .announce span{color:var(--gold-light)}
+.announce-t{display:block;width:max-content;margin:.45rem auto 0;padding:.2rem .7rem;border:1px solid var(--gold-light);color:var(--gold-light);font-weight:500;letter-spacing:.18em;font-variant-numeric:tabular-nums}
 
 /* ---------- header ---------- */
 header{position:sticky;top:0;z-index:50;background:rgba(244,240,234,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .4s}
@@ -244,6 +245,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 /* ---------- ficha de producto ---------- */
 .prod{padding:3.2rem 2rem 5rem}
 .prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;max-width:1180px}
+.prod-grid>*{min-width:0} /* sin esto la tabla de medidas ensancha la ficha en el celular */
 .prod-media-col{position:relative}
 
 .prod-media-col .badge{position:absolute;top:1rem;left:1rem;z-index:2;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;padding:.45rem .9rem;background:var(--ink);color:var(--ivory)}
@@ -326,7 +328,24 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 </head>
 <body>
 
-<div class="announce">Envíos a todo Lima y el Perú &nbsp;<span>✦</span>&nbsp; Yape o pago contra entrega &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp</div>
+<div class="announce" id="announce">⚡ Lanzamiento &nbsp;<span>✦</span>&nbsp; Envío gratis a todo el Perú por compras mayores a S/ 160<b class="announce-t" id="announceT" hidden></b></div>
+<script>
+/* barra de lanzamiento: cuenta regresiva real hasta FIN; al terminar vuelve sola al aviso normal */
+(function(){
+  var FIN = "2026-10-04T23:59:59-05:00";
+  var fin = new Date(FIN).getTime(), a = document.getElementById('announce'), t = document.getElementById('announceT');
+  function dos(n){ return (n<10?'0':'') + n; }
+  function tick(){
+    var s = Math.floor((fin - Date.now())/1000);
+    if(s <= 0){ a.innerHTML = 'Envíos a todo Lima y el Perú &nbsp;<span>✦</span>&nbsp; Yape o pago contra entrega &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp'; return; }
+    var d = Math.floor(s/86400); s %= 86400;
+    t.textContent = 'Termina en ' + (d ? d + 'd ' : '') + dos(Math.floor(s/3600)) + ':' + dos(Math.floor(s%3600/60)) + ':' + dos(s%60);
+    t.hidden = false;
+    setTimeout(tick, 1000);
+  }
+  tick();
+})();
+</script>
 
 <header id="header">
   <nav class="nav">
@@ -410,7 +429,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
       </a>
       <div class="prod-notes">
         <p>Queda <b>una unidad de cada talla</b>: S, M, L y XL.</p>
-        <p>Envíos a Lima y a todo el Perú. El costo y el tiempo de entrega los coordinamos por WhatsApp según tu distrito o ciudad.</p>
+        <p><b>Lanzamiento: envío gratis a todo el Perú por compras mayores a S/ 160, hasta el 4 de octubre.</b> En Lima, delivery a tu domicilio; a provincias, por Shalom (recoges en la agencia de tu ciudad). Para montos menores, el costo lo coordinamos por WhatsApp.</p>
         <p>Pago con Yape al 997 081 492 o contra entrega si estás en Lima.</p>
         <p>¿No sabes tu talla? Mide tu bajo busto, busto y cadera con la <a href="/guia-de-tallas/">guía de tallas</a> y te asesoramos por WhatsApp.</p>
         <p>Llega en un empaque listo para obsequiar, con la prenda protegida en una bolsita de tul.</p>
@@ -459,7 +478,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
           <div class="rel-body">
             <p class="rel-cat">Conjuntos</p>
             <p class="rel-name">Conjunto Hortencia</p>
-            <p class="rel-price"><strong>S/ 89.00</strong></p>
+            <p class="rel-price"><strong>S/ 89.90</strong></p>
           </div>
         </a>
     </div>

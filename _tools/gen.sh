@@ -93,7 +93,7 @@ SKU[conjunto-hortencia]="RS-010"
 NAME[conjunto-hortencia]="Conjunto Hortencia"
 CAT[conjunto-hortencia]="conjuntos"
 CATLABEL[conjunto-hortencia]="Conjuntos"
-PRICE[conjunto-hortencia]="89.00"
+PRICE[conjunto-hortencia]="89.90"
 OLDPRICE[conjunto-hortencia]=""
 IMG[conjunto-hortencia]="conjunto-hortencia-1.jpg"
 BADGE[conjunto-hortencia]="Nuevo"
@@ -117,7 +117,7 @@ SKU[conjunto-reina-de-corazones]="RS-009"
 NAME[conjunto-reina-de-corazones]="Conjunto Reina de Corazones"
 CAT[conjunto-reina-de-corazones]="conjuntos"
 CATLABEL[conjunto-reina-de-corazones]="Conjuntos"
-PRICE[conjunto-reina-de-corazones]="69.00"
+PRICE[conjunto-reina-de-corazones]="72.90"
 OLDPRICE[conjunto-reina-de-corazones]=""
 IMG[conjunto-reina-de-corazones]="conjunto-reina-de-corazones-3.jpg"
 BADGE[conjunto-reina-de-corazones]="Nuevo"
@@ -141,7 +141,7 @@ SKU[conjunto-buganvilla]="RS-008"
 NAME[conjunto-buganvilla]="Conjunto Buganvilla"
 CAT[conjunto-buganvilla]="conjuntos"
 CATLABEL[conjunto-buganvilla]="Conjuntos"
-PRICE[conjunto-buganvilla]="79.00"
+PRICE[conjunto-buganvilla]="79.90"
 OLDPRICE[conjunto-buganvilla]=""
 IMG[conjunto-buganvilla]="conjunto-buganvilla-1.jpg"
 BADGE[conjunto-buganvilla]="Última unidad"
@@ -164,7 +164,7 @@ SKU[conjunto-reina-de-rosas]="RS-007"
 NAME[conjunto-reina-de-rosas]="Conjunto Reina de Rosas"
 CAT[conjunto-reina-de-rosas]="conjuntos"
 CATLABEL[conjunto-reina-de-rosas]="Conjuntos"
-PRICE[conjunto-reina-de-rosas]="89.00"
+PRICE[conjunto-reina-de-rosas]="94.90"
 OLDPRICE[conjunto-reina-de-rosas]=""
 IMG[conjunto-reina-de-rosas]="conjunto-reina-de-rosas-1.jpg"
 BADGE[conjunto-reina-de-rosas]="Nuevo"
@@ -568,7 +568,7 @@ ${aviso_html}
       </a>
       <div class="prod-notes">
 $(nota_html "$slug")
-        <p>Envíos a Lima y a todo el Perú. El costo y el tiempo de entrega los coordinamos por WhatsApp según tu distrito o ciudad.</p>
+        <p><b>Lanzamiento: envío gratis a todo el Perú por compras mayores a S/ 160, hasta el 4 de octubre.</b> En Lima, delivery a tu domicilio; a provincias, por Shalom (recoges en la agencia de tu ciudad). Para montos menores, el costo lo coordinamos por WhatsApp.</p>
         <p>Pago con Yape al 997 081 492 o contra entrega si estás en Lima.</p>
         <p>¿No sabes tu talla? Mide tu bajo busto, busto y cadera con la <a href="/guia-de-tallas/">guía de tallas</a> y te asesoramos por WhatsApp.</p>
         <p>Llega en un empaque listo para obsequiar, con la prenda protegida en una bolsita de tul.</p>

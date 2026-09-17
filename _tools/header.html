@@ -1,4 +1,21 @@
-<div class="announce">Envíos a todo Lima y el Perú &nbsp;<span>✦</span>&nbsp; Yape o pago contra entrega &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp</div>
+<div class="announce" id="announce">⚡ Lanzamiento &nbsp;<span>✦</span>&nbsp; Envío gratis a todo el Perú por compras mayores a S/ 160<b class="announce-t" id="announceT" hidden></b></div>
+<script>
+/* barra de lanzamiento: cuenta regresiva real hasta FIN; al terminar vuelve sola al aviso normal */
+(function(){
+  var FIN = "2026-10-04T23:59:59-05:00";
+  var fin = new Date(FIN).getTime(), a = document.getElementById('announce'), t = document.getElementById('announceT');
+  function dos(n){ return (n<10?'0':'') + n; }
+  function tick(){
+    var s = Math.floor((fin - Date.now())/1000);
+    if(s <= 0){ a.innerHTML = 'Envíos a todo Lima y el Perú &nbsp;<span>✦</span>&nbsp; Yape o pago contra entrega &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp'; return; }
+    var d = Math.floor(s/86400); s %= 86400;
+    t.textContent = 'Termina en ' + (d ? d + 'd ' : '') + dos(Math.floor(s/3600)) + ':' + dos(Math.floor(s%3600/60)) + ':' + dos(s%60);
+    t.hidden = false;
+    setTimeout(tick, 1000);
+  }
+  tick();
+})();
+</script>
 
 <header id="header">
   <nav class="nav">
