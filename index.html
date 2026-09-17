@@ -489,6 +489,18 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 .ayuda-tallas a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-weight:400}
 .ayuda-tallas a:hover{color:var(--ink)}
 .ayuda-tallas .sep{color:var(--line);padding:0 .2rem}
+
+/* ---------- guías ---------- */
+.guias-sec{background:var(--ivory-soft);border-top:1px solid var(--line)}
+.guias-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+@media(max-width:900px){.guias-grid{grid-template-columns:1fr}}
+.guia-card{background:#fff;border:1px solid var(--line);padding:2rem 1.8rem;display:flex;flex-direction:column;gap:.7rem;transition:border-color .35s,transform .35s,box-shadow .35s}
+.guia-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 18px 40px rgba(27,21,18,.07)}
+.guia-card .g-kicker{font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.guia-card h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.15}
+.guia-card p{color:var(--ink-soft);font-size:.92rem;margin-bottom:.4rem}
+.guia-card .g-link{margin-top:auto;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:.5rem}
+.guia-card:hover .g-link{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -681,6 +693,46 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
         <p>Soy clienta fija desde el primer pedido. Calidad de boutique a precios accesibles y envíos a provincia sin problemas.</p>
         <div class="who"><span class="av">C</span><div><b>Camila R.</b><span>Arequipa</span></div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUÍAS -->
+<section class="guias-sec" id="guias">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-kicker">Antes de comprar</p>
+        <h2 class="sec-title">Guías para <em>elegir bien</em></h2>
+      </div>
+    </div>
+
+    <div class="guias-grid">
+      <a class="guia-card" href="/guia-de-tallas/">
+        <span class="g-kicker">Tallas</span>
+        <h3>Encuentra tu talla exacta</h3>
+        <p>Tres medidas y una cinta métrica. Cómo saber si la banda o la copa es la que falla.</p>
+        <span class="g-link">Leer la guía ✦</span>
+      </a>
+      <a class="guia-card" href="/comprar-lenceria-por-internet/">
+        <span class="g-kicker">Comprar online</span>
+        <h3>Comprar sin fallar la talla</h3>
+        <p>Usa un brasier que ya tengas, equivalencias con las tallas US y qué preguntar antes de pagar.</p>
+        <span class="g-link">Leer la guía ✦</span>
+      </a>
+      <a class="guia-card" href="/regalo-lenceria/">
+        <span class="g-kicker">Regalo</span>
+        <h3>Cómo regalar lencería</h3>
+        <p>Saber su talla sin preguntar, qué modelo elegir según la ocasión y cuánto gastar.</p>
+        <span class="g-link">Leer la guía ✦</span>
+      </a>
+    </div>
+
+    <div class="ayuda-tallas">
+      <span>¿Prefieres que te asesoremos?</span>
+      <a href="https://wa.me/51997081492?text=Hola%20Reina%20Scarlata%2C%20necesito%20ayuda%20para%20elegir%20mi%20talla" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+      <span class="sep">·</span>
+      <a href="/cuidados-del-encaje/">Cómo cuidar tu encaje</a>
     </div>
   </div>
 </section>
