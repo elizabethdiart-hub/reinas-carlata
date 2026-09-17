@@ -606,7 +606,7 @@ $(card "$r3")
 
 <div class="cierre">
   <h2>¿Te queda alguna <em>duda</em>?</h2>
-  <p>Escríbenos por WhatsApp y te respondemos de lunes a sábado, de 9:00 a 20:00.</p>
+  <p>Escríbenos por WhatsApp y te respondemos de lunes a sábado, de 9:00 a 20:00, y los domingos de 9:00 a 17:00.</p>
   <a href="${wa}" target="_blank" rel="noopener" class="btn btn-gold">Preguntar por esta pieza</a>
 </div>
 

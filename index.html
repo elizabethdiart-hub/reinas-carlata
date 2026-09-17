@@ -60,12 +60,20 @@
     "name": "Perú"
   },
   "email": "elizabeth.diart@gmail.com",
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-    "opens": "09:00",
-    "closes": "20:00"
-  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
   "sameAs": [
     "https://www.instagram.com/reinascarlata.lenceria/",
     "https://www.facebook.com/profile.php?id=61569019517795",
@@ -148,7 +156,7 @@
       "name": "¿En qué horario atienden?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Atendemos de lunes a sábado, de 9:00 a 20:00. Puedes escribirnos por WhatsApp al +51 997 081 492 o al correo elizabeth.diart@gmail.com."
+        "text": "Atendemos de lunes a sábado, de 9:00 a 20:00, y los domingos de 9:00 a 17:00. Puedes escribirnos por WhatsApp al +51 997 081 492 o al correo elizabeth.diart@gmail.com."
       }
     },
     {
@@ -710,7 +718,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 
       <details class="faq-item">
         <summary>¿En qué horario atienden?</summary>
-        <div class="faq-a">De lunes a sábado, de 9:00 a 20:00. Puedes escribirnos por WhatsApp al +51 997 081 492 o al correo <a href="mailto:elizabeth.diart@gmail.com">elizabeth.diart@gmail.com</a>.</div>
+        <div class="faq-a">De lunes a sábado, de 9:00 a 20:00, y los domingos de 9:00 a 17:00. Puedes escribirnos por WhatsApp al +51 997 081 492 o al correo <a href="mailto:elizabeth.diart@gmail.com">elizabeth.diart@gmail.com</a>.</div>
       </details>
 
       <details class="faq-item">
@@ -782,6 +790,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
         <li><a href="mailto:elizabeth.diart@gmail.com">elizabeth.diart@gmail.com</a></li>
         <li><span>Lima, Perú</span></li>
         <li><span>Lun – Sáb · 9:00 a 20:00</span></li>
+        <li><span>Dom · 9:00 a 17:00</span></li>
       </ul>
       <div class="foot-pago">
         <b>Formas de pago</b>
