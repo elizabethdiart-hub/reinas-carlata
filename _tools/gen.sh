@@ -34,10 +34,10 @@ DESCLONG[conjunto-petunia]="Conjunto de dos piezas en tul rosa transparente con 
 SPECS[conjunto-petunia]="Petunias bordadas en relieve sobre tul rosa|Degradado de rosa claro a fucsia en cada flor|Brasier con aro y copas de tul bordado|Borde de encaje festoneado y lacito de satén al centro|Tirantes regulables|Tanga a juego con tirantes finos regulables en la cadera"
 SEOH[conjunto-petunia]="El rosa, en <em>todos</em> sus tonos"
 SEOP1[conjunto-petunia]="La petunia es la flor de los balcones y los jardines de Lima: cinco pétalos redondos que nunca son de un solo color, sino que se oscurecen hacia el centro. Este conjunto la lleva bordada en relieve sobre tul rosa, y cada flor repite ese degradado, del rosa más claro en los bordes al fucsia en el corazón."
-SEOP2[conjunto-petunia]="Lo que lo distingue del resto del catálogo es el encaje festoneado que remata las copas y el frente de la tanga, un borde suave que se nota bajo una blusa de escote abierto. El brasier tiene aro, lacito de satén al centro y tirantes regulables, y la tanga suma tirantes finos regulables en la cadera para ajustarla a tu medida. Disponible en tallas S, M, L y XL, con una unidad de cada una."
+SEOP2[conjunto-petunia]="Lo que lo distingue del resto del catálogo es el encaje festoneado que remata las copas y el frente de la tanga, un borde suave que se nota bajo una blusa de escote abierto. El brasier tiene aro, lacito de satén al centro y tirantes regulables, y la tanga suma tirantes finos regulables en la cadera para ajustarla a tu medida. Disponible en tallas S, M, L y XL, en unidades limitadas."
 GALLERY[conjunto-petunia]="conjunto-petunia-1.jpg::1000::1500::Conjunto Petunia de Reina Scarlata sobre maniquí, brasier de tul rosa con petunias bordadas y encaje festoneado|conjunto-petunia-2.jpg::1000::1500::Conjunto Petunia colgado en percha de madera con lazo marfil sobre pared de lino, con petunias rosadas|conjunto-petunia-3.jpg::1000::1500::Detalle de las petunias bordadas en relieve y el encaje festoneado de la copa del brasier Petunia|conjunto-petunia-4.jpg::1000::1500::Primer plano de las petunias bordadas y el borde de encaje de la tanga Petunia sobre seda marfil"
 SIZES[conjunto-petunia]="S,M,L,XL"
-NOTA[conjunto-petunia]="Queda <b>una unidad de cada talla</b>: S, M, L y XL."
+NOTA[conjunto-petunia]="<b>Unidades limitadas</b> · Modelo exclusivo."
 MEDIDAS[conjunto-petunia]="Talla::Equivalencia US::Contorno bajo busto::Cintura de la tanga|S::32C · 32D · 34A · 34B::74–77 cm::66 cm|M::34C · 36A · 36B::78–81 cm::70 cm|L::34D · 36C · 38A · 38B::82–85 cm::76 cm|XL::36D · 38C::86–89 cm::82 cm"
 
 # ---------------- RS-012 ----------------
@@ -58,10 +58,10 @@ DESCLONG[conjunto-jazmin-rosa]="Conjunto de dos piezas en tul rosa transparente 
 SPECS[conjunto-jazmin-rosa]="Florecitas bordadas en rosa y fucsia sobre tul rosa|Tallos y hojas bordados en verde|Brasier con aro y copas de tul bordado|Ribetes rosa y tirantes regulables|Tanga a juego con el bordado al frente|Paneles de tul transparente a los costados"
 SEOH[conjunto-jazmin-rosa]="Flores pequeñas, efecto <em>grande</em>"
 SEOP1[conjunto-jazmin-rosa]="El jazmín es una flor diminuta que se hace notar por pura cantidad: nunca va sola, siempre en ramillete. Este conjunto sigue la misma idea. No tiene una flor protagonista, sino decenas de florecitas en rosa y fucsia esparcidas por las copas y el frente de la tanga, cada una con sus tallos y hojas bordados en verde."
-SEOP2[conjunto-jazmin-rosa]="Ese verde es el detalle que lo cambia todo: le da vida al bordado y hace que se vea como un jardín de verdad y no como un estampado plano. El tul rosa es transparente, así que las flores son las protagonistas. El brasier tiene aro y tirantes regulables, y la tanga suma paneles de tul liso a los costados que no marcan bajo la ropa. Es un conjunto alegre, de los que mejor funcionan como regalo. Disponible en tallas S, M, L y XL: quedan dos unidades en M y una en cada una de las demás."
+SEOP2[conjunto-jazmin-rosa]="Ese verde es el detalle que lo cambia todo: le da vida al bordado y hace que se vea como un jardín de verdad y no como un estampado plano. El tul rosa es transparente, así que las flores son las protagonistas. El brasier tiene aro y tirantes regulables, y la tanga suma paneles de tul liso a los costados que no marcan bajo la ropa. Es un conjunto alegre, de los que mejor funcionan como regalo. Disponible en tallas S, M, L y XL, en unidades limitadas."
 GALLERY[conjunto-jazmin-rosa]="conjunto-jazmin-rosa-1.jpg::1000::1500::Conjunto Jazmín Rosa de Reina Scarlata sobre maniquí, brasier de tul rosa con florecitas bordadas|conjunto-jazmin-rosa-2.jpg::1000::1500::Conjunto Jazmín Rosa colgado en percha sobre pared marfil con luz de ventana|conjunto-jazmin-rosa-3.jpg::1000::1500::Detalle de las florecitas bordadas en rosa y fucsia sobre la copa del brasier Jazmín Rosa|conjunto-jazmin-rosa-4.jpg::1000::1500::Primer plano del bordado floral de la tanga Jazmín Rosa sobre seda marfil"
 SIZES[conjunto-jazmin-rosa]="S,M,L,XL"
-NOTA[conjunto-jazmin-rosa]="Stock actual: <b>1 unidad en S, 2 en M, 1 en L y 1 en XL</b>."
+NOTA[conjunto-jazmin-rosa]="<b>Unidades limitadas</b> · Modelo exclusivo."
 MEDIDAS[conjunto-jazmin-rosa]="Talla::Equivalencia US::Contorno bajo busto::Cintura de la tanga|S::32C · 32D · 34A · 34B::74–77 cm::64 cm|M::34C · 36A · 36B::78–81 cm::68 cm|L::34D · 36C · 38A · 38B::82–85 cm::72 cm|XL::36D · 38C::86–89 cm::76 cm"
 
 # ---------------- RS-011 ----------------
@@ -82,10 +82,10 @@ DESCLONG[conjunto-azucena]="Conjunto de dos piezas en tul nude con azucenas bord
 SPECS[conjunto-azucena]="Azucenas bordadas en relieve sobre tul nude|Pétalos y hojas en blanco marfil|Brasier con aro y escote profundo en V|Copas de tul bordado con ribete champagne|Bordes y tirantes finos en blanco|Tanga a juego con bandas anchas de tul en la cadera"
 SEOH[conjunto-azucena]="Blanco, pero <em>nunca</em> simple"
 SEOP1[conjunto-azucena]="La azucena es el lirio blanco de toda la vida: la flor de los ramos de novia y de los altares, la que se asocia a lo puro sin necesitar un solo color. Este conjunto la lleva bordada en blanco marfil, con pétalos grandes y hojas que se abren sobre las copas y cruzan el frente de la tanga, cada una en relieve y con el brillo propio del hilo satinado."
-SEOP2[conjunto-azucena]="El truco está en el fondo: el tul es nude y no blanco, así que las flores parecen flotar y el bordado se lee nítido en lugar de perderse. El brasier tiene aro y escote profundo en V, que lo hace perfecto bajo vestidos de escote abierto y para novias, y la tanga suma bandas anchas de tul en la cadera enmarcadas en blanco. Stock actual: tres unidades en talla S, una en M y una en L."
+SEOP2[conjunto-azucena]="El truco está en el fondo: el tul es nude y no blanco, así que las flores parecen flotar y el bordado se lee nítido en lugar de perderse. El brasier tiene aro y escote profundo en V, que lo hace perfecto bajo vestidos de escote abierto y para novias, y la tanga suma bandas anchas de tul en la cadera enmarcadas en blanco. Disponible en tallas S, M y L, en unidades limitadas."
 GALLERY[conjunto-azucena]="conjunto-azucena-1.jpg::1000::1500::Conjunto Azucena de Reina Scarlata sobre maniquí, brasier de tul nude con azucenas bordadas en blanco|conjunto-azucena-2.jpg::1000::1500::Conjunto Azucena colgado en percha de madera sobre pared marfil, con azucenas blancas|conjunto-azucena-3.jpg::1000::1500::Primer plano de las azucenas bordadas de la tanga Azucena sobre seda marfil, con collar de perlas"
 SIZES[conjunto-azucena]="S,M,L"
-NOTA[conjunto-azucena]="Stock actual: <b>3 unidades en talla S, 1 en M y 1 en L</b>."
+NOTA[conjunto-azucena]="<b>Unidades limitadas</b> · Modelo exclusivo."
 MEDIDAS[conjunto-azucena]="Talla::Equivalencia US::Contorno bajo busto::Cintura de la tanga|S::32C · 32D · 34A · 34B::74–77 cm::64 cm|M::34C · 36A · 36B::78–81 cm::68 cm|L::34D · 36C · 38A · 38B::82–85 cm::72 cm"
 
 # ---------------- RS-010 ----------------
@@ -106,10 +106,10 @@ DESCLONG[conjunto-hortencia]="Conjunto de dos piezas en tul menta con hortensias
 SPECS[conjunto-hortencia]="Hortensias bordadas en relieve sobre tul menta|Pétalos en lila, marfil y celeste|Brasier con aro y copas de tul bordado|Tirantes anchos cubiertos de flores, con lacito lila|Herrajes dorados y tirantes regulables|Tanga a juego con el mismo bordado al frente"
 SEOH[conjunto-hortencia]="Hortensias bordadas, no <em>estampadas</em>"
 SEOP1[conjunto-hortencia]="La hortensia es de esas flores que no necesitan explicación: un ramo entero en una sola flor, con los pétalos apretados unos contra otros. Este conjunto las lleva bordadas sobre el tul menta en lila, marfil y celeste, y no de cualquier manera: cada flor está bordada en relieve, con cuerpo propio y su propia sombra sobre la tela."
-SEOP2[conjunto-hortencia]="Esa es la diferencia con casi todo lo que se encuentra a este precio. No es un estampado ni un encaje plano: el bordado se siente al pasar el dedo y cambia según le dé la luz. El brasier lleva aro y copas de tul bordado, con tirantes anchos cubiertos de flores y herrajes dorados, y la tanga repite el mismo jardín al frente. Es además la única pieza pastel del catálogo y la más luminosa de todas. Disponible en tallas S, M, L y XL, con una unidad de cada una."
+SEOP2[conjunto-hortencia]="Esa es la diferencia con casi todo lo que se encuentra a este precio. No es un estampado ni un encaje plano: el bordado se siente al pasar el dedo y cambia según le dé la luz. El brasier lleva aro y copas de tul bordado, con tirantes anchos cubiertos de flores y herrajes dorados, y la tanga repite el mismo jardín al frente. Es además la única pieza pastel del catálogo y la más luminosa de todas. Disponible en tallas S, M, L y XL, en unidades limitadas."
 GALLERY[conjunto-hortencia]="conjunto-hortencia-1.jpg::1000::1500::Conjunto Hortencia de Reina Scarlata sobre maniquí, brasier de tul menta con flores bordadas en lila|conjunto-hortencia-2.jpg::1000::1500::Conjunto Hortencia colgado en percha de madera sobre pared marfil, con lavanda|conjunto-hortencia-3.jpg::1000::1500::Detalle de las hortensias bordadas en relieve sobre la copa del brasier|conjunto-hortencia-4.jpg::1000::1500::Primer plano de las hortensias bordadas de la tanga sobre seda marfil"
 SIZES[conjunto-hortencia]="S,M,L,XL"
-NOTA[conjunto-hortencia]="Queda <b>una unidad de cada talla</b>: S, M, L y XL."
+NOTA[conjunto-hortencia]="<b>Unidades limitadas</b> · Modelo exclusivo."
 MEDIDAS[conjunto-hortencia]="Talla::Equivalencia US::Contorno bajo busto::Cintura de la tanga|S::32C · 32D · 34A · 34B::74–77 cm::66 cm|M::34C · 36A · 36B::78–81 cm::70 cm|L::34D · 36C · 38A · 38B::82–85 cm::76 cm|XL::36D · 38C::86–89 cm::82 cm"
 
 # ---------------- RS-009 ----------------
@@ -133,7 +133,7 @@ SEOP1[conjunto-reina-de-corazones]="Casi toda la lencería con corazones que se 
 SEOP2[conjunto-reina-de-corazones]="La tanga es de amarrar, con cintas largas de satén a los dos costados. Eso no es solo un detalle bonito: al anudarse, se ajusta a tu cadera en lugar de obligarte a entrar en una medida fija, así que perdona mucho más que una tanga convencional. El brasier suma tiras cruzadas de satén bajo la copa y lacitos en los tirantes, que son los detalles que hacen que esta pieza no se parezca a ninguna otra del catálogo."
 GALLERY[conjunto-reina-de-corazones]="conjunto-reina-de-corazones-3.jpg::1000::1500::Conjunto Reina de Corazones de Reina Scarlata sobre maniquí, brasier de encaje negro con corazones bordados y tanga de amarrar|conjunto-reina-de-corazones-1.jpg::1000::1500::Conjunto Reina de Corazones extendido sobre seda marfil, brasier y tanga con corazones bordados|conjunto-reina-de-corazones-4.jpg::1000::1500::Conjunto Reina de Corazones colgado en percha de madera sobre pared marfil"
 SIZES[conjunto-reina-de-corazones]="S,M,L"
-NOTA[conjunto-reina-de-corazones]="Queda <b>una unidad de cada talla</b>: S, M y L."
+NOTA[conjunto-reina-de-corazones]="<b>Unidades limitadas</b> · Modelo exclusivo."
 MEDIDAS[conjunto-reina-de-corazones]="Talla::Equivalencia US::Contorno bajo busto::Cintura de la tanga|S::32C · 32D · 34A · 34B::74–77 cm::68 cm|M::34C · 36A · 36B::78–81 cm::72 cm|L::34D · 36C · 38A · 38B::82–85 cm::76 cm"
 
 # ---------------- RS-008 ----------------
@@ -144,7 +144,7 @@ CATLABEL[conjunto-buganvilla]="Conjuntos"
 PRICE[conjunto-buganvilla]="79.90"
 OLDPRICE[conjunto-buganvilla]=""
 IMG[conjunto-buganvilla]="conjunto-buganvilla-1.jpg"
-BADGE[conjunto-buganvilla]="Última unidad"
+BADGE[conjunto-buganvilla]="Exclusivo"
 WANAME[conjunto-buganvilla]="Conjunto%20Buganvilla"
 TITLE[conjunto-buganvilla]="Conjunto de encaje fucsia Buganvilla | Reina Scarlata"
 METADESC[conjunto-buganvilla]="Conjunto de lencería fucsia con bordado floral en relieve sobre encaje y tanga a juego. Talla S. Envío gratis desde S/160 a todo el Perú."
@@ -156,7 +156,7 @@ SEOP1[conjunto-buganvilla]="Hay colores que acompañan y colores que hablan. El 
 SEOP2[conjunto-buganvilla]="El bordado floral está cosido sobre malla transparente, así que el dibujo se lee nítido y la pieza no depende de rellenos para verse bien. El brasier tiene aro y copas de tul bordado, con tirantes dobles finos que se regulan a tu altura, y la tanga repite el bordado al frente sumando tirantes dobles en la cadera, que es el detalle que más estiliza. Disponible en talla S: si necesitas otra, escríbenos por WhatsApp y te avisamos en cuanto entre."
 GALLERY[conjunto-buganvilla]="conjunto-buganvilla-1.jpg::1000::1500::Conjunto Buganvilla de Reina Scarlata, brasier de encaje fucsia con bordado floral y tanga a juego|conjunto-buganvilla-3.jpg::1600::893::Detalle del bordado floral del conjunto Buganvilla sobre seda marfil|conjunto-buganvilla-4.jpg::1600::893::Primer plano de las copas de tul bordado del brasier Buganvilla"
 SIZES[conjunto-buganvilla]="S"
-NOTA[conjunto-buganvilla]="Queda <b>una sola unidad</b> en talla S."
+NOTA[conjunto-buganvilla]="<b>Unidades limitadas</b> · Modelo exclusivo."
 MEDIDAS[conjunto-buganvilla]="Talla::Equivalencia US::Contorno bajo busto::Cintura de la tanga|S::32C · 32D · 34A · 34B::74–77 cm::66–98 cm"
 
 # ---------------- RS-007 ----------------
@@ -180,7 +180,7 @@ SEOP1[conjunto-reina-de-rosas]="Hay encaje estampado y hay bordado de verdad, y 
 SEOP2[conjunto-reina-de-rosas]="El corset es la pieza que más transforma la silueta de todo el catálogo. Las varillas marcan la cintura y las copas forradas dan forma real, no solo cobertura. Al no llevar tirantes funciona igual bajo un vestido de escote abierto o sola, y el cierre de corchetes en la espalda tiene varias posiciones, así que se ajusta a ti. Disponible en tallas S, M y L: si dudas entre dos, escríbenos por WhatsApp con tus medidas antes de pedir."
 GALLERY[conjunto-reina-de-rosas]="conjunto-reina-de-rosas-1.jpg::1000::1500::Conjunto Reina de Rosas de Reina Scarlata sobre maniquí, corset de encaje rojo con rosas bordadas y tanga a juego|conjunto-reina-de-rosas-2.jpg::1000::1500::Detalle de las rosas bordadas en relieve sobre la copa del corset Reina de Rosas|conjunto-reina-de-rosas-3.jpg::1000::1500::Primer plano de las rosas bordadas de la tanga Reina de Rosas sobre seda marfil"
 SIZES[conjunto-reina-de-rosas]="S,M,L"
-NOTA[conjunto-reina-de-rosas]="Stock actual: <b>1 unidad en talla S, 2 en M y 1 en L</b>."
+NOTA[conjunto-reina-de-rosas]="<b>Unidades limitadas</b> · Modelo exclusivo."
 MEDIDAS[conjunto-reina-de-rosas]="Talla::Equivalencia US::Contorno bajo busto::Cintura de la tanga|S::32C · 32D · 34A · 34B::74–77 cm::66 cm|M::34C · 36A · 36B::78–81 cm::70 cm|L::34D · 36C · 38A · 38B::82–85 cm::76 cm"
 
 # ---------------- RS-003 ----------------
