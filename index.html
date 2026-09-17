@@ -227,8 +227,9 @@ header.scrolled{box-shadow:0 10px 40px rgba(27,21,18,.08)}
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.06);animation:heroZoom 14s ease-out forwards}
-@keyframes heroZoom{to{transform:scale(1)}}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition:opacity .8s}
+.hero-bg video.on{opacity:1}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,13,10,.72) 0%,rgba(20,13,10,.45) 45%,rgba(20,13,10,.12) 100%)}
 .hero-inner{position:relative;z-index:2;max-width:1340px;margin:0 auto;padding:6rem 2rem;width:100%}
 .hero-kicker{color:var(--gold-light);font-size:.72rem;letter-spacing:.5em;text-transform:uppercase;margin-bottom:1.6rem;opacity:0;animation:fadeUp 1s .3s ease forwards}
@@ -236,6 +237,14 @@ header.scrolled{box-shadow:0 10px 40px rgba(27,21,18,.08)}
 .hero h1 em{font-style:italic;color:var(--cream-gold)}
 .hero p{color:rgba(253,250,245,.82);max-width:44ch;margin:1.8rem 0 2.6rem;font-size:1.02rem;opacity:0;animation:fadeUp 1s .8s ease forwards}
 .hero-ctas{display:flex;gap:1.2rem;flex-wrap:wrap;opacity:0;animation:fadeUp 1s 1.05s ease forwards}
+@media(min-width:901px){ /* en pantalla ancha: la portada entra en la pantalla y el maniquí va entero a la derecha del título */
+.hero{min-height:max(540px,calc(100vh - 190px))}
+.hero-inner{padding:3rem 2rem}
+.hero h1{font-size:clamp(3rem,6vw,5.2rem)}
+.hero p{margin:1.2rem 0 2rem}
+.hero-bg{background:#c9a79a}
+.hero-bg img,.hero-bg video{position:absolute;top:0;right:0;left:auto;width:70%;height:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 35%);mask-image:linear-gradient(90deg,transparent,#000 35%)}
+}
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 .btn{display:inline-flex;align-items:center;gap:.7rem;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;padding:1.05rem 2.4rem;transition:all .45s ease}
 .btn-gold{background:var(--gold);color:#fff}
@@ -245,9 +254,9 @@ header.scrolled{box-shadow:0 10px 40px rgba(27,21,18,.08)}
 .btn-dark{background:var(--ink);color:var(--ivory)}
 .btn-dark:hover{background:var(--gold)}
 /* rotating seal */
-.seal{position:absolute;right:4vw;bottom:6vh;z-index:3;width:132px;height:132px}
+.seal{position:absolute;right:calc(4vw + 70px);bottom:6vh;z-index:3;width:78px;height:78px;opacity:.55}
 .seal svg{width:100%;height:100%}
-.seal .ring{animation:spin 14s linear infinite;transform-origin:center}
+.seal .ring{animation:spin 30s linear infinite;transform-origin:center}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:900px){.seal{display:none}}
 
@@ -510,7 +519,10 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 
 <!-- HERO -->
 <section class="hero" id="inicio" style="padding:0">
-  <div class="hero-bg"><img src="assets/hero.jpg" width="1600" height="900" fetchpriority="high" decoding="async" alt="Lencería de encaje Reina Scarlata"></div>
+  <div class="hero-bg">
+    <img src="assets/hero-video.jpg" width="1600" height="900" fetchpriority="high" decoding="async" alt="Conjunto Petunia de Reina Scarlata en maniquí, con pétalos cayendo">
+    <video id="heroVideo" muted playsinline preload="none" poster="assets/hero-video.jpg" aria-hidden="true"></video>
+  </div>
   <div class="hero-inner">
     <p class="hero-kicker">Lencería femenina · Lima, Perú</p>
     <h1>Siéntete como la <em>reina</em> que eres</h1>
@@ -822,6 +834,21 @@ const PRODUCTS = [
   {id:4, name:"Bralette Marfil Sueño", slug:"bralette-marfil-sueno", alt:"Bralette triangular de encaje marfil Reina Scarlata, sin aro, con borde de pestaña festoneada", cat:"bralettes", catLabel:"Bralettes", price:59.90, oldPrice:75.00, img:"assets/bralette-encaje-marfil-sueno.jpg", badge:"Oferta", stock:false},
   {id:5, name:"Pijama Satén Champagne", slug:"pijama-saten-champagne", alt:"Pijama de satén champagne Reina Scarlata de dos piezas, top con escote en V y short con encaje", cat:"pijamas", catLabel:"Pijamas", price:109.90, oldPrice:null, img:"assets/pijama-saten-champagne.jpg", added:"2026-09-09", badge:"Nuevo", stock:false},
 ];
+
+/* video de portada: carga después de la página, se salta con ahorro de datos o "reducir movimiento",
+   y repite solo los primeros 6 s (al final del clip la cámara da un salto) */
+(function(){
+  const v = document.getElementById('heroVideo'), HASTA = 6;
+  const ahorro = navigator.connection && navigator.connection.saveData;
+  if(!v || ahorro || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  addEventListener('load', () => {
+    v.src = 'assets/hero.mp4';
+    v.addEventListener('playing', () => v.classList.add('on'), {once:true});
+    v.addEventListener('timeupdate', () => { if(v.currentTime >= HASTA) v.currentTime = 0; });
+    v.addEventListener('ended', () => { v.currentTime = 0; v.play(); });
+    v.play().catch(()=>{});
+  });
+})();
 
 const fmt = n => "S/ " + n.toFixed(2);
 const ENVIO_GRATIS = 160; // compras mayores a este monto: envío gratis a todo el Perú
