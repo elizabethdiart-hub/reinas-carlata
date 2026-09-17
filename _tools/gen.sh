@@ -794,6 +794,12 @@ HOY="$(date +%F)"
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>${SITE}/comprar-lenceria-por-internet/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 GUIAS
   echo '</urlset>'
 } > "$ROOT/sitemap.xml"

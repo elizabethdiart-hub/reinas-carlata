@@ -171,7 +171,7 @@
 }
 </script>
 
-<link rel="preload" as="image" href="/assets/hero.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/hero-video.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -780,6 +780,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
         <li><a href="/guia-de-tallas/">Guía de tallas</a></li>
         <li><a href="/cuidados-del-encaje/">Cuidados del encaje</a></li>
         <li><a href="/regalo-lenceria/">Cómo regalar lencería</a></li>
+        <li><a href="/comprar-lenceria-por-internet/">Comprar por internet</a></li>
         <li><a href="https://wa.me/51997081492?text=Hola%2C%20quisiera%20consultar%20sobre%20env%C3%ADos" target="_blank" rel="noopener">Envíos y entregas</a></li>
         <li><a href="https://wa.me/51997081492?text=Hola%2C%20quisiera%20consultar%20sobre%20cambios%20y%20devoluciones" target="_blank" rel="noopener">Cambios y devoluciones</a></li>
       </ul>
@@ -868,8 +869,9 @@ const PRODUCTS = [
    y repite solo los primeros 6 s (al final del clip la cámara da un salto) */
 (function(){
   const v = document.getElementById('heroVideo'), HASTA = 6;
-  const ahorro = navigator.connection && navigator.connection.saveData;
-  if(!v || ahorro || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const con = navigator.connection || {};
+  const lento = con.saveData || /(^|\W)(2g|3g)$/.test(con.effectiveType || '');
+  if(!v || lento || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   addEventListener('load', () => {
     v.src = 'assets/hero.mp4';
     v.addEventListener('playing', () => v.classList.add('on'), {once:true});
