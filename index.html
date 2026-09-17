@@ -12,7 +12,7 @@
 <meta property="og:locale" content="es_PE">
 <meta property="og:url" content="https://reinascarlata.com/">
 <meta property="og:title" content="Reina Scarlata · Lencería que celebra tu esencia">
-<meta property="og:description" content="Lencería femenina en Lima, Perú. Conjuntos, bodys, bralettes y pijamas. Envíos a todo el país y pago contra entrega en Lima.">
+<meta property="og:description" content="Lencería femenina en Lima, Perú. Conjuntos, bodys, bralettes y pijamas. Envíos a todo el Perú y pago seguro con Yape, Plin o transferencia.">
 <meta property="og:image" content="https://reinascarlata.com/assets/og-portada.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,7 +20,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Reina Scarlata · Lencería que celebra tu esencia">
-<meta name="twitter:description" content="Lencería femenina en Lima, Perú. Envíos a todo el país y pago contra entrega en Lima.">
+<meta name="twitter:description" content="Lencería femenina en Lima, Perú. Envíos a todo el Perú y pago seguro con Yape, Plin o transferencia.">
 <meta name="twitter:image" content="https://reinascarlata.com/assets/og-portada.jpg">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -49,7 +49,7 @@
   "telephone": "+51997081492",
   "priceRange": "S/ 59 - S/ 110",
   "currenciesAccepted": "PEN",
-  "paymentAccepted": "Yape, efectivo, pago contra entrega",
+  "paymentAccepted": "Yape, Plin, transferencia bancaria",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Lima",
@@ -132,7 +132,7 @@
       "name": "¿Cómo puedo pagar mi pedido?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Puedes pagar con Yape o, si estás en Lima, contra entrega al recibir tu pedido. Nuestro Yape es 997 081 492, a nombre de Elizabeth Cinthya Jimenez Matos. Envíanos la captura por WhatsApp y despachamos tu pedido."
+        "text": "Puedes pagar con Yape (997 081 492), Plin o transferencia a la cuenta BCP Soles 191-98344785-0-64, a nombre de Elizabeth Cinthya Jimenez Matos. Envíanos la captura por WhatsApp: verificamos el pago, despachamos tu pedido y te enviamos tu número de seguimiento."
       }
     },
     {
@@ -456,7 +456,16 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 
 /* ---------- formas de pago ---------- */
 .pago{background:var(--ivory-soft);border:1px solid var(--line);border-left:3px solid var(--gold);margin:.4rem 1.8rem 1.3rem;padding:.9rem 1rem;display:flex;flex-direction:column;align-items:center;gap:.5rem;text-align:center}
-.pago a.qr{display:block;width:100%;max-width:155px;margin-top:.35rem;line-height:0;border-radius:4px;overflow:hidden;transition:transform .3s}
+.pago .pago-m{display:flex;flex-direction:column;gap:.1rem}
+.pago .pago-m .pago-n{font-size:1.1rem;font-variant-numeric:lining-nums tabular-nums}
+.pago .pago-qr{width:100%}
+.pago .pago-qr summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1.1rem;border:1px solid var(--gold);color:var(--gold);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;transition:background .3s,color .3s}
+.pago .pago-qr summary::-webkit-details-marker{display:none}
+.pago .pago-qr summary::after{content:"▾";font-size:.8rem;letter-spacing:0;transition:transform .3s}
+.pago .pago-qr[open] summary::after{transform:rotate(180deg)}
+.pago .pago-qr summary:hover,.pago .pago-qr[open] summary{background:var(--gold);color:#fff}
+.pago .pago-qr summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.pago a.qr{display:block;width:100%;max-width:155px;margin:.7rem auto 0;line-height:0;border-radius:4px;overflow:hidden;transition:transform .3s}
 .pago a.qr:hover{transform:scale(1.04)}
 .pago img{width:100%;height:auto;display:block}
 @media(max-width:400px){.pago{margin:.4rem 1.1rem 1.3rem}}
@@ -485,7 +494,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
   function dos(n){ return (n<10?'0':'') + n; }
   function tick(){
     var s = Math.floor((fin - Date.now())/1000);
-    if(s <= 0){ a.innerHTML = 'Envíos a todo Lima y el Perú &nbsp;<span>✦</span>&nbsp; Yape o pago contra entrega &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp'; return; }
+    if(s <= 0){ a.innerHTML = 'Envíos a todo el Perú &nbsp;<span>✦</span>&nbsp; Pago seguro con Yape, Plin o transferencia &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp'; return; }
     var d = Math.floor(s/86400); s %= 86400;
     t.textContent = 'Termina en ' + (d ? d + 'd ' : '') + dos(Math.floor(s/3600)) + ':' + dos(Math.floor(s%3600/60)) + ':' + dos(s%60);
     t.hidden = false;
@@ -609,7 +618,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
   <div class="offer-inner">
     <p class="sec-kicker" style="color:var(--cream-gold)">Recién llegado</p>
     <h2>Conjunto <em>Reina de Rosas</em></h2>
-    <p>Corset de tul con rosas bordadas en relieve y tanga a juego. Tallas S, M y L. Envíos a todo el Perú y pago con Yape o contra entrega en Lima.</p>
+    <p>Corset de tul con rosas bordadas en relieve y tanga a juego. Tallas S, M y L. Envíos a todo el Perú y pago seguro con Yape, Plin o transferencia.</p>
     <a href="/conjunto-reina-de-rosas/" class="btn btn-gold">Ver la pieza</a>
   </div>
 </section>
@@ -691,7 +700,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 
       <details class="faq-item">
         <summary>¿Cómo puedo pagar mi pedido?</summary>
-        <div class="faq-a">Puedes pagar con <b>Yape</b> o, si estás en Lima, contra entrega al recibir tu pedido. Nuestro Yape es <b>997 081 492</b>, a nombre de Elizabeth Cinthya Jimenez Matos. Envíanos la captura por WhatsApp y despachamos tu pedido.</div>
+        <div class="faq-a">Puedes pagar con Yape, Plin o transferencia bancaria:<br>✦ <b>Yape:</b> 997 081 492<br>✦ <b>Transferencia BCP Soles:</b> 191-98344785-0-64<br>A nombre de Elizabeth Cinthya Jimenez Matos. Envíanos la captura por WhatsApp: verificamos el pago, despachamos tu pedido y te enviamos tu número de seguimiento.</div>
       </details>
 
       <details class="faq-item">
@@ -777,8 +786,8 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
       <div class="foot-pago">
         <b>Formas de pago</b>
         <span>Yape: 997 081 492</span>
-        <span>Elizabeth Cinthya Jimenez Matos</span>
-        <span>Contra entrega en Lima</span>
+        <span>BCP Soles: 191-98344785-0-64</span>
+        <span>Titular: Elizabeth Cinthya Jimenez Matos</span>
       </div>
     </div>
   </div>
@@ -803,10 +812,20 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
   <div class="drawer-scroll">
     <div class="drawer-body" id="cartBody"></div>
     <div class="pago" id="pagoBox" style="display:none">
-      <span class="pago-t">Paga con Yape</span>
-      <span class="pago-n">997 081 492</span>
+      <span class="pago-t">Formas de pago</span>
+      <div class="pago-m">
+        <span class="pago-t">Yape</span>
+        <span class="pago-n">997 081 492</span>
+      </div>
+      <div class="pago-m">
+        <span class="pago-t">Transferencia BCP Soles</span>
+        <span class="pago-n">191-98344785-0-64</span>
+      </div>
       <span class="pago-d">A nombre de Elizabeth Cinthya Jimenez Matos. Envíanos la captura por WhatsApp.</span>
-      <a class="qr" href="/assets/yape-qr.png" target="_blank" rel="noopener" title="Ampliar el QR"><img src="/assets/yape-qr.png" width="440" height="420" loading="lazy" decoding="async" alt="Código QR de Yape de Reina Scarlata"></a>
+      <details class="pago-qr">
+        <summary>Paga con QR</summary>
+        <a class="qr" href="/assets/yape-qr.png" target="_blank" rel="noopener" title="Ampliar el QR"><img src="/assets/yape-qr.png" width="440" height="420" loading="lazy" decoding="async" alt="Código QR de Yape de Reina Scarlata"></a>
+      </details>
     </div>
   </div>
   <div class="drawer-foot" id="cartFoot" style="display:none">
@@ -1022,11 +1041,11 @@ function updateCart(){
   const lanzamiento = Date.now() < ENVIO_GRATIS_FIN.getTime();
   const gratis = lanzamiento && total >= ENVIO_GRATIS;
   document.getElementById('shipNote').innerHTML = !lanzamiento
-    ? `En Lima también puedes pagar contra entrega.<br>* El costo de envío se coordina por WhatsApp.`
+    ? `Pago seguro con Yape, Plin o transferencia.<br>* El costo de envío se coordina por WhatsApp.`
     : (gratis
       ? `✦ Tu pedido tiene <b>envío gratis a todo el Perú</b>.`
       : `Te faltan <b>${fmt(ENVIO_GRATIS-total)}</b> para envío gratis a todo el Perú.`)
-      + `<br>En Lima también puedes pagar contra entrega.`;
+      + `<br>Pago seguro con Yape, Plin o transferencia.`;
 
   /* mensaje de WhatsApp */
   let lines = ["Hola Reina Scarlata, quiero hacer este pedido:", ""];

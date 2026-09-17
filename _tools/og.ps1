@@ -11,7 +11,7 @@ $marfil  = [System.Drawing.Color]::FromArgb(240, 228, 212)
 $vino1   = [System.Drawing.Color]::FromArgb(78, 17, 26)
 $vino2   = [System.Drawing.Color]::FromArgb(26, 8, 11)
 $fuente  = 'Garamond'
-$tagline = "Env$([char]0xED)os a todo el Per$([char]0xFA)  $([char]0x00B7)  Pago contra entrega en Lima"
+$tagline = "Env$([char]0xED)os a todo el Per$([char]0xFA)  $([char]0x00B7)  Yape, Plin o transferencia"
 $tagSinStock = "Agotado por ahora  $([char]0x00B7)  Escr$([char]0xED)benos"
 $gris = [System.Drawing.Color]::FromArgb(235, 90, 90, 90)
 

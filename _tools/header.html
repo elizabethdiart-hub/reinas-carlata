@@ -7,7 +7,7 @@
   function dos(n){ return (n<10?'0':'') + n; }
   function tick(){
     var s = Math.floor((fin - Date.now())/1000);
-    if(s <= 0){ a.innerHTML = 'Envíos a todo Lima y el Perú &nbsp;<span>✦</span>&nbsp; Yape o pago contra entrega &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp'; return; }
+    if(s <= 0){ a.innerHTML = 'Envíos a todo el Perú &nbsp;<span>✦</span>&nbsp; Pago seguro con Yape, Plin o transferencia &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp'; return; }
     var d = Math.floor(s/86400); s %= 86400;
     t.textContent = 'Termina en ' + (d ? d + 'd ' : '') + dos(Math.floor(s/3600)) + ':' + dos(Math.floor(s%3600/60)) + ':' + dos(s%60);
     t.hidden = false;

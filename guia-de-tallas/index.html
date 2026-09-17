@@ -249,7 +249,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
   function dos(n){ return (n<10?'0':'') + n; }
   function tick(){
     var s = Math.floor((fin - Date.now())/1000);
-    if(s <= 0){ a.innerHTML = 'Envíos a todo Lima y el Perú &nbsp;<span>✦</span>&nbsp; Yape o pago contra entrega &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp'; return; }
+    if(s <= 0){ a.innerHTML = 'Envíos a todo el Perú &nbsp;<span>✦</span>&nbsp; Pago seguro con Yape, Plin o transferencia &nbsp;<span>✦</span>&nbsp; Pedidos por WhatsApp'; return; }
     var d = Math.floor(s/86400); s %= 86400;
     t.textContent = 'Termina en ' + (d ? d + 'd ' : '') + dos(Math.floor(s/3600)) + ':' + dos(Math.floor(s%3600/60)) + ':' + dos(s%60);
     t.hidden = false;
@@ -395,8 +395,8 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
       <div class="foot-pago">
         <b>Formas de pago</b>
         <span>Yape: 997 081 492</span>
-        <span>Elizabeth Cinthya Jimenez Matos</span>
-        <span>Contra entrega en Lima</span>
+        <span>BCP Soles: 191-98344785-0-64</span>
+        <span>Titular: Elizabeth Cinthya Jimenez Matos</span>
       </div>
     </div>
   </div>
