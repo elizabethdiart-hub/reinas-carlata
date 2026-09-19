@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reina Scarlata · Lencería Femenina | Lima, Perú</title>
-<meta name="description" content="Lencería femenina en Lima y todo el Perú: conjuntos de encaje bordado, bodys, bralettes y pijamas. Tallas S a XL y envío gratis desde S/160.">
+<meta name="description" content="Lencería femenina en Lima y todo el Perú: conjuntos de encaje bordado, bodys, bralettes y pijamas. Tallas S a XL y envío gratis desde S/150.">
 <link rel="canonical" href="https://reinascarlata.com/">
 
 <meta property="og:type" content="website">
@@ -132,7 +132,7 @@
       "name": "¿Hacen envíos fuera de Lima?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. Enviamos a Lima y a todo el Perú. Por lanzamiento, hasta el domingo 4 de octubre de 2026 el envío es gratis por compras mayores a S/ 160. Para montos menores, el costo y el tiempo de entrega los coordinamos por WhatsApp."
+        "text": "Sí. Enviamos a Lima y a todo el Perú. Por lanzamiento, hasta el domingo 4 de octubre de 2026 el envío es gratis por compras desde S/ 150. Para montos menores, el costo y el tiempo de entrega los coordinamos por WhatsApp."
       }
     },
     {
@@ -372,7 +372,7 @@ section{padding:6.5rem 2rem}
 
 /* ---------- footer ---------- */
 footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5rem 2rem 2rem}
-.foot-grid{max-width:1340px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:3rem}
+.foot-grid{max-width:1340px;margin:0 auto;display:grid;grid-template-columns:1.5fr .9fr 1.15fr 1.15fr 1.2fr;gap:3rem 2.3rem}
 @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
 .foot-brand p{color:var(--muted);font-size:.9rem;margin:1.2rem 0 1.6rem;max-width:34ch}
@@ -505,7 +505,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 </head>
 <body>
 
-<div class="announce" id="announce">⚡ Lanzamiento &nbsp;<span>✦</span>&nbsp; Envío gratis a todo el Perú por compras mayores a S/ 160<b class="announce-t" id="announceT" hidden></b></div>
+<div class="announce" id="announce">⚡ Lanzamiento &nbsp;<span>✦</span>&nbsp; Envío gratis a todo el Perú por compras desde S/ 150<b class="announce-t" id="announceT" hidden></b></div>
 <script>
 /* barra de lanzamiento: cuenta regresiva real hasta FIN; al terminar vuelve sola al aviso normal */
 (function(){
@@ -556,7 +556,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
   <div class="hero-inner">
     <p class="hero-kicker">Lencería femenina · Lima, Perú</p>
     <h1>Siéntete como la <em>reina</em> que eres</h1>
-    <p>Piezas de encaje y satén diseñadas para celebrar tu feminidad. Calidad, comodidad y elegancia en cada detalle. Envío gratis a todo el Perú desde S/160.</p>
+    <p>Piezas de encaje y satén diseñadas para celebrar tu feminidad. Calidad, comodidad y elegancia en cada detalle. Envío gratis a todo el Perú desde S/150.</p>
     <div class="hero-ctas">
       <a href="#catalogo" class="btn btn-gold">Ver Catálogo</a>
       <a href="https://wa.me/51997081492?text=Hola%20Reina%20Scarlata%2C%20quiero%20hacer%20un%20pedido%20%E2%9C%A8" target="_blank" rel="noopener" class="btn btn-ghost">Pedir por WhatsApp</a>
@@ -757,7 +757,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 
       <details class="faq-item">
         <summary>¿Hacen envíos fuera de Lima?</summary>
-        <div class="faq-a">Sí. Enviamos a Lima y a todo el Perú. Por lanzamiento, hasta el domingo 4 de octubre de 2026 el envío es gratis por compras mayores a S/ 160. Para montos menores, el costo y el tiempo de entrega los coordinamos por WhatsApp.</div>
+        <div class="faq-a">Sí. Enviamos a Lima y a todo el Perú. Por lanzamiento, hasta el domingo 4 de octubre de 2026 el envío es gratis por compras desde S/ 150. Para montos menores, el costo y el tiempo de entrega los coordinamos por WhatsApp.</div>
       </details>
 
       <details class="faq-item">
@@ -825,6 +825,18 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
         <li><a href="#categorias">Categorías</a></li>
         <li><a href="#catalogo">Catálogo</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Prendas</h4>
+      <ul>
+        <li><a href="/conjunto-petunia/">Conjunto Petunia</a></li>
+        <li><a href="/conjunto-jazmin-rosa/">Conjunto Jazmín Rosa</a></li>
+        <li><a href="/conjunto-azucena/">Conjunto Azucena</a></li>
+        <li><a href="/conjunto-hortencia/">Conjunto Hortencia</a></li>
+        <li><a href="/conjunto-reina-de-corazones/">Conjunto Reina de Corazones</a></li>
+        <li><a href="/conjunto-reina-de-rosas/">Conjunto Reina de Rosas</a></li>
+        <li><a href="/conjunto-buganvilla/">Conjunto Buganvilla</a></li>
       </ul>
     </div>
     <div class="foot-col">
@@ -934,7 +946,7 @@ const PRODUCTS = [
 })();
 
 const fmt = n => "S/ " + n.toFixed(2);
-const ENVIO_GRATIS = 160; // compras mayores a este monto: envío gratis a todo el Perú
+const ENVIO_GRATIS = 150; // desde este monto (incluido): envío gratis a todo el Perú
 const ENVIO_GRATIS_FIN = new Date("2026-10-04T23:59:59-05:00"); // fin del lanzamiento (misma fecha que la barra)
 let cart = [];
 

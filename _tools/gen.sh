@@ -28,7 +28,7 @@ BADGE[conjunto-petunia]="Nuevo"
 ADDED[conjunto-petunia]="2026-09-13"
 WANAME[conjunto-petunia]="Conjunto%20Petunia"
 TITLE[conjunto-petunia]="Conjunto de encaje rosa Petunia | Reina Scarlata"
-METADESC[conjunto-petunia]="Conjunto de lencería rosa con petunias bordadas en relieve, encaje festoneado y brasier con aro. Tallas S a XL. Envío gratis desde S/160."
+METADESC[conjunto-petunia]="Conjunto de lencería rosa con petunias bordadas en relieve, encaje festoneado y brasier con aro. Tallas S a XL. Envío gratis desde S/150."
 ALT[conjunto-petunia]="Conjunto Petunia de Reina Scarlata, brasier de tul rosa con petunias bordadas en degradado rosa y encaje festoneado"
 DESCLONG[conjunto-petunia]="Conjunto de dos piezas en tul rosa transparente con petunias bordadas en relieve, en degradado de rosa claro a fucsia. Brasier con aro, copas de tul bordado con borde de encaje festoneado, lacito de satén al centro y tirantes regulables. Tanga a juego con el mismo bordado al frente, borde de encaje y tirantes finos regulables en la cadera."
 SPECS[conjunto-petunia]="Petunias bordadas en relieve sobre tul rosa|Degradado de rosa claro a fucsia en cada flor|Brasier con aro y copas de tul bordado|Borde de encaje festoneado y lacito de satén al centro|Tirantes regulables|Tanga a juego con tirantes finos regulables en la cadera"
@@ -52,7 +52,7 @@ BADGE[conjunto-jazmin-rosa]="Nuevo"
 ADDED[conjunto-jazmin-rosa]="2026-09-13"
 WANAME[conjunto-jazmin-rosa]="Conjunto%20Jazm%C3%ADn%20Rosa"
 TITLE[conjunto-jazmin-rosa]="Conjunto de encaje rosa Jazmín Rosa | Reina Scarlata"
-METADESC[conjunto-jazmin-rosa]="Conjunto de lencería rosa con bordado floral en rosa, fucsia y verde sobre tul transparente. Tallas S a XL. Envío gratis desde S/160."
+METADESC[conjunto-jazmin-rosa]="Conjunto de lencería rosa con bordado floral en rosa, fucsia y verde sobre tul transparente. Tallas S a XL. Envío gratis desde S/150."
 ALT[conjunto-jazmin-rosa]="Conjunto Jazmín Rosa de Reina Scarlata, brasier de tul rosa con florecitas bordadas en rosa, fucsia y verde"
 DESCLONG[conjunto-jazmin-rosa]="Conjunto de dos piezas en tul rosa transparente con florecitas bordadas en rosa y fucsia, con tallos y hojas en verde. Brasier con aro, copas de tul bordado, ribetes rosa y tirantes regulables. Tanga a juego con el mismo bordado al frente y paneles de tul liso a los costados."
 SPECS[conjunto-jazmin-rosa]="Florecitas bordadas en rosa y fucsia sobre tul rosa|Tallos y hojas bordados en verde|Brasier con aro y copas de tul bordado|Ribetes rosa y tirantes regulables|Tanga a juego con el bordado al frente|Paneles de tul transparente a los costados"
@@ -76,7 +76,7 @@ BADGE[conjunto-azucena]="Nuevo"
 ADDED[conjunto-azucena]="2026-09-13"
 WANAME[conjunto-azucena]="Conjunto%20Azucena"
 TITLE[conjunto-azucena]="Conjunto de encaje blanco Azucena | Reina Scarlata"
-METADESC[conjunto-azucena]="Conjunto de lencería blanco marfil con bordado floral en relieve sobre tul nude y escote en V. Tallas S, M y L. Envío gratis desde S/160."
+METADESC[conjunto-azucena]="Conjunto de lencería blanco marfil con bordado floral en relieve sobre tul nude y escote en V. Tallas S, M y L. Envío gratis desde S/150."
 ALT[conjunto-azucena]="Conjunto Azucena de Reina Scarlata, brasier de tul nude con azucenas bordadas en blanco y escote profundo en V"
 DESCLONG[conjunto-azucena]="Conjunto de dos piezas en tul nude con azucenas bordadas en relieve en blanco marfil. Brasier con aro, escote profundo en V, copas de tul bordado con ribete champagne y bordes y tirantes finos en blanco. Tanga a juego con el mismo bordado al frente y bandas anchas de tul transparente en la cadera, enmarcadas en blanco."
 SPECS[conjunto-azucena]="Azucenas bordadas en relieve sobre tul nude|Pétalos y hojas en blanco marfil|Brasier con aro y escote profundo en V|Copas de tul bordado con ribete champagne|Bordes y tirantes finos en blanco|Tanga a juego con bandas anchas de tul en la cadera"
@@ -100,7 +100,7 @@ BADGE[conjunto-hortencia]="Nuevo"
 ADDED[conjunto-hortencia]="2026-09-12"
 WANAME[conjunto-hortencia]="Conjunto%20Hortencia"
 TITLE[conjunto-hortencia]="Conjunto de encaje lila Hortencia | Reina Scarlata"
-METADESC[conjunto-hortencia]="Conjunto de lencería lila y menta con hortensias bordadas y brasier con aro. Tallas S a XL. Envío gratis desde S/160 a todo el Perú."
+METADESC[conjunto-hortencia]="Conjunto de lencería lila y menta con hortensias bordadas y brasier con aro. Tallas S a XL. Envío gratis desde S/150 a todo el Perú."
 ALT[conjunto-hortencia]="Conjunto Hortencia de Reina Scarlata, brasier de tul menta con hortensias bordadas en lila, marfil y celeste"
 DESCLONG[conjunto-hortencia]="Conjunto de dos piezas en tul menta con hortensias bordadas en relieve en lila, marfil y celeste. Brasier con aro, copas de tul bordado y tirantes anchos cubiertos de flores, con lacito lila al centro y herrajes dorados. Tanga a juego con tirantes finos regulables y el mismo bordado al frente."
 SPECS[conjunto-hortencia]="Hortensias bordadas en relieve sobre tul menta|Pétalos en lila, marfil y celeste|Brasier con aro y copas de tul bordado|Tirantes anchos cubiertos de flores, con lacito lila|Herrajes dorados y tirantes regulables|Tanga a juego con el mismo bordado al frente"
@@ -124,7 +124,7 @@ BADGE[conjunto-reina-de-corazones]="Nuevo"
 ADDED[conjunto-reina-de-corazones]="2026-09-12"
 WANAME[conjunto-reina-de-corazones]="Conjunto%20Reina%20de%20Corazones"
 TITLE[conjunto-reina-de-corazones]="Conjunto de encaje negro con corazones | Reina Scarlata"
-METADESC[conjunto-reina-de-corazones]="Conjunto de lencería negro con corazones bordados y tanga de amarrar con cintas de raso. Tallas S, M y L. Envío gratis desde S/160."
+METADESC[conjunto-reina-de-corazones]="Conjunto de lencería negro con corazones bordados y tanga de amarrar con cintas de raso. Tallas S, M y L. Envío gratis desde S/150."
 ALT[conjunto-reina-de-corazones]="Conjunto Reina de Corazones de Reina Scarlata, brasier de encaje negro con corazones bordados y tanga de amarrar"
 DESCLONG[conjunto-reina-de-corazones]="Conjunto de dos piezas en tul negro con corazones bordados. Brasier con aro y copas de tul bordado, tirantes de satén con lazos y tiras cruzadas bajo la copa. Tanga de amarrar con cintas largas de satén a los costados y borde de encaje festoneado."
 SPECS[conjunto-reina-de-corazones]="Corazones bordados sobre tul transparente|Brasier con aro y copas de tul bordado|Tirantes de satén con lazos y tiras cruzadas|Tanga de amarrar con cintas largas de satén|Borde de encaje festoneado en la tanga"
@@ -147,7 +147,7 @@ IMG[conjunto-buganvilla]="conjunto-buganvilla-1.jpg"
 BADGE[conjunto-buganvilla]="Exclusivo"
 WANAME[conjunto-buganvilla]="Conjunto%20Buganvilla"
 TITLE[conjunto-buganvilla]="Conjunto de encaje fucsia Buganvilla | Reina Scarlata"
-METADESC[conjunto-buganvilla]="Conjunto de lencería fucsia con bordado floral en relieve sobre encaje y tanga a juego. Talla S. Envío gratis desde S/160 a todo el Perú."
+METADESC[conjunto-buganvilla]="Conjunto de lencería fucsia con bordado floral en relieve sobre encaje y tanga a juego. Talla S. Envío gratis desde S/150 a todo el Perú."
 ALT[conjunto-buganvilla]="Conjunto Buganvilla de Reina Scarlata, brasier de encaje fucsia con bordado floral y tanga a juego"
 DESCLONG[conjunto-buganvilla]="Conjunto de dos piezas en encaje fucsia con bordado floral sobre malla transparente. Brasier con aro y copas de tul bordado, con tirantes dobles finos y regulables. Tanga a juego con el mismo bordado al frente y tirantes dobles en la cadera."
 SPECS[conjunto-buganvilla]="Encaje fucsia con bordado floral sobre malla transparente|Brasier con aro y copas de tul bordado|Tirantes dobles finos y regulables|Tanga a juego con bordado al frente|Tirantes dobles en la cadera, regulables"
@@ -171,7 +171,7 @@ BADGE[conjunto-reina-de-rosas]="Nuevo"
 ADDED[conjunto-reina-de-rosas]="2026-09-12"
 WANAME[conjunto-reina-de-rosas]="Conjunto%20Reina%20de%20Rosas"
 TITLE[conjunto-reina-de-rosas]="Conjunto de encaje rojo Reina de Rosas | Reina Scarlata"
-METADESC[conjunto-reina-de-rosas]="Corset de lencería rojo con varillas y rosas bordadas en relieve, con tanga a juego. Tallas S, M y L. Envío gratis desde S/160."
+METADESC[conjunto-reina-de-rosas]="Corset de lencería rojo con varillas y rosas bordadas en relieve, con tanga a juego. Tallas S, M y L. Envío gratis desde S/150."
 ALT[conjunto-reina-de-rosas]="Conjunto Reina de Rosas de Reina Scarlata, corset de encaje rojo con rosas bordadas y tanga a juego"
 DESCLONG[conjunto-reina-de-rosas]="Conjunto de dos piezas: corset de tul con rosas bordadas en relieve y tanga a juego. Copas forradas en satén con aro, varillas que marcan la cintura, escote festoneado y cierre de corchetes regulable en la espalda. La tanga lleva tirantes regulables con argollas."
 SPECS[conjunto-reina-de-rosas]="Rosas bordadas en relieve sobre tul transparente|Copas forradas en satén con aro|Varillas que marcan la cintura|Escote festoneado, sin tirantes|Cierre de corchetes regulable en la espalda|Tanga a juego con tirantes regulables y argollas"
@@ -260,6 +260,16 @@ for s in "${SLUGS[@]}"; do
 done
 
 # ---------------- helpers ----------------
+# La columna "Prendas" del pie se arma con las prendas en stock, para que no
+# queden enlaces a fichas agotadas cuando cambie la mercaderia.
+lista_prendas(){
+  local s
+  for s in "${SLUGS[@]}"; do
+    [ -n "${AGOTADO[$s]:-}" ] && continue
+    printf '        <li><a href="/%s/">%s</a></li>\n' "$s" "${NAME[$s]}"
+  done
+}
+
 fmt(){ printf 'S/ %s' "$1"; }
 
 galeria_html(){ # $1 = slug
@@ -568,7 +578,7 @@ ${aviso_html}
       </a>
       <div class="prod-notes">
 $(nota_html "$slug")
-        <p><b>Lanzamiento: envío gratis a todo el Perú por compras mayores a S/ 160, hasta el 4 de octubre.</b> Para montos menores, el costo lo coordinamos por WhatsApp.</p>
+        <p><b>Lanzamiento: envío gratis a todo el Perú por compras desde S/ 150, hasta el 4 de octubre.</b> Para montos menores, el costo lo coordinamos por WhatsApp.</p>
         <p>Pago seguro con Yape (997 081 492), Plin o transferencia a la cuenta BCP Soles 191-98344785-0-64. Te enviamos tu número de seguimiento para que sigas tu pedido.</p>
         <p>¿No sabes tu talla? Mide tu bajo busto, busto y cadera con la <a href="/guia-de-tallas/">guía de tallas</a> y te asesoramos por WhatsApp.</p>
         <p>Llega en una bolsa con nuestro logo y, dentro, la prenda protegida en una bolsita de organza. Lista para obsequiar.</p>
@@ -612,7 +622,9 @@ $(card "$r3")
 
 BODY2
 
-  cat "$SP/footer.html"
+  # el marcador <!--LISTA_PRENDAS--> se reemplaza por la lista de prendas en stock
+
+  awk -v lista="$(lista_prendas)" '{sub(/<!--LISTA_PRENDAS-->/, lista); print}' "$SP/footer.html"
 
   cat <<'TAIL'
 

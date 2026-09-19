@@ -73,7 +73,7 @@ section{padding:6.5rem 2rem}
 
 /* ---------- footer ---------- */
 footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5rem 2rem 2rem}
-.foot-grid{max-width:1340px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:3rem}
+.foot-grid{max-width:1340px;margin:0 auto;display:grid;grid-template-columns:1.5fr .9fr 1.15fr 1.15fr 1.2fr;gap:3rem 2.3rem}
 @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
 .foot-brand p{color:var(--muted);font-size:.9rem;margin:1.2rem 0 1.6rem;max-width:34ch}
