@@ -359,6 +359,46 @@
     <g:size>L</g:size>
   </item>
   <item>
+    <g:id>RS-014-S</g:id>
+    <g:item_group_id>RS-014</g:item_group_id>
+    <g:title>Conjunto Reina de Corazones Roja</g:title>
+    <g:description>Conjunto de dos piezas en tul rojo con corazones bordados. Brasier con aro y copas de tul bordado, tirantes de satén con lazos y tiras cruzadas bajo la copa. Tanga de amarrar con cintas largas de satén a los costados y borde de encaje festoneado.</g:description>
+    <g:link>https://reinascarlata.com/conjunto-reina-de-corazones-roja/</g:link>
+    <g:image_link>https://reinascarlata.com/assets/conjunto-reina-de-corazones-roja-1.jpg</g:image_link>
+    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-reina-de-corazones-roja-2.jpg</g:additional_image_link>
+    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-reina-de-corazones-roja-3.jpg</g:additional_image_link>
+    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-reina-de-corazones-roja-4.jpg</g:additional_image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>72.90 PEN</g:price>
+    <g:brand>Reina Scarlata</g:brand>
+    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>
+    <g:product_type>Conjuntos</g:product_type>
+    <g:gender>female</g:gender>
+    <g:age_group>adult</g:age_group>
+    <g:size>S</g:size>
+  </item>
+  <item>
+    <g:id>RS-014-M</g:id>
+    <g:item_group_id>RS-014</g:item_group_id>
+    <g:title>Conjunto Reina de Corazones Roja</g:title>
+    <g:description>Conjunto de dos piezas en tul rojo con corazones bordados. Brasier con aro y copas de tul bordado, tirantes de satén con lazos y tiras cruzadas bajo la copa. Tanga de amarrar con cintas largas de satén a los costados y borde de encaje festoneado.</g:description>
+    <g:link>https://reinascarlata.com/conjunto-reina-de-corazones-roja/</g:link>
+    <g:image_link>https://reinascarlata.com/assets/conjunto-reina-de-corazones-roja-1.jpg</g:image_link>
+    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-reina-de-corazones-roja-2.jpg</g:additional_image_link>
+    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-reina-de-corazones-roja-3.jpg</g:additional_image_link>
+    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-reina-de-corazones-roja-4.jpg</g:additional_image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>72.90 PEN</g:price>
+    <g:brand>Reina Scarlata</g:brand>
+    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>
+    <g:product_type>Conjuntos</g:product_type>
+    <g:gender>female</g:gender>
+    <g:age_group>adult</g:age_group>
+    <g:size>M</g:size>
+  </item>
+  <item>
     <g:id>RS-007-S</g:id>
     <g:item_group_id>RS-007</g:item_group_id>
     <g:title>Conjunto Reina de Rosas</g:title>

@@ -132,7 +132,7 @@
       "name": "¿Hacen envíos fuera de Lima?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. Enviamos a Lima y a todo el Perú. Por lanzamiento, hasta el domingo 4 de octubre de 2026 el envío es gratis por compras desde S/ 150. Para montos menores, el costo y el tiempo de entrega los coordinamos por WhatsApp."
+        "text": "Sí. Enviamos a Lima y a todo el Perú. Por lanzamiento, hasta el sábado 10 de octubre de 2026 el envío es gratis por compras desde S/ 150. Para montos menores, el costo y el tiempo de entrega los coordinamos por WhatsApp."
       }
     },
     {
@@ -509,7 +509,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 <script>
 /* barra de lanzamiento: cuenta regresiva real hasta FIN; al terminar vuelve sola al aviso normal */
 (function(){
-  var FIN = "2026-10-04T23:59:59-05:00";
+  var FIN = "2026-10-10T23:59:59-05:00";
   var fin = new Date(FIN).getTime(), a = document.getElementById('announce'), t = document.getElementById('announceT');
   function dos(n){ return (n<10?'0':'') + n; }
   function tick(){
@@ -757,7 +757,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
 
       <details class="faq-item">
         <summary>¿Hacen envíos fuera de Lima?</summary>
-        <div class="faq-a">Sí. Enviamos a Lima y a todo el Perú. Por lanzamiento, hasta el domingo 4 de octubre de 2026 el envío es gratis por compras desde S/ 150. Para montos menores, el costo y el tiempo de entrega los coordinamos por WhatsApp.</div>
+        <div class="faq-a">Sí. Enviamos a Lima y a todo el Perú. Por lanzamiento, hasta el sábado 10 de octubre de 2026 el envío es gratis por compras desde S/ 150. Para montos menores, el costo y el tiempo de entrega los coordinamos por WhatsApp.</div>
       </details>
 
       <details class="faq-item">
@@ -835,6 +835,7 @@ footer{background:var(--ivory-soft);border-top:1px solid var(--line);padding:5re
         <li><a href="/conjunto-azucena/">Conjunto Azucena</a></li>
         <li><a href="/conjunto-hortencia/">Conjunto Hortencia</a></li>
         <li><a href="/conjunto-reina-de-corazones/">Conjunto Reina de Corazones</a></li>
+        <li><a href="/conjunto-reina-de-corazones-roja/">Conjunto Reina de Corazones Roja</a></li>
         <li><a href="/conjunto-reina-de-rosas/">Conjunto Reina de Rosas</a></li>
         <li><a href="/conjunto-buganvilla/">Conjunto Buganvilla</a></li>
       </ul>
@@ -922,6 +923,7 @@ const PRODUCTS = [
   {id:11, name:"Conjunto Azucena", slug:"conjunto-azucena", alt:"Conjunto Azucena de Reina Scarlata, brasier de tul nude con azucenas bordadas en blanco y escote profundo en V", cat:"conjuntos", catLabel:"Conjuntos", price:79.90, oldPrice:null, img:"assets/conjunto-azucena-1.jpg", added:"2026-09-13", badge:"Nuevo"},
   {id:12, name:"Conjunto Jazmín Rosa", slug:"conjunto-jazmin-rosa", alt:"Conjunto Jazmín Rosa de Reina Scarlata, brasier de tul rosa con florecitas bordadas en rosa, fucsia y verde", cat:"conjuntos", catLabel:"Conjuntos", price:69.90, oldPrice:null, img:"assets/conjunto-jazmin-rosa-1.jpg", added:"2026-09-13", badge:"Nuevo"},
   {id:9, name:"Conjunto Reina de Corazones", slug:"conjunto-reina-de-corazones", alt:"Conjunto Reina de Corazones de Reina Scarlata, brasier de encaje negro con corazones bordados y tanga de amarrar", cat:"conjuntos", catLabel:"Conjuntos", price:72.90, oldPrice:null, img:"assets/conjunto-reina-de-corazones-3.jpg", added:"2026-09-12", badge:"Nuevo"},
+  {id:14, name:"Conjunto Reina de Corazones Roja", slug:"conjunto-reina-de-corazones-roja", alt:"Conjunto Reina de Corazones Roja de Reina Scarlata, brasier de tul rojo con corazones bordados y tanga de amarrar", cat:"conjuntos", catLabel:"Conjuntos", price:72.90, oldPrice:null, img:"assets/conjunto-reina-de-corazones-roja-1.jpg", added:"2026-09-30", badge:"Nuevo"},
   {id:7, name:"Conjunto Reina de Rosas", slug:"conjunto-reina-de-rosas", alt:"Conjunto Reina de Rosas de Reina Scarlata, corset de encaje rojo con rosas bordadas y tanga a juego", cat:"conjuntos", catLabel:"Conjuntos", price:94.90, oldPrice:null, img:"assets/conjunto-reina-de-rosas-1.jpg", added:"2026-09-12", badge:"Nuevo"},
   {id:8, name:"Conjunto Buganvilla", slug:"conjunto-buganvilla", alt:"Conjunto Buganvilla de Reina Scarlata, brasier de encaje fucsia con bordado floral y tanga a juego", cat:"conjuntos", catLabel:"Conjuntos", price:79.90, oldPrice:null, img:"assets/conjunto-buganvilla-portada.jpg", badge:"Exclusivo"},
   {id:3, name:"Body Burdeos Real", slug:"body-burdeos-real", alt:"Body de encaje floral burdeos Reina Scarlata con escote profundo en V y herrajes dorados", cat:"bodys", catLabel:"Bodys", price:99.90, oldPrice:null, img:"assets/body-encaje-burdeos-real.jpg", badge:null, stock:false},
@@ -947,7 +949,7 @@ const PRODUCTS = [
 
 const fmt = n => "S/ " + n.toFixed(2);
 const ENVIO_GRATIS = 150; // desde este monto (incluido): envío gratis a todo el Perú
-const ENVIO_GRATIS_FIN = new Date("2026-10-04T23:59:59-05:00"); // fin del lanzamiento (misma fecha que la barra)
+const ENVIO_GRATIS_FIN = new Date("2026-10-10T23:59:59-05:00"); // fin del lanzamiento (misma fecha que la barra)
 let cart = [];
 
 /* ---------- render catálogo ---------- */

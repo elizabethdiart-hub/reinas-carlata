@@ -5,7 +5,7 @@ SP="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$SP/.." && pwd)"
 SITE="https://reinascarlata.com"
 
-SLUGS=(conjunto-petunia conjunto-jazmin-rosa conjunto-azucena conjunto-hortencia conjunto-reina-de-corazones conjunto-reina-de-rosas conjunto-buganvilla body-burdeos-real bralette-marfil-sueno pijama-saten-champagne)
+SLUGS=(conjunto-petunia conjunto-jazmin-rosa conjunto-azucena conjunto-hortencia conjunto-reina-de-corazones conjunto-reina-de-corazones-roja conjunto-reina-de-rosas conjunto-buganvilla body-burdeos-real bralette-marfil-sueno pijama-saten-champagne)
 
 declare -A SKU NAME CAT CATLABEL PRICE OLDPRICE IMG BADGE ADDED TITLE METADESC ALT DESCLONG SPECS SEOH SEOP1 SEOP2 WANAME GALLERY SIZES NOTA MEDIDAS OGCROP AGOTADO
 
@@ -15,6 +15,30 @@ declare -A SKU NAME CAT CATLABEL PRICE OLDPRICE IMG BADGE ADDED TITLE METADESC A
 AGOTADO[body-burdeos-real]=1
 AGOTADO[bralette-marfil-sueno]=1
 AGOTADO[pijama-saten-champagne]=1
+
+# ---------------- RS-014 ----------------
+SKU[conjunto-reina-de-corazones-roja]="RS-014"
+NAME[conjunto-reina-de-corazones-roja]="Conjunto Reina de Corazones Roja"
+CAT[conjunto-reina-de-corazones-roja]="conjuntos"
+CATLABEL[conjunto-reina-de-corazones-roja]="Conjuntos"
+PRICE[conjunto-reina-de-corazones-roja]="72.90"
+OLDPRICE[conjunto-reina-de-corazones-roja]=""
+IMG[conjunto-reina-de-corazones-roja]="conjunto-reina-de-corazones-roja-1.jpg"
+BADGE[conjunto-reina-de-corazones-roja]="Nuevo"
+ADDED[conjunto-reina-de-corazones-roja]="2026-09-30"
+WANAME[conjunto-reina-de-corazones-roja]="Conjunto%20Reina%20de%20Corazones%20Roja"
+TITLE[conjunto-reina-de-corazones-roja]="Conjunto de encaje rojo con corazones | Reina Scarlata"
+METADESC[conjunto-reina-de-corazones-roja]="Conjunto de lencería roja con corazones bordados y tanga de amarrar con cintas de raso. Tallas S y M, unidades muy limitadas. Envío gratis desde S/150."
+ALT[conjunto-reina-de-corazones-roja]="Conjunto Reina de Corazones Roja de Reina Scarlata, brasier de tul rojo con corazones bordados y tanga de amarrar"
+DESCLONG[conjunto-reina-de-corazones-roja]="Conjunto de dos piezas en tul rojo con corazones bordados. Brasier con aro y copas de tul bordado, tirantes de satén con lazos y tiras cruzadas bajo la copa. Tanga de amarrar con cintas largas de satén a los costados y borde de encaje festoneado."
+SPECS[conjunto-reina-de-corazones-roja]="Corazones bordados sobre tul rojo transparente|Brasier con aro y copas de tul bordado|Tirantes de satén con lazos y tiras cruzadas|Tanga de amarrar con cintas largas de satén|Borde de encaje festoneado en la tanga"
+SEOH[conjunto-reina-de-corazones-roja]="Los corazones no se estampan, se <em>bordan</em>"
+SEOP1[conjunto-reina-de-corazones-roja]="Es el mismo Conjunto Reina de Corazones que ya conoces, ahora en rojo. Los corazones van bordados uno a uno sobre el tul, con hilo que tiene brillo y relieve propios: la diferencia entre un dibujo y una textura, y se nota tanto en la foto de cerca como cuando la tienes en la mano."
+SEOP2[conjunto-reina-de-corazones-roja]="La tanga es de amarrar, con cintas largas de satén a los dos costados, así que se ajusta a tu cadera en lugar de obligarte a entrar en una medida fija. El brasier suma tiras cruzadas de satén bajo la copa y lacitos en los tirantes. De esta versión en rojo llegaron muy pocas unidades: solo talla S y M, en cantidad limitada de verdad."
+GALLERY[conjunto-reina-de-corazones-roja]="conjunto-reina-de-corazones-roja-1.jpg::2000::1116::Conjunto Reina de Corazones Roja de Reina Scarlata sobre maniquí, brasier de tul rojo con corazones bordados y tanga de amarrar, rodeado de rosas rojas|conjunto-reina-de-corazones-roja-2.jpg::2000::1116::Conjunto Reina de Corazones Roja colgado en percha de madera con lazo marfil, con una rosa roja junto a la prenda|conjunto-reina-de-corazones-roja-3.jpg::2000::1116::Detalle de los corazones bordados en relieve sobre el tul rojo de la copa del brasier|conjunto-reina-de-corazones-roja-4.jpg::2000::1116::Primer plano de los corazones bordados y los lazos de satén rojo del Conjunto Reina de Corazones Roja"
+SIZES[conjunto-reina-de-corazones-roja]="S,M"
+NOTA[conjunto-reina-de-corazones-roja]="<b>Solo 3 unidades en total</b> (1 en S, 2 en M) · Modelo exclusivo."
+MEDIDAS[conjunto-reina-de-corazones-roja]="Talla::Equivalencia US::Contorno bajo busto::Cintura de la tanga|S::32C · 32D · 34A · 34B::74–77 cm::68 cm|M::34C · 36A · 36B::78–81 cm::72 cm"
 
 # ---------------- RS-013 ----------------
 SKU[conjunto-petunia]="RS-013"
@@ -578,7 +602,7 @@ ${aviso_html}
       </a>
       <div class="prod-notes">
 $(nota_html "$slug")
-        <p><b>Lanzamiento: envío gratis a todo el Perú por compras desde S/ 150, hasta el 4 de octubre.</b> Para montos menores, el costo lo coordinamos por WhatsApp.</p>
+        <p><b>Lanzamiento: envío gratis a todo el Perú por compras desde S/ 150, hasta el 10 de octubre.</b> Para montos menores, el costo lo coordinamos por WhatsApp.</p>
         <p>Pago seguro con Yape (997 081 492), Plin o transferencia a la cuenta BCP Soles 191-98344785-0-64. Te enviamos tu número de seguimiento para que sigas tu pedido.</p>
         <p>¿No sabes tu talla? Mide tu bajo busto, busto y cadera con la <a href="/guia-de-tallas/">guía de tallas</a> y te asesoramos por WhatsApp.</p>
         <p>Llega en una bolsa con nuestro logo y, dentro, la prenda protegida en una bolsita de organza. Lista para obsequiar.</p>
