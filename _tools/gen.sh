@@ -5,7 +5,7 @@ SP="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$SP/.." && pwd)"
 SITE="https://reinascarlata.com"
 
-SLUGS=(conjunto-petunia conjunto-jazmin-rosa conjunto-azucena conjunto-hortencia conjunto-reina-de-corazones conjunto-reina-de-corazones-roja conjunto-reina-de-rosas conjunto-buganvilla body-burdeos-real bralette-marfil-sueno pijama-saten-champagne)
+SLUGS=(conjunto-petunia conjunto-jazmin-rosa conjunto-azucena conjunto-hortencia conjunto-reina-de-corazones conjunto-reina-de-corazones-roja conjunto-algodon-de-azucar conjunto-reina-de-rosas conjunto-buganvilla body-burdeos-real bralette-marfil-sueno pijama-saten-champagne)
 
 declare -A SKU NAME CAT CATLABEL PRICE OLDPRICE IMG BADGE ADDED TITLE METADESC ALT DESCLONG SPECS SEOH SEOP1 SEOP2 WANAME GALLERY SIZES NOTA MEDIDAS OGCROP AGOTADO
 
@@ -15,6 +15,30 @@ declare -A SKU NAME CAT CATLABEL PRICE OLDPRICE IMG BADGE ADDED TITLE METADESC A
 AGOTADO[body-burdeos-real]=1
 AGOTADO[bralette-marfil-sueno]=1
 AGOTADO[pijama-saten-champagne]=1
+
+# ---------------- RS-015 ----------------
+SKU[conjunto-algodon-de-azucar]="RS-015"
+NAME[conjunto-algodon-de-azucar]="Conjunto Algodón de Azúcar"
+CAT[conjunto-algodon-de-azucar]="conjuntos"
+CATLABEL[conjunto-algodon-de-azucar]="Conjuntos"
+PRICE[conjunto-algodon-de-azucar]="59.90"
+OLDPRICE[conjunto-algodon-de-azucar]=""
+IMG[conjunto-algodon-de-azucar]="conjunto-algodon-de-azucar-1.jpg"
+BADGE[conjunto-algodon-de-azucar]="Nuevo"
+ADDED[conjunto-algodon-de-azucar]="2026-09-30"
+WANAME[conjunto-algodon-de-azucar]="Conjunto%20Algod%C3%B3n%20de%20Az%C3%BAcar"
+TITLE[conjunto-algodon-de-azucar]="Conjunto de tul rosa con corazones | Reina Scarlata"
+METADESC[conjunto-algodon-de-azucar]="Conjunto de lencería rosa pálido con corazones bordados y lazos de satén. Tallas S, M y L, unidades muy limitadas. Envío gratis desde S/150."
+ALT[conjunto-algodon-de-azucar]="Conjunto Algodón de Azúcar de Reina Scarlata, brasier triangular de tul rosa con corazones bordados y lacitos de satén"
+DESCLONG[conjunto-algodon-de-azucar]="Conjunto de dos piezas en tul rosa pálido transparente con corazones bordados en blanco marfil. Brasier triangular sin aro, con tirantes regulables y lacitos de satén rosa en los hombros. Tanga con el mismo bordado de corazones al frente y tira regulable con lacito en la cadera."
+SPECS[conjunto-algodon-de-azucar]="Corazones bordados en blanco marfil sobre tul rosa|Brasier triangular sin aro, tirantes regulables|Lacitos de satén rosa en los hombros|Tanga con el mismo bordado al frente|Tira regulable con lacito en la cadera"
+SEOH[conjunto-algodon-de-azucar]="Corazones pequeños, ternura <em>grande</em>"
+SEOP1[conjunto-algodon-de-azucar]="No es un brasier con aro ni una pieza estructurada: es tul rosa pálido, suave al tacto, con corazoncitos bordados en blanco marfil repartidos sin patrón fijo, como si hubieran caído ahí solos. Los lacitos de satén rosa en los hombros y en la cadera rematan esa sensación delicada de principio a fin."
+SEOP2[conjunto-algodon-de-azucar]="Es una pieza pensada para sentirse ligera, no para marcar ni ajustar: el triangular se acomoda sin aro y los tirantes se regulan a tu medida. De esta pieza llegó una unidad por talla nada más, así que lo que ves es exactamente lo que hay: S, M y L, una de cada una."
+GALLERY[conjunto-algodon-de-azucar]="conjunto-algodon-de-azucar-1.jpg::2000::1116::Conjunto Algodón de Azúcar de Reina Scarlata sobre maniquí, brasier triangular de tul rosa con corazones bordados, rodeado de tulipanes rosados|conjunto-algodon-de-azucar-2.jpg::2000::1116::Conjunto Algodón de Azúcar colgado en percha de madera con lazo marfil, con un tulipán rosado junto a la prenda|conjunto-algodon-de-azucar-3.jpg::1493::2000::Detalle de los corazones bordados en blanco marfil y el lacito de satén rosa del brasier|conjunto-algodon-de-azucar-4.jpg::2000::1116::Tanga del Conjunto Algodón de Azúcar extendida sobre seda marfil, con los corazones bordados y los lacitos de satén rosa"
+SIZES[conjunto-algodon-de-azucar]="S,M,L"
+NOTA[conjunto-algodon-de-azucar]="<b>Solo 3 unidades en total</b> (1 en S, 1 en M, 1 en L) · Modelo exclusivo."
+MEDIDAS[conjunto-algodon-de-azucar]=""
 
 # ---------------- RS-014 ----------------
 SKU[conjunto-reina-de-corazones-roja]="RS-014"
