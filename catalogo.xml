@@ -165,26 +165,6 @@
     <g:size>XL</g:size>
   </item>
   <item>
-    <g:id>RS-016-S</g:id>
-    <g:item_group_id>RS-016</g:item_group_id>
-    <g:title>Conjunto Jazmín Negro</g:title>
-    <g:description>Conjunto de dos piezas en tul negro transparente con rosas y florecitas bordadas en rojo, con tallos y hojas en negro. Brasier con aro, copas de tul bordado, ribetes negros y tirantes regulables. Tanga a juego con el mismo bordado al frente y paneles de tul liso a los costados.</g:description>
-    <g:link>https://reinascarlata.com/conjunto-jazmin-negro/</g:link>
-    <g:image_link>https://reinascarlata.com/assets/conjunto-jazmin-negro-1.jpg</g:image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-negro-2.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-negro-3.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-negro-4.jpg</g:additional_image_link>
-    <g:availability>in stock</g:availability>
-    <g:condition>new</g:condition>
-    <g:price>69.90 PEN</g:price>
-    <g:brand>Reina Scarlata</g:brand>
-    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>
-    <g:product_type>Conjuntos</g:product_type>
-    <g:gender>female</g:gender>
-    <g:age_group>adult</g:age_group>
-    <g:size>S</g:size>
-  </item>
-  <item>
     <g:id>RS-016-M</g:id>
     <g:item_group_id>RS-016</g:item_group_id>
     <g:title>Conjunto Jazmín Negro</g:title>
@@ -223,66 +203,6 @@
     <g:gender>female</g:gender>
     <g:age_group>adult</g:age_group>
     <g:size>L</g:size>
-  </item>
-  <item>
-    <g:id>RS-016-XL</g:id>
-    <g:item_group_id>RS-016</g:item_group_id>
-    <g:title>Conjunto Jazmín Negro</g:title>
-    <g:description>Conjunto de dos piezas en tul negro transparente con rosas y florecitas bordadas en rojo, con tallos y hojas en negro. Brasier con aro, copas de tul bordado, ribetes negros y tirantes regulables. Tanga a juego con el mismo bordado al frente y paneles de tul liso a los costados.</g:description>
-    <g:link>https://reinascarlata.com/conjunto-jazmin-negro/</g:link>
-    <g:image_link>https://reinascarlata.com/assets/conjunto-jazmin-negro-1.jpg</g:image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-negro-2.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-negro-3.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-negro-4.jpg</g:additional_image_link>
-    <g:availability>in stock</g:availability>
-    <g:condition>new</g:condition>
-    <g:price>69.90 PEN</g:price>
-    <g:brand>Reina Scarlata</g:brand>
-    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>
-    <g:product_type>Conjuntos</g:product_type>
-    <g:gender>female</g:gender>
-    <g:age_group>adult</g:age_group>
-    <g:size>XL</g:size>
-  </item>
-  <item>
-    <g:id>RS-017-S</g:id>
-    <g:item_group_id>RS-017</g:item_group_id>
-    <g:title>Conjunto Jazmín Blanco</g:title>
-    <g:description>Conjunto de dos piezas en tul blanco transparente con rosas y florecitas bordadas en rojo, con tallos y hojas en verde oscuro. Brasier con aro, copas de tul bordado, ribetes blancos y tirantes regulables. Tanga a juego con el mismo bordado al frente y paneles de tul liso a los costados.</g:description>
-    <g:link>https://reinascarlata.com/conjunto-jazmin-blanco/</g:link>
-    <g:image_link>https://reinascarlata.com/assets/conjunto-jazmin-blanco-1.jpg</g:image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-blanco-2.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-blanco-3.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-blanco-4.jpg</g:additional_image_link>
-    <g:availability>in stock</g:availability>
-    <g:condition>new</g:condition>
-    <g:price>69.90 PEN</g:price>
-    <g:brand>Reina Scarlata</g:brand>
-    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>
-    <g:product_type>Conjuntos</g:product_type>
-    <g:gender>female</g:gender>
-    <g:age_group>adult</g:age_group>
-    <g:size>S</g:size>
-  </item>
-  <item>
-    <g:id>RS-017-M</g:id>
-    <g:item_group_id>RS-017</g:item_group_id>
-    <g:title>Conjunto Jazmín Blanco</g:title>
-    <g:description>Conjunto de dos piezas en tul blanco transparente con rosas y florecitas bordadas en rojo, con tallos y hojas en verde oscuro. Brasier con aro, copas de tul bordado, ribetes blancos y tirantes regulables. Tanga a juego con el mismo bordado al frente y paneles de tul liso a los costados.</g:description>
-    <g:link>https://reinascarlata.com/conjunto-jazmin-blanco/</g:link>
-    <g:image_link>https://reinascarlata.com/assets/conjunto-jazmin-blanco-1.jpg</g:image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-blanco-2.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-blanco-3.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-jazmin-blanco-4.jpg</g:additional_image_link>
-    <g:availability>in stock</g:availability>
-    <g:condition>new</g:condition>
-    <g:price>69.90 PEN</g:price>
-    <g:brand>Reina Scarlata</g:brand>
-    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>
-    <g:product_type>Conjuntos</g:product_type>
-    <g:gender>female</g:gender>
-    <g:age_group>adult</g:age_group>
-    <g:size>M</g:size>
   </item>
   <item>
     <g:id>RS-017-L</g:id>
@@ -699,46 +619,6 @@
     <g:size>L</g:size>
   </item>
   <item>
-    <g:id>RS-019-S</g:id>
-    <g:item_group_id>RS-019</g:item_group_id>
-    <g:title>Conjunto Rubí</g:title>
-    <g:description>Conjunto de dos piezas en tul rojo transparente con pedrería plateada. Corset strapless con copas con aro, varillas verticales que marcan la silueta y bajo en punta; los bordes de las copas y las costuras llevan una fila de piedritas plateadas, con un lacito de satén rojo al centro. Tanga a juego con tres franjas de pedrería al frente y tiras laterales regulables.</g:description>
-    <g:link>https://reinascarlata.com/conjunto-rubi/</g:link>
-    <g:image_link>https://reinascarlata.com/assets/conjunto-rubi-1.jpg</g:image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-rubi-2.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-rubi-3.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-rubi-4.jpg</g:additional_image_link>
-    <g:availability>in stock</g:availability>
-    <g:condition>new</g:condition>
-    <g:price>94.90 PEN</g:price>
-    <g:brand>Reina Scarlata</g:brand>
-    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>
-    <g:product_type>Conjuntos</g:product_type>
-    <g:gender>female</g:gender>
-    <g:age_group>adult</g:age_group>
-    <g:size>S</g:size>
-  </item>
-  <item>
-    <g:id>RS-019-M</g:id>
-    <g:item_group_id>RS-019</g:item_group_id>
-    <g:title>Conjunto Rubí</g:title>
-    <g:description>Conjunto de dos piezas en tul rojo transparente con pedrería plateada. Corset strapless con copas con aro, varillas verticales que marcan la silueta y bajo en punta; los bordes de las copas y las costuras llevan una fila de piedritas plateadas, con un lacito de satén rojo al centro. Tanga a juego con tres franjas de pedrería al frente y tiras laterales regulables.</g:description>
-    <g:link>https://reinascarlata.com/conjunto-rubi/</g:link>
-    <g:image_link>https://reinascarlata.com/assets/conjunto-rubi-1.jpg</g:image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-rubi-2.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-rubi-3.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-rubi-4.jpg</g:additional_image_link>
-    <g:availability>in stock</g:availability>
-    <g:condition>new</g:condition>
-    <g:price>94.90 PEN</g:price>
-    <g:brand>Reina Scarlata</g:brand>
-    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>
-    <g:product_type>Conjuntos</g:product_type>
-    <g:gender>female</g:gender>
-    <g:age_group>adult</g:age_group>
-    <g:size>M</g:size>
-  </item>
-  <item>
     <g:id>RS-019-L</g:id>
     <g:item_group_id>RS-019</g:item_group_id>
     <g:title>Conjunto Rubí</g:title>
@@ -759,26 +639,6 @@
     <g:size>L</g:size>
   </item>
   <item>
-    <g:id>RS-020-S</g:id>
-    <g:item_group_id>RS-020</g:item_group_id>
-    <g:title>Conjunto Zafiro</g:title>
-    <g:description>Conjunto de dos piezas en azul zafiro. Brasier con aro, copas de tul transparente con grandes lirios bordados en hilo satinado, laterales de satén, tirantes regulables y un pequeño dije de corazón con brillante al centro. Tanga a juego con el mismo bordado de lirios al frente, parte trasera de satén y tiras laterales regulables.</g:description>
-    <g:link>https://reinascarlata.com/conjunto-zafiro/</g:link>
-    <g:image_link>https://reinascarlata.com/assets/conjunto-zafiro-1.jpg</g:image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-zafiro-2.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-zafiro-3.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-zafiro-4.jpg</g:additional_image_link>
-    <g:availability>in stock</g:availability>
-    <g:condition>new</g:condition>
-    <g:price>79.90 PEN</g:price>
-    <g:brand>Reina Scarlata</g:brand>
-    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>
-    <g:product_type>Conjuntos</g:product_type>
-    <g:gender>female</g:gender>
-    <g:age_group>adult</g:age_group>
-    <g:size>S</g:size>
-  </item>
-  <item>
     <g:id>RS-020-M</g:id>
     <g:item_group_id>RS-020</g:item_group_id>
     <g:title>Conjunto Zafiro</g:title>
@@ -797,46 +657,6 @@
     <g:gender>female</g:gender>
     <g:age_group>adult</g:age_group>
     <g:size>M</g:size>
-  </item>
-  <item>
-    <g:id>RS-020-L</g:id>
-    <g:item_group_id>RS-020</g:item_group_id>
-    <g:title>Conjunto Zafiro</g:title>
-    <g:description>Conjunto de dos piezas en azul zafiro. Brasier con aro, copas de tul transparente con grandes lirios bordados en hilo satinado, laterales de satén, tirantes regulables y un pequeño dije de corazón con brillante al centro. Tanga a juego con el mismo bordado de lirios al frente, parte trasera de satén y tiras laterales regulables.</g:description>
-    <g:link>https://reinascarlata.com/conjunto-zafiro/</g:link>
-    <g:image_link>https://reinascarlata.com/assets/conjunto-zafiro-1.jpg</g:image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-zafiro-2.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-zafiro-3.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-zafiro-4.jpg</g:additional_image_link>
-    <g:availability>in stock</g:availability>
-    <g:condition>new</g:condition>
-    <g:price>79.90 PEN</g:price>
-    <g:brand>Reina Scarlata</g:brand>
-    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>
-    <g:product_type>Conjuntos</g:product_type>
-    <g:gender>female</g:gender>
-    <g:age_group>adult</g:age_group>
-    <g:size>L</g:size>
-  </item>
-  <item>
-    <g:id>RS-020-XL</g:id>
-    <g:item_group_id>RS-020</g:item_group_id>
-    <g:title>Conjunto Zafiro</g:title>
-    <g:description>Conjunto de dos piezas en azul zafiro. Brasier con aro, copas de tul transparente con grandes lirios bordados en hilo satinado, laterales de satén, tirantes regulables y un pequeño dije de corazón con brillante al centro. Tanga a juego con el mismo bordado de lirios al frente, parte trasera de satén y tiras laterales regulables.</g:description>
-    <g:link>https://reinascarlata.com/conjunto-zafiro/</g:link>
-    <g:image_link>https://reinascarlata.com/assets/conjunto-zafiro-1.jpg</g:image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-zafiro-2.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-zafiro-3.jpg</g:additional_image_link>
-    <g:additional_image_link>https://reinascarlata.com/assets/conjunto-zafiro-4.jpg</g:additional_image_link>
-    <g:availability>in stock</g:availability>
-    <g:condition>new</g:condition>
-    <g:price>79.90 PEN</g:price>
-    <g:brand>Reina Scarlata</g:brand>
-    <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Underwear &amp; Socks &gt; Lingerie</g:google_product_category>
-    <g:product_type>Conjuntos</g:product_type>
-    <g:gender>female</g:gender>
-    <g:age_group>adult</g:age_group>
-    <g:size>XL</g:size>
   </item>
   <item>
     <g:id>RS-007-S</g:id>
